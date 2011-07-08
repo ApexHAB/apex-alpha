@@ -1,0 +1,2 @@
+MICROCHIP - MCP1700T-3302E/TT - IC, V REG, LDO 250MA, SMD, SOT-23-3, OVF 3.3V
+http://uk.farnell.com/microchip/mcp1700t-3302e-tt/ic-v-reg-ldo-250ma-smd-sot-23-3/dp/1296592
