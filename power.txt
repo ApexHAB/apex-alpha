@@ -1,0 +1,19 @@
+Apex Alpha Power Consumption
+============================
+
+ATMEGA328 AVR
+    04MHz 3V - 03.5mA
+    08MHz 5V - 12.0mA
+    16MHz 3V - 30.0mA *
+    * Most likely higher than needed
+
+RADIOMETRIX NTX2-434.650-10
+    18.0mA
+
+TRIMBLE LASSEN iQ
+    Running - 27.0mA
+    Cold Start may be higher - 50.0mA
+
+----------------------------
+Max Total: 98.0mA
+----------------------------
