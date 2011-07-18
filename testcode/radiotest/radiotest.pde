@@ -1,74 +1,77 @@
 /*
    APEX Alpha - Radio Telemetry Test with 2 Output Pins
    Daniel Saul
+   Priyesh Patel
    18 July 2011
 
    (C) Copyright APEXHAB Team 2011
    team@apexhab.org
-
  */
 
 void setup()
 {
-
 }
 
 void loop()
 {
-    //Now send to the splitIntoCharacters function
-    splitIntoChars("a very long test string");
+    rtty_tx("a very long test string");
 }
 
-//Split into characters
-void splitIntoChars(char * string)
+void rtty_tx(char * sentence)
 {
-    // Send a character at a time to the Bytes function :P
+    // Send a character at a time to the rtty_byte function :P
     char s;
 
-    s = *string++;
+    s = *sentence++;
 
-    while( s != '\0'){
-        Bytes(s);
-        s = *string++;
+    while(s != '\0')
+    {
+        rtty_byte(s);
+        s = *sentence++;
     }
 }
 
-
-void Bytes(char s){
-    // Send a byte at a time to the splitIntoBits function
+void rtty_byte(char s){
+    // Send a byte at a time to the rtty_bit function
 
     int b;
 
     //Send a start bit
-    splitIntoBits(0);
+    rtty_bit(0);
 
     //Send rest of it
-    for(b=0;b<8;b++){
-
-        if(s & 1){
-            splitIntoBits(1);
-        }else{
-            splitIntoBits(0);
+    for(b=0;b<8;b++)
+    {
+        if(s & 1)
+        {
+            rtty_bit(1);
+        }
+        else
+        {
+            rtty_bit(0);
         }
 
         s = s >> 1;
     }
 
     //Send 2 stop bits
-    splitIntoBits(1);
-    splitIntoBits(1);
-
+    rtty_bit(1);
+    rtty_bit(1);
 }
 
-void splitIntoBits(int abit)
+void rtty_bit(int b)
 {
-    if(abit){                        //if high
-        digitalWrite(5, HIGH);
-        digitalWrite(6, LOW);
-    }else{                           // if low
-        digitalWrite(5, LOW);
-        digitalWrite(6, HIGH);
+    if(b)
+    {   // if high
+        digitalWrite(5,HIGH);
+        digitalWrite(6,LOW);
+    }
+    else
+    {   // if low
+        digitalWrite(5,LOW);
+        digitalWrite(6,HIGH);
     } 
+
     delayMicroseconds(3370);
 }
 
