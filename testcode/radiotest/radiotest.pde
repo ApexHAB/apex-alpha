@@ -12,24 +12,15 @@
 
 void setup() {
   
-  //Initialise Serial Communication from Computer - for testing purposes
-  Serial.begin(9600);
+
 
 }
 
 void loop() {
-   
-   //Check for a string from the Computer that needs sending
-   if (Serial.available() > 0) {
-    char stringToSend = Serial.read();
-    
+
     //Now send to the splitIntoCharacters function
-    splitIntoChars(stringToSend);
+    splitIntoChars("a very long test string");
     
-    Serial.println("Sent.");
-    Serial.println("");
-    
-   }
 }
 
 
