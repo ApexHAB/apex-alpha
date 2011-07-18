@@ -1,2 +1,8 @@
 MICROCHIP - MCP1700T-3302E/TT - IC, V REG, LDO 250MA, SMD, SOT-23-3, OVF 3.3V
 http://uk.farnell.com/microchip/mcp1700t-3302e-tt/ic-v-reg-ldo-250ma-smd-sot-23-3/dp/1296592
+
+HRS (HIROSE) - DM3D-SF - CONNECTOR, MICRO SD, PUSH PULL
+http://uk.farnell.com/hrs-hirose/dm3d-sf/connector-micro-sd-push-pull/dp/1764377?Ntt=1764377
+
+TE CONNECTIVITY - 5-1634521-1 - SOCKET, BNC, BULKHEAD, 50R
+http://uk.farnell.com/te-connectivity/5-1634521-1/socket-bnc-bulkhead-50r/dp/1248949?Ntt=1248949
