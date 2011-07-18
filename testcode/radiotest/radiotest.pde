@@ -2,7 +2,7 @@
    APEX Alpha - Radio Telemetry Test with 2 Output Pins
    
    ****DANIEL SAUL*****
-   and the Obsessive-Compulsive Priyesh Patel
+   Priyesh Patel
    
    18 July 2011
 
