@@ -1,4 +1,4 @@
-/*
+ /*
    APEX Alpha - Radio Telemetry Test with 2 Output Pins
    
    ****DANIEL SAUL*****
@@ -12,11 +12,18 @@
 
 void setup()
 {
+  
+pinMode(5,OUTPUT);
+pinMode(6,OUTPUT);
+  
 }
 
 void loop()
 {
-    rtty_tx("a very long test string");
+    rtty_tx("a very long test string \n");
+    delay(2000);
+   //  digitalWrite(5,HIGH);
+   //   digitalWrite(6,LOW);
 }
 
 void rtty_tx(char * sentence)
@@ -65,13 +72,13 @@ void rtty_bit(int b)
 {
     if(b)
     {   // if high
-        digitalWrite(5,HIGH);
-        digitalWrite(6,LOW);
+        digitalWrite(6,HIGH);
+        digitalWrite(5,LOW);
     }
     else
     {   // if low
-        digitalWrite(5,LOW);
-        digitalWrite(6,HIGH);
+        digitalWrite(5,HIGH);
+        digitalWrite(6,LOW);
     } 
 
     delayMicroseconds(3370);
