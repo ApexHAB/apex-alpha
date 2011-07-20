@@ -1,3 +1,16 @@
+/**
+ * This program lists the addresses of all the 
+ * temperature sensors on the OneWire bus.
+ *
+ * Part of the Apex Alpha project
+ * http://www.apexhab.org/alpha/
+ *
+ * Priyesh Patel
+ *
+ * (c) Copyright ApexHAB 2011
+ * team@apexhab.org
+ */
+
 #include <OneWire.h>
 
 // Temperature Chip on pin 2
