@@ -34,7 +34,7 @@ char* Temp::get(uint8_t* addr)
     ds.write(0x44);
 
     // Wait while conversion is in process
-    while(digitalRead(2) == 0) {}
+    while(digitalRead(_pin) == 0) {}
 
     // Read scratchpad
     ds.reset();
