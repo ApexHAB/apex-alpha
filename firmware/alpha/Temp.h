@@ -14,14 +14,16 @@
 #define TEMP_H
 
 #include "WProgram.h"
-
 #include "OneWire.h"
 
 class Temp
 {
     public:
         Temp();
+        void init(int pin);
+        char* get(uint8_t* addr);
     private:
+        int _pin;
 };
 
 #endif
