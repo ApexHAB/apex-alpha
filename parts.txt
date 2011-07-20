@@ -1,5 +1,5 @@
-MICROCHIP - MCP1700T-3302E/TT - IC, V REG, LDO 250MA, SMD, SOT-23-3, OVF 3.3V
-http://uk.farnell.com/microchip/mcp1700t-3302e-tt/ic-v-reg-ldo-250ma-smd-sot-23-3/dp/1296592
+LINEAR TECHNOLOGY - LT1763CS8-3.3#PBF - V REG LDO +3.3V, SMD, SOIC8, 1763
+http://uk.farnell.com/linear-technology/lt1763cs8-3-3-pbf/v-reg-ldo-3-3v-smd-soic8-1763/dp/1273617
 
 HRS (HIROSE) - DM3D-SF - CONNECTOR, MICRO SD, PUSH PULL
 http://uk.farnell.com/hrs-hirose/dm3d-sf/connector-micro-sd-push-pull/dp/1764377?Ntt=1764377
