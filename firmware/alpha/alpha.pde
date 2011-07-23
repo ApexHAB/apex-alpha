@@ -141,5 +141,5 @@ void build_packet()
     strcat(packet,int_temp);
 
     // New line
-    strcat(packet,"\n");
+    strcat(packet,"\r\n");
 }
