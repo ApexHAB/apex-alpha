@@ -21,7 +21,7 @@ void Temp::init(int pin)
     _pin = pin;
 }
 
-char* Temp::get(uint8_t* addr)
+float Temp::get(uint8_t* addr)
 {
     OneWire ds(_pin);
     byte data[9];
@@ -48,22 +48,15 @@ char* Temp::get(uint8_t* addr)
     }
 
     // Form temperature data in float temp
-    float temp;
-    temp = ( (data[1] << 8) + data[0] ) * 0.0625;
+    float temp = ( (data[1] << 8) + data[0] ) * 0.0625;
 
-    // Format the temperature into a string
-    char temp_formatted[10];
-    dtostrf(temp,4,2,temp_formatted);
-    char temp_formatted2[6];
-    sprintf(temp_formatted2,"%s",temp_formatted);
-
-    // Error string
-    char error[4] = "err";
+    // Error temperature
+    float error = 999.99;
 
     // Check CRC8 checksum and then return data
     if(OneWire::crc8(data, 8) == data[8])
     {
-        return temp_formatted2;
+        return temp;
     }
     else
     {

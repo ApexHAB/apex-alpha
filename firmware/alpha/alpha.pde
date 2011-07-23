@@ -31,9 +31,9 @@ Temp temp_sensor;
 Gps gps_receiver;
 
 // Define RTTY protocol
-char sentence_start_marker[3] = "$$";
-char callsign[6] = "ALPHA";
-char field_separator[2] = ",";
+char sentence_start_marker[] = "$$";
+char callsign[] = "ALPHA";
+char field_separator[] = ",";
 uint16_t counter = 0; // To be written to EEPROM later
 
 // Define packet variable
@@ -42,7 +42,7 @@ char packet[200];
 // Define variables for data
 char ext_temp[10];
 char int_temp[10];
-char gps_data[60];
+char gps_data[50];
 
 void setup()
 {
@@ -102,9 +102,13 @@ void loop()
 void get_data()
 {
     // External temperature sensor
-    sprintf(ext_temp,temp_sensor.get(ext_temp_addr));
+    char et[10];
+    dtostrf(temp_sensor.get(ext_temp_addr),4,2,et);
+    sprintf(ext_temp,"%s",et);
     // Internal temperature sensor
-    sprintf(int_temp,temp_sensor.get(int_temp_addr));
+    char it[10];
+    dtostrf(temp_sensor.get(int_temp_addr),4,2,it);
+    sprintf(int_temp,"%s",it);
     // GPS receiver
     sprintf(gps_data,gps_receiver.getData());
 }
@@ -120,7 +124,7 @@ void build_packet()
     strcat(packet,field_separator);
 
     // Tick counter
-    char counter_temp[5];
+    char counter_temp[6];
     sprintf(counter_temp,"%u",counter);
     strcat(packet,counter_temp);
     strcat(packet,field_separator);
@@ -133,7 +137,7 @@ void build_packet()
     strcat(packet,ext_temp);
     strcat(packet,field_separator);
 
-    //// Internal temperature
+    // Internal temperature
     strcat(packet,int_temp);
 
     // New line

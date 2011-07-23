@@ -21,7 +21,7 @@ class Temp
     public:
         Temp();
         void init(int pin);
-        char* get(uint8_t* addr);
+        float get(uint8_t* addr);
     private:
         int _pin;
 };
