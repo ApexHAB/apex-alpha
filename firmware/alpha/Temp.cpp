@@ -52,8 +52,10 @@ char* Temp::get(uint8_t* addr)
     temp = ( (data[1] << 8) + data[0] ) * 0.0625;
 
     // Format the temperature into a string
-    char tempf[10];
-    dtostrf(temp,4,2,tempf);
+    char temp_formatted[10];
+    dtostrf(temp,4,2,temp_formatted);
+    char temp_formatted2[6];
+    sprintf(temp_formatted2,"%s",temp_formatted);
 
     // Error string
     char error[4] = "err";
@@ -61,7 +63,7 @@ char* Temp::get(uint8_t* addr)
     // Check CRC8 checksum and then return data
     if(OneWire::crc8(data, 8) == data[8])
     {
-        return tempf;
+        return temp_formatted2;
     }
     else
     {

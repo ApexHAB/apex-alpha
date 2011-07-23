@@ -10,17 +10,39 @@
  * team@apexhab.org
  */
 
+// Include header files
 #include "Led.h"
 #include "Temp.h"
+#include "Gps.h"
 
+// Define constants [pin numbers]
 #define LED_PIN 13
 #define TEMPERATURE_PIN 2
+#define GPS_RX 3
+#define GPS_TX 4
 
+// Addresses of sensors
 byte ext_temp_addr[8] = {0x28, 0xE1, 0x5D, 0x3E, 0x03, 0x00, 0x00, 0xC0};
 byte int_temp_addr[8] = {0x28, 0x15, 0x8B, 0x51, 0x03, 0x00, 0x00, 0xA6};
 
+// Create instances of classes
 Led status_led;
 Temp temp_sensor;
+Gps gps_receiver;
+
+// Define RTTY protocol
+char sentence_start_marker[3] = "$$";
+char callsign[6] = "ALPHA";
+char field_separator[2] = ",";
+uint16_t counter = 0; // To be written to EEPROM later
+
+// Define packet variable
+char packet[200];
+
+// Define variables for data
+char ext_temp[10];
+char int_temp[10];
+char gps_data[60];
 
 void setup()
 {
@@ -40,8 +62,13 @@ void setup()
     Serial.println("initialised");
 
     // Initialise temperature sensors
-    Serial.print("  - Temperature sensors... ");
+    Serial.print("  - Temperature Sensors... ");
     temp_sensor.init(TEMPERATURE_PIN);
+    Serial.println("initialised");
+
+    // Initialise GPS receiver
+    Serial.print("  - GPS... ");
+    gps_receiver.init(GPS_RX,GPS_TX);
     Serial.println("initialised");
 
     // System initialised and booted
@@ -50,15 +77,65 @@ void setup()
     Serial.println("");
 
     Serial.print("Turning status LED off... ");
-    // Turn status LED off after 1 second
-    status_led.timer(1000, false);
+    // Turn status LED off after 0.5 second
+    status_led.timer(500, false);
     Serial.println("done");
     Serial.println("");
 }
 
 void loop()
 {
-    Serial.println(temp_sensor.get(ext_temp_addr));
-    Serial.println(temp_sensor.get(int_temp_addr));
+    // Increment the counter
+    counter++;
+
+    // Get data from external sensors and devices
+    get_data();
+
+    // Construct the packet
+    build_packet();
+
+    Serial.print(packet);
+    
     delay(1000);
+}
+
+void get_data()
+{
+    // External temperature sensor
+    sprintf(ext_temp,temp_sensor.get(ext_temp_addr));
+    // Internal temperature sensor
+    sprintf(int_temp,temp_sensor.get(int_temp_addr));
+    // GPS receiver
+    sprintf(gps_data,gps_receiver.getData());
+}
+
+void build_packet()
+{
+    // Empty the packet variable
+    sprintf(packet,"");
+
+    // $$ and callsign
+    strcat(packet,sentence_start_marker);
+    strcat(packet,callsign);
+    strcat(packet,field_separator);
+
+    // Tick counter
+    char counter_temp[5];
+    sprintf(counter_temp,"%u",counter);
+    strcat(packet,counter_temp);
+    strcat(packet,field_separator);
+
+    // GPS string
+    strcat(packet,gps_data);
+    strcat(packet,field_separator);
+
+    // External temperature
+    strcat(packet,ext_temp);
+    strcat(packet,field_separator);
+
+    //// Internal temperature
+    strcat(packet,int_temp);
+
+    // New line
+    strcat(packet,"\n");
 }
