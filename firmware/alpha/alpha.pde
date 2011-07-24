@@ -15,13 +15,16 @@
 #include "Temp.h"
 #include "Gps.h"
 #include "Counter.h"
-#include "util/crc16.h"
+#include "Rtty.h"
 
 // Define constants [pin numbers]
 #define LED_PIN 13
 #define TEMPERATURE_PIN 2
 #define GPS_RX 3
 #define GPS_TX 4
+#define TX_1 5
+#define TX_0 6
+#define NTX2_EN 7
 
 // Addresses of sensors
 byte ext_temp_addr[8] = {0x28, 0xE1, 0x5D, 0x3E, 0x03, 0x00, 0x00, 0xC0};
@@ -32,6 +35,7 @@ Led status_led;
 Temp temp_sensor;
 Gps gps_receiver;
 Counter tick_counter;
+Rtty radio;
 
 // Define RTTY protocol
 char sentence_delimiter[] = "$$";
@@ -78,6 +82,11 @@ void setup()
     gps_receiver.init(GPS_RX,GPS_TX);
     Serial.println("initialised");
 
+    // Initialise radio module
+    Serial.print("  - Radio Module... ");
+    radio.init(TX_1,TX_0,NTX2_EN);
+    Serial.println("initialised");
+
     // System initialised and booted
     Serial.println("");
     Serial.println("Apex Alpha successfully booted");
@@ -101,11 +110,29 @@ void loop()
     // Construct the packet
     build_packet();
 
+    // Store sent packet and prepare packet
+    char packet_sent[220];
+    strcpy(packet_sent,radio.prepare(packet));
+
     // Send the packet with RTTY
-    Serial.print(packet); // Temporary
+    // @ 300 baud - preamble then 3 times
+    radio.set_baud(300);
+    radio.preamble();
+    radio.tx();
+    radio.tx();
+    radio.tx();
+    // @ 50 baud - preamble then 2 times
+    radio.set_baud(50);
+    radio.preamble();
+    radio.tx();
+    radio.tx();
+    
+    // Print packet to serial
+    Serial.print(packet_sent);
 
     // Delay until the next packet
-    delay(2000);
+    // This window is also for UART commands to be entered in
+    delay(8000);
 
     // Check for any inputted UART commands
     uart_commands();
@@ -157,15 +184,6 @@ void build_packet()
 
     // Internal temperature
     strcat(packet,int_temp);
-
-    // Checksum (CRC16_CCITT) (Preceded by an asterisk)
-    uint16_t checksum = CRC16_CCITT_checksum(packet);
-    char checksum_string[6];
-    sprintf(checksum_string,"*%04X",checksum);
-    strcat(packet,checksum_string);
-
-    // New line
-    strcat(packet,"\r\n");
 }
 
 /**
@@ -203,25 +221,4 @@ void uart_commands_parse(char* cmd)
     {
         tick_counter.reset();
     }
-}
-
-/**
- * Form CRC16_CCITT checksum
- */
-uint16_t CRC16_CCITT_checksum (char* sentence)
-{
-    size_t i;
-    uint16_t crc;
-    uint8_t c;
-
-    crc = 0xFFFF;
-
-    // Skip the $$ at the beginning
-    for (i=2; i<strlen(sentence); i++)
-    {
-        c = sentence[i];
-        crc = _crc_xmodem_update(crc, c);
-    }
-
-    return crc;
 }
