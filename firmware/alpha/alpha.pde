@@ -34,9 +34,9 @@ Gps gps_receiver;
 Counter tick_counter;
 
 // Define RTTY protocol
-char sentence_start_marker[] = "$$";
+char sentence_delimiter[] = "$$";
 char callsign[] = "ALPHA";
-char field_separator[] = ",";
+char field_delimiter[] = ",";
 
 // Define packet variable
 char packet[200];
@@ -137,23 +137,23 @@ void build_packet()
     sprintf(packet,"");
 
     // $$ and callsign
-    strcat(packet,sentence_start_marker);
+    strcat(packet,sentence_delimiter);
     strcat(packet,callsign);
-    strcat(packet,field_separator);
+    strcat(packet,field_delimiter);
 
     // Tick counter
     char counter_temp[6];
     sprintf(counter_temp,"%u",tick_counter.get());
     strcat(packet,counter_temp);
-    strcat(packet,field_separator);
+    strcat(packet,field_delimiter);
 
     // GPS string
     strcat(packet,gps_data);
-    strcat(packet,field_separator);
+    strcat(packet,field_delimiter);
 
     // External temperature
     strcat(packet,ext_temp);
-    strcat(packet,field_separator);
+    strcat(packet,field_delimiter);
 
     // Internal temperature
     strcat(packet,int_temp);
