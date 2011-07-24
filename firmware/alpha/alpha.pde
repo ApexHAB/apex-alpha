@@ -158,7 +158,7 @@ void build_packet()
     // Internal temperature
     strcat(packet,int_temp);
 
-    // Checksum (CRC16_CCITT)
+    // Checksum (CRC16_CCITT) (Preceded by an asterisk)
     uint16_t checksum = CRC16_CCITT_checksum(packet);
     char checksum_string[6];
     sprintf(checksum_string,"*%04X",checksum);
@@ -175,6 +175,7 @@ void uart_commands()
 {
     if(Serial.available() >= 4)
     {
+        // A $ signifies the start of a 3 character command
         while((Serial.available() > 0) && (Serial.read() != '$')) {}
 
         if(Serial.available() >= 3)
@@ -215,6 +216,7 @@ uint16_t CRC16_CCITT_checksum (char* sentence)
 
     crc = 0xFFFF;
 
+    // Skip the $$ at the beginning
     for (i=2; i<strlen(sentence); i++)
     {
         c = sentence[i];
