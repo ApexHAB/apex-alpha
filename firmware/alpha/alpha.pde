@@ -15,6 +15,7 @@
 #include "Temp.h"
 #include "Gps.h"
 #include "Counter.h"
+#include "util/crc16.h"
 
 // Define constants [pin numbers]
 #define LED_PIN 13
@@ -110,6 +111,9 @@ void loop()
     uart_commands();
 }
 
+/**
+ * Get data from external sensors and receivers
+ */
 void get_data()
 {
     // External temperature sensor
@@ -124,6 +128,9 @@ void get_data()
     sprintf(gps_data,gps_receiver.getData());
 }
 
+/**
+ * Build the packet
+ */
 void build_packet()
 {
     // Empty the packet variable
@@ -151,10 +158,19 @@ void build_packet()
     // Internal temperature
     strcat(packet,int_temp);
 
+    // Checksum (CRC16_CCITT)
+    uint16_t checksum = CRC16_CCITT_checksum(packet);
+    char checksum_string[6];
+    sprintf(checksum_string,"*%04X",checksum);
+    strcat(packet,checksum_string);
+
     // New line
     strcat(packet,"\r\n");
 }
 
+/**
+ * Check for any commands via UART 
+ */
 void uart_commands()
 {
     if(Serial.available() >= 4)
@@ -177,10 +193,33 @@ void uart_commands()
     Serial.flush();
 }
 
+/**
+ * Parse UART command 
+ */
 void uart_commands_parse(char* cmd)
 {
     if(strcmp(cmd,"RTC") == 0)
     {
         tick_counter.reset();
     }
+}
+
+/**
+ * Form CRC16_CCITT checksum
+ */
+uint16_t CRC16_CCITT_checksum (char* sentence)
+{
+    size_t i;
+    uint16_t crc;
+    uint8_t c;
+
+    crc = 0xFFFF;
+
+    for (i=2; i<strlen(sentence); i++)
+    {
+        c = sentence[i];
+        crc = _crc_xmodem_update(crc, c);
+    }
+
+    return crc;
 }
