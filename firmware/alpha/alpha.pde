@@ -14,6 +14,7 @@
 #include "Led.h"
 #include "Temp.h"
 #include "Gps.h"
+#include "Counter.h"
 
 // Define constants [pin numbers]
 #define LED_PIN 13
@@ -29,12 +30,12 @@ byte int_temp_addr[8] = {0x28, 0x15, 0x8B, 0x51, 0x03, 0x00, 0x00, 0xA6};
 Led status_led;
 Temp temp_sensor;
 Gps gps_receiver;
+Counter tick_counter;
 
 // Define RTTY protocol
 char sentence_start_marker[] = "$$";
 char callsign[] = "ALPHA";
 char field_separator[] = ",";
-uint16_t counter = 0; // To be written to EEPROM later
 
 // Define packet variable
 char packet[200];
@@ -59,6 +60,11 @@ void setup()
     Serial.print("  - Status LED... ");
     status_led.init(LED_PIN);
     status_led.on();
+    Serial.println("initialised");
+
+    // Initialise tick counter
+    Serial.print("  - Counter... ");
+    tick_counter.init();
     Serial.println("initialised");
 
     // Initialise temperature sensors
@@ -86,7 +92,7 @@ void setup()
 void loop()
 {
     // Increment the counter
-    counter++;
+    tick_counter.inc();
 
     // Get data from external sensors and devices
     get_data();
@@ -94,9 +100,14 @@ void loop()
     // Construct the packet
     build_packet();
 
-    Serial.print(packet);
-    
-    delay(1000);
+    // Send the packet with RTTY
+    Serial.print(packet); // Temporary
+
+    // Delay until the next packet
+    delay(2000);
+
+    // Check for any inputted UART commands
+    uart_commands();
 }
 
 void get_data()
@@ -125,7 +136,7 @@ void build_packet()
 
     // Tick counter
     char counter_temp[6];
-    sprintf(counter_temp,"%u",counter);
+    sprintf(counter_temp,"%u",tick_counter.get());
     strcat(packet,counter_temp);
     strcat(packet,field_separator);
 
@@ -142,4 +153,34 @@ void build_packet()
 
     // New line
     strcat(packet,"\r\n");
+}
+
+void uart_commands()
+{
+    if(Serial.available() >= 4)
+    {
+        while((Serial.available() > 0) && (Serial.read() != '$')) {}
+
+        if(Serial.available() >= 3)
+        {
+            char data[4];
+            for(int i=0; i<3; i++)
+            {
+                data[i] = Serial.read();
+            }
+            data[3] = 0;
+            
+            uart_commands_parse(data);
+        }
+    }
+
+    Serial.flush();
+}
+
+void uart_commands_parse(char* cmd)
+{
+    if(strcmp(cmd,"RTC") == 0)
+    {
+        tick_counter.reset();
+    }
 }
