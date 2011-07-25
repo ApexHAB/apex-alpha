@@ -17,6 +17,8 @@
 #include "Counter.h"
 #include "Rtty.h"
 
+#include "SD.h"
+
 // Define constants [pin numbers]
 #define LED_PIN 13
 #define TEMPERATURE_PIN 2
@@ -25,6 +27,9 @@
 #define TX_1 5
 #define TX_0 6
 #define NTX2_EN 7
+#define SD_CS 10
+
+#define LOG_FILENAME "alpha.log"
 
 // Addresses of sensors
 byte ext_temp_addr[8] = {0x28, 0xE1, 0x5D, 0x3E, 0x03, 0x00, 0x00, 0xC0};
@@ -87,6 +92,11 @@ void setup()
     radio.init(TX_1,TX_0,NTX2_EN);
     Serial.println("initialised");
 
+    // Initialise SD card
+    Serial.print("  - SD Card... ");
+    sd_card_init(SD_CS);
+    Serial.println("initialised");
+
     // System initialised and booted
     Serial.println("");
     Serial.println("Apex Alpha successfully booted");
@@ -127,6 +137,9 @@ void loop()
     radio.tx();
     radio.tx();
     
+    // Write packet to SD card
+    sd_card_write(packet_sent);
+
     // Print packet to serial
     Serial.print(packet_sent);
 
@@ -220,5 +233,29 @@ void uart_commands_parse(char* cmd)
     if(strcmp(cmd,"RTC") == 0)
     {
         tick_counter.reset();
+    }
+}
+
+void sd_card_init(int cspin)
+{
+    pinMode(SD_CS,OUTPUT);
+}
+
+void sd_card_write(char* sentence)
+{
+    if(!SD.begin(SD_CS))
+    {
+        return;
+    }
+    else
+    {
+        File logFile;
+        logFile = SD.open(LOG_FILENAME,FILE_WRITE);
+
+        if(logFile)
+        {
+            logFile.println(sentence);
+            logFile.close();
+        }
     }
 }
