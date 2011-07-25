@@ -17,8 +17,6 @@
 #include "Counter.h"
 #include "Rtty.h"
 
-#include "SD.h"
-
 // Define constants [pin numbers]
 #define LED_PIN 13
 #define TEMPERATURE_PIN 2
@@ -94,7 +92,7 @@ void setup()
 
     // Initialise SD card
     Serial.print("  - SD Card... ");
-    sd_card_init(SD_CS);
+    //
     Serial.println("initialised");
 
     // System initialised and booted
@@ -124,6 +122,8 @@ void loop()
     char packet_sent[220];
     strcpy(packet_sent,radio.prepare(packet));
 
+    Serial.print("Telemetry started... ");
+
     // Send the packet with RTTY
     // @ 300 baud - preamble then 3 times
     radio.set_baud(300);
@@ -136,9 +136,11 @@ void loop()
     radio.preamble();
     radio.tx();
     radio.tx();
+
+    Serial.println("finished");
     
     // Write packet to SD card
-    sd_card_write(packet_sent);
+    //
 
     // Print packet to serial
     Serial.print(packet_sent);
@@ -233,29 +235,5 @@ void uart_commands_parse(char* cmd)
     if(strcmp(cmd,"RTC") == 0)
     {
         tick_counter.reset();
-    }
-}
-
-void sd_card_init(int cspin)
-{
-    pinMode(SD_CS,OUTPUT);
-}
-
-void sd_card_write(char* sentence)
-{
-    if(!SD.begin(SD_CS))
-    {
-        return;
-    }
-    else
-    {
-        File logFile;
-        logFile = SD.open(LOG_FILENAME,FILE_WRITE);
-
-        if(logFile)
-        {
-            logFile.println(sentence);
-            logFile.close();
-        }
     }
 }
