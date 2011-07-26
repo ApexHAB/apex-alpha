@@ -16,6 +16,7 @@
 #include "Gps.h"
 #include "Counter.h"
 #include "Rtty.h"
+#include "SdLogger.h"
 
 // Define constants [pin numbers]
 #define LED_PIN 13
@@ -25,9 +26,8 @@
 #define TX_1 5
 #define TX_0 6
 #define NTX2_EN 7
-#define SD_CS 10
 
-#define LOG_FILENAME "alpha.log"
+#define LOG_FILENAME "ALPHA.LOG"
 
 // Addresses of sensors
 byte ext_temp_addr[8] = {0x28, 0xE1, 0x5D, 0x3E, 0x03, 0x00, 0x00, 0xC0};
@@ -39,6 +39,7 @@ Temp temp_sensor;
 Gps gps_receiver;
 Counter tick_counter;
 Rtty radio;
+SdLogger sdcard;
 
 // Define RTTY protocol
 char sentence_delimiter[] = "$$";
@@ -92,7 +93,7 @@ void setup()
 
     // Initialise SD card
     Serial.print("  - SD Card... ");
-    //
+    sdcard.init(LOG_FILENAME);
     Serial.println("initialised");
 
     // System initialised and booted
@@ -122,6 +123,13 @@ void loop()
     char packet_sent[220];
     strcpy(packet_sent,radio.prepare(packet));
 
+    // Print packet to serial
+    Serial.print(packet_sent);
+
+    // Write packet to SD card
+    sdcard.log(packet_sent);
+
+    // Telemetry
     Serial.print("Telemetry started... ");
 
     // Send the packet with RTTY
@@ -139,12 +147,6 @@ void loop()
 
     Serial.println("finished");
     
-    // Write packet to SD card
-    //
-
-    // Print packet to serial
-    Serial.print(packet_sent);
-
     // Delay until the next packet
     // This window is also for UART commands to be entered in
     delay(8000);
