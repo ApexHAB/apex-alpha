@@ -46,12 +46,18 @@ char* Rtty::prepare(char* sentence)
 
 void Rtty::tx()
 {
+    // Disable interrupts
+    noInterrupts();
+
     int i=0;
     while(_sentence[i] != 0)
     {
         _tx_byte(_sentence[i]);
         i++;
     }
+
+    // Re-enable interrupts
+    interrupts();
 }
 
 void Rtty::set_baud(int baud)
@@ -66,8 +72,10 @@ int Rtty::get_baud()
 
 void Rtty::preamble()
 {
-    char sentence[15] = "UUUUUUUUUUUU";
-    strcat(sentence,"\r\n");
+    char sentence[15] = "UUUUUUUUUUUU\r\n";
+
+    // Disable interrupts
+    noInterrupts();
 
     int i=0;
     while(sentence[i] != 0)
@@ -75,6 +83,9 @@ void Rtty::preamble()
         _tx_byte(sentence[i]);
         i++;
     }
+
+    // Re-enable interrupts
+    interrupts();
 }
 
 void Rtty::_tx_byte(char c)

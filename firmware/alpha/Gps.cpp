@@ -37,7 +37,7 @@ char* Gps::getData()
     bool correctNmeaType = false;
 
     // The NMEA sentence type needed
-    char NmeaType[6] = "GPGGA";
+    char nmeaType[6] = "GPGGA";
 
     // While the current sentence type is not needed sentence type
     while(!correctNmeaType)
@@ -58,23 +58,15 @@ char* Gps::getData()
             serbuf[i] = gps.read();
         }
 
-        correctNmeaType = true;
-
         // Compare buffer with the specified NMEA type
         // above and put the result in 'matches'
-        for (int i=0; i<5; i++)
-        {
-            if(NmeaType[i] != serbuf[i])
-            {
-                correctNmeaType = false;
-            }
-        }
+        if((strncmp(nmeaType,serbuf,5) == 0) && (strlen(serbuf) >= 5)) correctNmeaType = true;
     }
 
     // Create a char array to contain the rest of the sentence
     char data[100] = "";
     data[0] = 0;
-    int i = 1;
+    uint8_t i = 1;
 
     // Place the rest of the sentence (upto the CR) into a buffer
     while(data[i-1] != 13)

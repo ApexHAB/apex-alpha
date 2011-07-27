@@ -31,7 +31,7 @@ class Rtty
         int _tx0_pin;
         int _en_pin;
         int _baud;
-        char _sentence[220];
+        char _sentence[200];
         void _tx_byte(char c);
         void _tx_bit(int b);
         uint16_t _crc16_ccitt_checksum(char* sentence);

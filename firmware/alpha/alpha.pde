@@ -49,10 +49,9 @@ char field_delimiter[] = ",";
 // Define packet variable
 char packet[200];
 
-// Define variables for data
+// Temperature variables
 char ext_temp[10];
 char int_temp[10];
-char gps_data[50];
 
 void setup()
 {
@@ -113,21 +112,17 @@ void loop()
     // Increment the counter
     tick_counter.inc();
 
-    // Get data from external sensors and devices
-    get_data();
-
-    // Construct the packet
+    // Get data from external sensors and devices and then construct the packet
     build_packet();
 
     // Store sent packet and prepare packet
-    char packet_sent[220];
-    strcpy(packet_sent,radio.prepare(packet));
+    strcpy(packet,radio.prepare(packet));
 
     // Print packet to serial
-    Serial.print(packet_sent);
+    Serial.print(packet);
 
     // Write packet to SD card
-    sdcard.log(packet_sent);
+    sdcard.log(packet); 
 
     // Telemetry
     Serial.print("Telemetry started... ");
@@ -154,53 +149,25 @@ void loop()
     // Check for any inputted UART commands
     uart_commands();
 }
-
-/**
- * Get data from external sensors and receivers
- */
-void get_data()
-{
-    // External temperature sensor
-    char et[10];
-    dtostrf(temp_sensor.get(ext_temp_addr),4,2,et);
-    sprintf(ext_temp,"%s",et);
-    // Internal temperature sensor
-    char it[10];
-    dtostrf(temp_sensor.get(int_temp_addr),4,2,it);
-    sprintf(int_temp,"%s",it);
-    // GPS receiver
-    sprintf(gps_data,gps_receiver.getData());
-}
-
 /**
  * Build the packet
  */
 void build_packet()
 {
-    // Empty the packet variable
-    sprintf(packet,"");
-
-    // $$ and callsign
-    strcat(packet,sentence_delimiter);
-    strcat(packet,callsign);
-    strcat(packet,field_delimiter);
-
-    // Tick counter
-    char counter_temp[6];
-    sprintf(counter_temp,"%u",tick_counter.get());
-    strcat(packet,counter_temp);
-    strcat(packet,field_delimiter);
+    // Empty the packet and insert $$, callsign and tick counter
+    sprintf(packet,"%s%s%s%u%s",sentence_delimiter,callsign,field_delimiter,tick_counter.get(),field_delimiter);
 
     // GPS string
-    strcat(packet,gps_data);
-    strcat(packet,field_delimiter);
+    sprintf(packet + strlen(packet),"%s%s",gps_receiver.getData(),field_delimiter);
 
-    // External temperature
-    strcat(packet,ext_temp);
-    strcat(packet,field_delimiter);
-
-    // Internal temperature
-    strcat(packet,int_temp);
+    // External temperature sensor
+    char et[10];
+    dtostrf(temp_sensor.get(ext_temp_addr),4,2,et);
+    // Internal temperature sensor
+    char it[10];
+    dtostrf(temp_sensor.get(int_temp_addr),4,2,it);
+    // Temperature
+    sprintf(packet + strlen(packet),"%s%s%s",et,field_delimiter,it);
 }
 
 /**
