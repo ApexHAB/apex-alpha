@@ -119,7 +119,7 @@ void loop()
     build_packet();
 
     // Store sent packet and prepare packet
-    strcpy(packet,radio.prepare(packet));
+    sprintf(packet,radio.prepare(packet));
 
     // Print packet to serial
     Serial.print(packet);
