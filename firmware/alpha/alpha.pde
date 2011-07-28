@@ -17,6 +17,7 @@
 #include "Counter.h"
 #include "Rtty.h"
 #include "SdLogger.h"
+#include "Battery.h"
 
 // Define constants [pin numbers]
 #define LED_PIN 13
@@ -26,6 +27,7 @@
 #define TX_1 5
 #define TX_0 6
 #define NTX2_EN 7
+#define BATT_PIN 0
 
 #define LOG_FILENAME "ALPHA.LOG"
 
@@ -40,11 +42,7 @@ Gps gps_receiver;
 Counter tick_counter;
 Rtty radio;
 SdLogger sdcard;
-
-// Define RTTY protocol
-char sentence_delimiter[] = "$$";
-char callsign[] = "ALPHA";
-char field_delimiter[] = ",";
+Battery batt;
 
 // Define packet variable
 char packet[200];
@@ -88,6 +86,11 @@ void setup()
     // Initialise radio module
     Serial.print("  - Radio Module... ");
     radio.init(TX_1,TX_0,NTX2_EN);
+    Serial.println("initialised");
+
+    // Initialise battery sensor
+    Serial.print("  - Battery Sensor... ");
+    batt.init(BATT_PIN);
     Serial.println("initialised");
 
     // Initialise SD card
@@ -154,20 +157,15 @@ void loop()
  */
 void build_packet()
 {
-    // Empty the packet and insert $$, callsign and tick counter
-    sprintf(packet,"%s%s%s%u%s",sentence_delimiter,callsign,field_delimiter,tick_counter.get(),field_delimiter);
-
-    // GPS string
-    sprintf(packet + strlen(packet),"%s%s",gps_receiver.getData(),field_delimiter);
-
     // External temperature sensor
     char et[10];
     dtostrf(temp_sensor.get(ext_temp_addr),4,2,et);
     // Internal temperature sensor
     char it[10];
     dtostrf(temp_sensor.get(int_temp_addr),4,2,it);
-    // Temperature
-    sprintf(packet + strlen(packet),"%s%s%s",et,field_delimiter,it);
+
+    // Build the packet
+    sprintf(packet,"$$ALPHA,%u,%s,%s,%s",tick_counter.get(),gps_receiver.getData(),et,it);
 }
 
 /**

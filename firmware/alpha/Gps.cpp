@@ -80,7 +80,7 @@ char* Gps::getData()
     char parsed[50]; 
 
     // Check for GPS Fix
-    if(data[37] == '1' || data[37] == '2')
+    if(data[37] != '0')
     {
         // Parse data
         char hours[3];
