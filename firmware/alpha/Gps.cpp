@@ -76,12 +76,12 @@ char* Gps::getData()
         i++;
     }
 
-    // Create a char array for the parsed data
-    char parsed[50]; 
-
     // Check for GPS Fix
     if(data[37] != '0')
     {
+        // Create a char array for the parsed data
+        char parsed[50]; 
+
         // Parse data
         char hours[3];
         hours[0] = data[2];
