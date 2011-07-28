@@ -25,6 +25,7 @@ class Gps
     private:
         int _rxpin;
         int _txpin;
+        void _strCopy(char* str, char* dest, int pos, int len);
 };
 
 #endif

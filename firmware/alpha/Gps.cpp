@@ -77,107 +77,30 @@ char* Gps::getData()
     }
 
     // Check for GPS Fix
-    if(data[37] != '0')
+    if(data[37] == '1' || data[37] == '2')
     {
         // Create a char array for the parsed data
         char parsed[50]; 
+        sprintf(parsed,"");
 
         // Parse data
-        char hours[3];
-        hours[0] = data[2];
-        hours[1] = data[3];
-        hours[2] = 0;
-
-        char minutes[3];
-        minutes[0] = data[4];
-        minutes[1] = data[5];
-        minutes[2] = 0;
-
-        char seconds[3];
-        seconds[0] = data[6];
-        seconds[1] = data[7];
-        seconds[2] = 0;
-
-        char latitude[10];
-        latitude[0] = data[12];
-        latitude[1] = data[13];
-        latitude[2] = data[14];
-        latitude[3] = data[15];
-        latitude[4] = '.';
-        latitude[5] = data[17];
-        latitude[6] = data[18];
-        latitude[7] = data[19];
-        latitude[8] = data[20];
-        latitude[9] = 0;
-
-        // Prepend a '-' if the latitude is 'S'
-        char latitude_ns[2];
-        if(data[22] == 'S')
-        {
-            latitude_ns[0] = '-';
-        }
-        else
-        {
-            latitude_ns[0] = 0;
-        }
-        latitude_ns[1] = 0;
-
-        char longitude[11];
-        longitude[0] = data[24];
-        longitude[1] = data[25];
-        longitude[2] = data[26];
-        longitude[3] = data[27];
-        longitude[4] = data[28];
-        longitude[5] = '.';
-        longitude[6] = data[30];
-        longitude[7] = data[31];
-        longitude[8] = data[32];
-        longitude[9] = data[33];
-        longitude[10] = 0;
-
-        // Prepend a '-' if the longitude is 'W'
-        char longitude_ew[2];
-        if(data[35] == 'W')
-        {
-            longitude_ew[0] = '-';
-        }
-        else
-        {
-            longitude_ew[0] = 0;
-        }
-        longitude_ew[1] = 0;
-
-        char satellites[3];
-        satellites[0] = data[39];
-        satellites[1] = data[40];
-        satellites[2] = 0;
-
-        char altitude[6];
-        altitude[0] = data[47];
-        altitude[1] = data[48];
-        altitude[2] = data[49];
-        altitude[3] = data[50];
-        altitude[4] = data[51];
-        altitude[5] = 0;
-
-        // Place the data into a formatted character array with 
-        // each field separated by a ','
-        sprintf(parsed,"");
-        strcat(parsed,hours);
+        _strCopy(data,parsed+strlen(parsed),2,2);
         strcat(parsed,":");
-        strcat(parsed,minutes);
+        _strCopy(data,parsed+strlen(parsed),4,2);
         strcat(parsed,":");
-        strcat(parsed,seconds);
+        _strCopy(data,parsed+strlen(parsed),6,2);
         strcat(parsed,",");
-        strcat(parsed,latitude_ns);
-        strcat(parsed,latitude);
+        // Prepend a '-' if the latitude is S
+        if(data[22] == 'S') strcat(parsed,"-");
+        _strCopy(data,parsed+strlen(parsed),12,9);
         strcat(parsed,",");
-        strcat(parsed,longitude_ew);
-        strcat(parsed,longitude);
+        // Prepend a '-' if the longitude is W
+        if(data[35] == 'W') strcat(parsed,"-");
+        _strCopy(data,parsed+strlen(parsed),24,10);
         strcat(parsed,",");
-        strcat(parsed,altitude);
+        _strCopy(data,parsed+strlen(parsed),47,5);
         strcat(parsed,",");
-        strcat(parsed,satellites);
+        _strCopy(data,parsed+strlen(parsed),39,2);
 
         // Return the parsed data
         return parsed;
@@ -190,4 +113,16 @@ char* Gps::getData()
 
     // End the software serial session to the GPS
     gps.end();
+}
+
+void Gps::_strCopy(char* str, char* dest, int pos, int len)
+{
+    while(len > 0)
+    {
+        *(dest) = *(str + pos);
+        dest++;
+        str++;
+        len--;
+    }
+    *dest = '\0';
 }
