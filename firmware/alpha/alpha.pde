@@ -11,7 +11,6 @@
  */
 
 // Include header files
-#include "Led.h"
 #include "Temp.h"
 #include "Gps.h"
 #include "Counter.h"
@@ -20,7 +19,7 @@
 #include "Battery.h"
 
 // Define constants [pin numbers]
-#define LED_PIN 13
+#define STATUS_LED_PIN 13
 #define TEMPERATURE_PIN 2
 #define GPS_RX 3
 #define GPS_TX 4
@@ -36,7 +35,6 @@ byte ext_temp_addr[8] = {0x28, 0xE1, 0x5D, 0x3E, 0x03, 0x00, 0x00, 0xC0};
 byte int_temp_addr[8] = {0x28, 0x15, 0x8B, 0x51, 0x03, 0x00, 0x00, 0xA6};
 
 // Create instances of classes
-Led status_led;
 Temp temp_sensor;
 Gps gps_receiver;
 Counter tick_counter;
@@ -63,10 +61,8 @@ void setup()
     Serial.println("Initialising:");
 
     // Initialise status LED and then turn it on
-    Serial.print("  - Status LED... ");
-    status_led.init(LED_PIN);
-    status_led.on();
-    Serial.println("initialised");
+    pinMode(STATUS_LED_PIN,OUTPUT);
+    digitalWrite(STATUS_LED_PIN,HIGH);
 
     // Initialise tick counter
     Serial.print("  - Counter... ");
@@ -103,10 +99,10 @@ void setup()
     Serial.println("Apex Alpha successfully booted");
     Serial.println("");
 
-    Serial.print("Turning status LED off... ");
-    // Turn status LED off after 0.5 second
-    status_led.timer(500, false);
-    Serial.println("done");
+    // Turn status LED off
+    digitalWrite(STATUS_LED_PIN,LOW);
+
+    // Blank line to serial
     Serial.println("");
 }
 
@@ -129,7 +125,7 @@ void loop()
 
     // Telemetry
     Serial.print("Telemetry started... ");
-    status_led.on();
+    digitalWrite(STATUS_LED_PIN,HIGH);
 
     // Send the packet with RTTY
     // @ 300 baud - preamble then 3 times
@@ -144,8 +140,8 @@ void loop()
     radio.tx();
     radio.tx();
 
-    status_led.off();
     Serial.println("finished");
+    digitalWrite(STATUS_LED_PIN,LOW);
     
     // Delay until the next packet
     // This window is also for UART commands to be entered in
