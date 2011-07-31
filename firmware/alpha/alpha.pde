@@ -129,6 +129,7 @@ void loop()
 
     // Telemetry
     Serial.print("Telemetry started... ");
+    status_led.on();
 
     // Send the packet with RTTY
     // @ 300 baud - preamble then 3 times
@@ -143,6 +144,7 @@ void loop()
     radio.tx();
     radio.tx();
 
+    status_led.off();
     Serial.println("finished");
     
     // Delay until the next packet
