@@ -1,5 +1,5 @@
 /**
- * rtty.c
+ * rtty.cpp
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -23,7 +23,7 @@ void rtty_init()
 
 char* rtty_prepare(char* sentence)
 {
-    uint16_t checksum = _crc16_ccitt_checksum(_sentence);
+    uint16_t checksum = rtty_crc16_ccitt_checksum(sentence);
 
     char checksum_string[6];
     sprintf(checksum_string,"*%04X",checksum);
@@ -50,7 +50,7 @@ void rtty_tx(char* sentence, int baud)
     interrupts();
 }
 
-void Rtty::preamble(int baud)
+void rtty_preamble(int baud)
 {
     char sentence[15] = "UUUUUUUUUUUU\r\n";
 

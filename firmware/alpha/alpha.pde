@@ -11,24 +11,15 @@
  */
 
 // Include header files
+#include "counter.h"
 #include "temperature.h"
 #include "gps.h"
-#include "counter.h"
 #include "rtty.h"
 #include "sdlogger.h"
 #include "battery.h"
 
-// Define constants [pin numbers]
+// Define constants (other pin numbers are defined in their respective header files
 #define STATUS_LED_PIN 13
-#define TEMPERATURE_PIN 2
-#define GPS_RX 3
-#define GPS_TX 4
-#define TX_1 5
-#define TX_0 6
-#define NTX2_EN 7
-#define BATTERY_PIN 0
-
-#define LOG_FILENAME "ALPHA.LOG"
 
 // Addresses of sensors
 byte ext_temp_addr[8] = {0x28, 0x13, 0xF7, 0x73, 0x03, 0x00, 0x00, 0x2F};
@@ -74,7 +65,7 @@ void loop()
     build_packet();
 
     // Store sent packet and prepare packet
-    sprintf(packet,radio.prepare(packet));
+    sprintf(packet,rtty_prepare(packet));
 
     // Print packet to serial
     Serial.print(packet);
@@ -160,6 +151,6 @@ void uart_commands_parse(char* cmd)
 {
     if(strcmp(cmd,"RTC") == 0)
     {
-        tick_counter.reset();
+        counter_reset();
     }
 }

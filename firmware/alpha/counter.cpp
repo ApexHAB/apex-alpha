@@ -1,5 +1,5 @@
 /**
- * counter.c
+ * counter.cpp
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -27,7 +27,7 @@ void counter_set(uint16_t new_counter)
 
 void counter_inc()
 {
-    counter_set(counter_get + 1);
+    counter_set(counter_get() + 1);
 }
 
 void counter_reset()

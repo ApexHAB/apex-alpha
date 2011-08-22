@@ -23,7 +23,11 @@
 #include "WProgram.h"
 #include "util/crc16.h"
 
-void rtty_init(int tx1_pin, int tx0_pin, int en_pin);
+#define TX_1 5
+#define TX_0 6
+#define NTX2_EN 7
+
+void rtty_init();
 char* rtty_prepare(char* sentence);
 void rtty_tx(char* sentence, int baud);
 void rtty_preamble(int baud);

@@ -15,6 +15,8 @@
 
 #include "WProgram.h"
 
+#define BATTERY_PIN 0
+
 float battery_get_voltage();
 
 #endif

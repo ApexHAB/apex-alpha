@@ -1,5 +1,5 @@
 /**
- * sdlogger.c
+ * sdlogger.cpp
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/

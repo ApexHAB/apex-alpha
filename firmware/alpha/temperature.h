@@ -16,6 +16,8 @@
 #include "WProgram.h"
 #include "OneWire.h"
 
+#define TEMPERATURE_PIN 2
+
 float temperature_get(int pin, uint8_t* addr);
 
 #endif
