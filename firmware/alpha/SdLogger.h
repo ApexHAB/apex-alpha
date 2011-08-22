@@ -1,5 +1,5 @@
 /**
- * SdLogger.h
+ * sdlogger.h
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -17,14 +17,6 @@
 #include "Fat16.h"
 #include "Fat16util.h"
 
-class SdLogger
-{
-    public:
-        SdLogger();
-        void init(char* logFile);
-        void log(char* sentence);
-    private:
-        char _logFile[15];
-};
+void sdlogger_log(char* sentence);
 
 #endif

@@ -1,5 +1,5 @@
 /**
- * Counter.cpp
+ * counter.c
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -10,39 +10,27 @@
  * team@apexhab.org
  */
 
-#include "Counter.h"
+#include "counter.h"
 
-Counter::Counter()
-{
-}
-
-void Counter::init()
-{
-    // To reset the counter (in EEPROM) on init
-    //reset();
-}
-
-uint16_t Counter::get()
+uint16_t counter_get()
 {
     byte lowByte = EEPROM.read(EEPROM_LOW_BYTE);
     byte highByte = EEPROM.read(EEPROM_HIGH_BYTE);
     return ((highByte << 8) | lowByte);
 }
 
-void Counter::set(uint16_t new_counter)
+void counter_set(uint16_t new_counter)
 {
     EEPROM.write(EEPROM_LOW_BYTE, (byte) (0xFF & new_counter));
     EEPROM.write(EEPROM_HIGH_BYTE, (byte) (new_counter >> 8));
 }
 
-void Counter::inc()
+void counter_inc()
 {
-    uint16_t temp_counter = get();
-    temp_counter++;
-    set(temp_counter);
+    counter_set(counter_get + 1);
 }
 
-void Counter::reset()
+void counter_reset()
 {
-    set(0);
+    counter_set(0);
 }

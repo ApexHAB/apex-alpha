@@ -1,5 +1,5 @@
 /**
- * Temp.cpp
+ * temperature.c
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -10,20 +10,11 @@
  * team@apexhab.org
  */
 
-#include "Temp.h"
+#include "temperature.h"
 
-Temp::Temp()
+float temperature_get(int pin, uint8_t* addr)
 {
-}
-
-void Temp::init(int pin)
-{
-    _pin = pin;
-}
-
-float Temp::get(uint8_t* addr)
-{
-    OneWire ds(_pin);
+    OneWire ds(pin);
     byte data[9];
 
     // Reset OneWire and then select specified sensor
@@ -34,7 +25,7 @@ float Temp::get(uint8_t* addr)
     ds.write(0x44);
 
     // Wait while conversion is in process
-    while(digitalRead(_pin) == 0) {}
+    while(digitalRead(pin) == 0) {}
 
     // Read scratchpad
     ds.reset();

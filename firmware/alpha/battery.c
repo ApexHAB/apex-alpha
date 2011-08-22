@@ -1,5 +1,5 @@
 /**
- * Battery.cpp
+ * battery.c
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -10,13 +10,11 @@
  * team@apexhab.org
  */
 
-#include "Battery.h"
+#include "battery.h"
 
-Battery::Battery()
+void battery_get_voltage()
 {
-}
-
-void Battery::init(int pin)
-{
-    _adcPin = pin;
+    // PIN -> BATTERY_PIN
+    float volt = 8.34;
+    return volt;
 }

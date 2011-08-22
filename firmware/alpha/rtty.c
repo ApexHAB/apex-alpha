@@ -1,5 +1,5 @@
 /**
- * Rtty.cpp
+ * rtty.c
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -10,49 +10,39 @@
  * team@apexhab.org
  */
 
-#include "Rtty.h"
+#include "rtty.h"
 
-Rtty::Rtty()
+void rtty_init()
 {
+    pinMode(TX_1,OUTPUT);
+    pinMode(TX_0,OUTPUT);
+    pinMode(NTX2_EN,OUTPUT);
+
+    digitalWrite(NTX2_EN,HIGH);
 }
 
-void Rtty::init(int tx1_pin, int tx0_pin, int en_pin)
+char* rtty_prepare(char* sentence)
 {
-    _tx1_pin = tx1_pin;
-    _tx0_pin = tx0_pin;
-    _en_pin = en_pin;
-
-    pinMode(_tx1_pin,OUTPUT);
-    pinMode(_tx0_pin,OUTPUT);
-    pinMode(_en_pin,OUTPUT);
-
-    digitalWrite(_en_pin,HIGH);
-}
-
-char* Rtty::prepare(char* sentence)
-{
-    strcpy(_sentence,sentence);
-
     uint16_t checksum = _crc16_ccitt_checksum(_sentence);
 
     char checksum_string[6];
     sprintf(checksum_string,"*%04X",checksum);
 
-    strcat(_sentence,checksum_string);
-    strcat(_sentence,"\r\n");
+    strcat(sentence,checksum_string);
+    strcat(sentence,"\r\n");
 
-    return _sentence;
+    return sentence;
 }
 
-void Rtty::tx()
+void rtty_tx(char* sentence, int baud)
 {
     // Disable interrupts
     noInterrupts();
 
     int i=0;
-    while(_sentence[i] != 0)
+    while(sentence[i] != 0)
     {
-        _tx_byte(_sentence[i]);
+        rtty_tx_byte(sentence[i], baud);
         i++;
     }
 
@@ -60,17 +50,7 @@ void Rtty::tx()
     interrupts();
 }
 
-void Rtty::set_baud(int baud)
-{
-    _baud = baud;
-}
-
-int Rtty::get_baud()
-{
-    return _baud;
-}
-
-void Rtty::preamble()
+void Rtty::preamble(int baud)
 {
     char sentence[15] = "UUUUUUUUUUUU\r\n";
 
@@ -80,7 +60,7 @@ void Rtty::preamble()
     int i=0;
     while(sentence[i] != 0)
     {
-        _tx_byte(sentence[i]);
+        rtty_tx_byte(sentence[i], baud);
         i++;
     }
 
@@ -88,64 +68,66 @@ void Rtty::preamble()
     interrupts();
 }
 
-void Rtty::_tx_byte(char c)
+void rtty_tx_byte(char c, int baud)
 {
     // Start bit
-    _tx_bit(0);
+    rtty_tx_bit(0, baud);
 
     // Send byte
     for(int b=0; b<8; b++)
     {
         if(c & 1)
         {
-            _tx_bit(1);
+            rtty_tx_bit(1, baud);
         }
         else
         {
-            _tx_bit(0);
+            rtty_tx_bit(0, baud);
         }
 
         c = c >> 1;
     }
 
     // 2 Stop bits
-    _tx_bit(1);
-    _tx_bit(1);
+    rtty_tx_bit(1, baud);
+    rtty_tx_bit(1, baud);
 }
 
-void Rtty::_tx_bit(int b)
+void rtty_tx_bit(int b, int baud)
 {
     if(b)
     {
         // If HIGH
-        digitalWrite(_tx1_pin,HIGH);
-        digitalWrite(_tx0_pin,LOW);
+        digitalWrite(TX_1,HIGH);
+        digitalWrite(TX_0,LOW);
     }
     else
     {
         // If LOW
-        digitalWrite(_tx1_pin,LOW);
-        digitalWrite(_tx0_pin,HIGH);        
+        digitalWrite(TX_1,LOW);
+        digitalWrite(TX_0,HIGH);        
     }
 
-    if(_baud == 300)
+    if(baud == 1)
     {
+        // 300 baud
         delayMicroseconds(3370);
     }
-    else if(_baud == 50)
+    else if(baud == 0)
     {
+        // 50 baud
         delayMicroseconds(10000);
         delayMicroseconds(10150);
     }
     else
     {
-        // Otherwise 50 baud
+        // Otherwise default to 50 baud
         delayMicroseconds(10000);
         delayMicroseconds(10150);
     }
 }
 
-uint16_t Rtty::_crc16_ccitt_checksum(char* sentence)
+uint16_t rtty_crc16_ccitt_checksum(char* sentence)
 {
     size_t i;
     uint16_t crc;

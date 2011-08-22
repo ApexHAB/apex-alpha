@@ -1,5 +1,5 @@
 /**
- * Gps.cpp
+ * gps.c
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -10,22 +10,12 @@
  * team@apexhab.org
  */
 
-#include "Gps.h"
+#include "gps.h"
 
-Gps::Gps()
-{
-}
-
-void Gps::init(int rxpin, int txpin)
-{
-    _rxpin = rxpin;
-    _txpin = txpin;
-}
-
-char* Gps::getData()
+char* gps_get()
 {
     // Software serial
-    NewSoftSerial gps(_rxpin,_txpin);
+    NewSoftSerial gps(GPS_RX, GPS_TX);
 
     // Begin software serial at 4800 baud
     gps.begin(4800);
@@ -84,23 +74,23 @@ char* Gps::getData()
         sprintf(parsed,"");
 
         // Parse data
-        _strCopy(data,parsed+strlen(parsed),2,2);
+        gps_strCopy(data,parsed+strlen(parsed),2,2);
         strcat(parsed,":");
-        _strCopy(data,parsed+strlen(parsed),4,2);
+        gps_strCopy(data,parsed+strlen(parsed),4,2);
         strcat(parsed,":");
-        _strCopy(data,parsed+strlen(parsed),6,2);
+        gps_strCopy(data,parsed+strlen(parsed),6,2);
         strcat(parsed,",");
         // Prepend a '-' if the latitude is S
         if(data[22] == 'S') strcat(parsed,"-");
-        _strCopy(data,parsed+strlen(parsed),12,9);
+        gps_strCopy(data,parsed+strlen(parsed),12,9);
         strcat(parsed,",");
         // Prepend a '-' if the longitude is W
         if(data[35] == 'W') strcat(parsed,"-");
-        _strCopy(data,parsed+strlen(parsed),24,10);
+        gps_strCopy(data,parsed+strlen(parsed),24,10);
         strcat(parsed,",");
-        _strCopy(data,parsed+strlen(parsed),47,5);
+        gps_strCopy(data,parsed+strlen(parsed),47,5);
         strcat(parsed,",");
-        _strCopy(data,parsed+strlen(parsed),39,2);
+        gps_strCopy(data,parsed+strlen(parsed),39,2);
 
         // Return the parsed data
         return parsed;
@@ -115,7 +105,7 @@ char* Gps::getData()
     gps.end();
 }
 
-void Gps::_strCopy(char* str, char* dest, int pos, int len)
+void gps_strCopy(char* str, char* dest, int pos, int len)
 {
     while(len > 0)
     {

@@ -1,5 +1,5 @@
 /**
- * Battery.h
+ * battery.h
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -15,13 +15,6 @@
 
 #include "WProgram.h"
 
-class Battery
-{
-    public:
-        Battery();
-        void init(int pin);
-    private:
-        int _adcPin;
-};
+float battery_get_voltage();
 
 #endif

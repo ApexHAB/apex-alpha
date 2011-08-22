@@ -1,5 +1,5 @@
 /**
- * Gps.h
+ * gps.h
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -16,16 +16,7 @@
 #include "WProgram.h"
 #include "NewSoftSerial.h"
 
-class Gps
-{
-    public:
-        Gps();
-        void init(int rxpin, int txpin);
-        char* getData();
-    private:
-        int _rxpin;
-        int _txpin;
-        void _strCopy(char* str, char* dest, int pos, int len);
-};
+char* gps_get();
+void gps_strCopy(char* str, char* dest, int pos, int len);
 
 #endif

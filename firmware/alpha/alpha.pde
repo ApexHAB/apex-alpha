@@ -11,12 +11,12 @@
  */
 
 // Include header files
-#include "Temp.h"
-#include "Gps.h"
-#include "Counter.h"
-#include "Rtty.h"
-#include "SdLogger.h"
-#include "Battery.h"
+#include "temperature.h"
+#include "gps.h"
+#include "counter.h"
+#include "rtty.h"
+#include "sdlogger.h"
+#include "battery.h"
 
 // Define constants [pin numbers]
 #define STATUS_LED_PIN 13
@@ -26,7 +26,7 @@
 #define TX_1 5
 #define TX_0 6
 #define NTX2_EN 7
-#define BATT_PIN 0
+#define BATTERY_PIN 0
 
 #define LOG_FILENAME "ALPHA.LOG"
 
@@ -34,67 +34,26 @@
 byte ext_temp_addr[8] = {0x28, 0x13, 0xF7, 0x73, 0x03, 0x00, 0x00, 0x2F};
 byte int_temp_addr[8] = {0x28, 0x35, 0x8C, 0x5E, 0x03, 0x00, 0x00, 0xDB};
 
-// Create instances of classes
-Temp temp_sensor;
-Gps gps_receiver;
-Counter tick_counter;
-Rtty radio;
-SdLogger sdcard;
-Battery batt;
-
 // Define packet variable
 char packet[200];
-
-// Temperature variables
-char ext_temp[10];
-char int_temp[10];
 
 void setup()
 {
     // Setup serial
     Serial.begin(9600);
 
-    Serial.println("/------------------------\\");
-    Serial.println("|       Apex Alpha       |");
-    Serial.println("\\------------------------/");
-    Serial.println("");
-    Serial.println("Initialising:");
+    Serial.println("/------------\\");
+    Serial.println("| Apex Alpha |");
+    Serial.println("\\------------/");
 
     // Initialise status LED and then turn it on
     pinMode(STATUS_LED_PIN,OUTPUT);
     digitalWrite(STATUS_LED_PIN,HIGH);
 
-    // Initialise tick counter
-    Serial.print("  - Counter... ");
-    tick_counter.init();
-    Serial.println("initialised");
-
-    // Initialise temperature sensors
-    Serial.print("  - Temperature Sensors... ");
-    temp_sensor.init(TEMPERATURE_PIN);
-    Serial.println("initialised");
-
-    // Initialise GPS receiver
-    Serial.print("  - GPS... ");
-    gps_receiver.init(GPS_RX,GPS_TX);
-    Serial.println("initialised");
-
     // Initialise radio module
-    Serial.print("  - Radio Module... ");
-    radio.init(TX_1,TX_0,NTX2_EN);
-    Serial.println("initialised");
+    rtty_init();
 
-    // Initialise battery sensor
-    Serial.print("  - Battery Sensor... ");
-    batt.init(BATT_PIN);
-    Serial.println("initialised");
-
-    // Initialise SD card
-    Serial.print("  - SD Card... ");
-    sdcard.init(LOG_FILENAME);
-    Serial.println("initialised");
-
-    // System initialised and booted
+    // System booted
     Serial.println("");
     Serial.println("Apex Alpha successfully booted");
     Serial.println("");
@@ -109,7 +68,7 @@ void setup()
 void loop()
 {
     // Increment the counter
-    tick_counter.inc();
+    counter_inc();
 
     // Get data from external sensors and devices and then construct the packet
     build_packet();
@@ -121,7 +80,7 @@ void loop()
     Serial.print(packet);
 
     // Write packet to SD card
-    sdcard.log(packet); 
+    sdlogger_log(packet); 
 
     // Telemetry
     Serial.print("Telemetry started... ");
@@ -129,16 +88,14 @@ void loop()
 
     // Send the packet with RTTY
     // @ 300 baud - preamble then 3 times
-    radio.set_baud(300);
-    radio.preamble();
-    radio.tx();
-    radio.tx();
-    radio.tx();
+    rtty_preamble(1);
+    rtty_tx(packet, 1);
+    rtty_tx(packet, 1);
+    rtty_tx(packet, 1);
     // @ 50 baud - preamble then 2 times
-    radio.set_baud(50);
-    radio.preamble();
-    radio.tx();
-    radio.tx();
+    rtty_preamble(0);
+    rtty_tx(packet, 0);
+    rtty_tx(packet, 0);
 
     Serial.println("finished");
     //digitalWrite(STATUS_LED_PIN,LOW); // SPI bus is in use
@@ -157,13 +114,17 @@ void build_packet()
 {
     // External temperature sensor
     char et[10];
-    dtostrf(temp_sensor.get(ext_temp_addr),4,2,et);
+    dtostrf(temperature_get(TEMPERATURE_PIN,ext_temp_addr),4,2,et);
     // Internal temperature sensor
     char it[10];
-    dtostrf(temp_sensor.get(int_temp_addr),4,2,it);
+    dtostrf(temperature_get(TEMPERATURE_PIN,int_temp_addr),4,2,it);
+
+    // Battery voltage
+    char bv[10];
+    dtostrf(battery_get_voltage(),4,2,bv);
 
     // Build the packet
-    sprintf(packet,"$$ALPHA,%u,%s,%s,%s",tick_counter.get(),gps_receiver.getData(),et,it);
+    sprintf(packet,"$$ALPHA,%u,%s,%s,%s,%s",counter_get(),gps_get(),et,it,bv);
 }
 
 /**

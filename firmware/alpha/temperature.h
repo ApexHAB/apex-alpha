@@ -1,5 +1,5 @@
 /**
- * Temp.h
+ * temperature.h
  *
  * Part of the Apex Alpha project
  * http://www.apexhab.org/alpha/
@@ -10,20 +10,12 @@
  * team@apexhab.org
  */
 
-#ifndef TEMP_H
-#define TEMP_H
+#ifndef TEMPERATURE_H
+#define TEMPERATURE_H
 
 #include "WProgram.h"
 #include "OneWire.h"
 
-class Temp
-{
-    public:
-        Temp();
-        void init(int pin);
-        float get(uint8_t* addr);
-    private:
-        int _pin;
-};
+float temperature_get(int pin, uint8_t* addr);
 
 #endif
