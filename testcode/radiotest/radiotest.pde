@@ -1,7 +1,7 @@
  /*
    APEX Alpha - Radio Telemetry Test with 2 Output Pins
    
-   ****DANIEL SAUL*****
+   Daniel Saul
    Priyesh Patel
    
    18 July 2011
@@ -12,18 +12,18 @@
 
 void setup()
 {
-  
-pinMode(5,OUTPUT);
-pinMode(6,OUTPUT);
-  
+    pinMode(5,OUTPUT);
+    pinMode(6,OUTPUT);
+
+    // Enable NTX2
+    pinMode(7,OUTPUT);
+    digitalWrite(7,HIGH);
 }
 
 void loop()
 {
-    rtty_tx("a very long test string \n");
+    rtty_tx("$$ALPHA,a,very,long,test,string,is,being,sent,over,rtty!\n");
     delay(2000);
-   //  digitalWrite(5,HIGH);
-   //   digitalWrite(6,LOW);
 }
 
 void rtty_tx(char * sentence)
