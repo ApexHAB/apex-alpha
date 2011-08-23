@@ -1,0 +1,54 @@
+_________________________________
+|    Partlist for Apex Alpha    |
+| ============================= |
+| http://www.apexhab.org/alpha/ |
+|_______________________________|
+
+
+Part              Value               Device                        Package               Library           Sheet
+-----------------------------------------------------------------------------------------------------------------
+1WIRE_PULL_UP     4.7K                R-EU_R0603                    R0603                 rcl               1
+ANLG              ANLG_HEADER         22-27-2091-09                 6410-09               con-molex         1
+ARDUINO-ATMEGA328 ATMEGA328           ATMEGA168-AU                  TQFP32-08             Arduino-AVR       1
+BATT              33K                 R-EU_R0603                    R0603                 rcl               1
+BATT2             22K                 R-EU_R0603                    R0603                 rcl               1
+BATT3             100nF               CAP0805                       0805                  SparkFun          1
+C1                10uF                CAP0805                       0805                  SparkFun          1
+C2                1uF                 CAP0805                       0805                  SparkFun          1
+C3                0.01uF              CAP0805                       0805                  SparkFun          1
+C4                18pF                CAP0805                       0805                  SparkFun          1
+C5                18pF                CAP0805                       0805                  SparkFun          1
+C6                100nF               CAP0805                       0805                  SparkFun          1
+C7                100nF               CAP0805                       0805                  SparkFun          1
+C8                100nF               CAP0805                       0805                  SparkFun          1
+C10               100nF               CAP0805                       0805                  SparkFun          1
+CS_PULL_UP_RES    4.7K                R-EU_R0603                    R0603                 rcl               1
+DGTL              DGTL_HEADER         22-27-2041-04                 6410-04               con-molex         1
+FTDI              FTDI_BASICPTH       FTDI_BASICPTH                 FTDI_BASIC            SparkFun          1
+GPS               LASSEN_IQ_GPSLASSEN LASSEN_IQ_GPSLASSEN           LASSEN_IQ_GPS         SparkFun          1
+GPS_DCPLG         100nF               CAP0805                       0805                  SparkFun          1
+GPS_RES           100K                R-EU_R0603                    R0603                 rcl               1
+GPS_RES1          100K                R-EU_R0603                    R0603                 rcl               1
+GPS_RES2          1K                  R-EU_R0603                    R0603                 rcl               1
+ICSP              AVR-ISP-6           AVR-ISP-6                     AVR-ISP-6             avr-4             1
+INTERNAL_TEMP     DS18B20Z            DS18B20Z                      SO08                  1wire             1
+LED_PWR           GREEN               LEDCHIPLED_0603               CHIPLED_0603          led               1
+MICRO-SD          USD-SOCKET          USD-SOCKET                    MICRO-SD-PUSH-PULL    matt_brejza       1
+MISO_RES          1K                  R-EU_R0603                    R0603                 rcl               1
+NTX2_DCPLG        100nF               CAP0805                       0805                  SparkFun          1
+NTX2_RES          22K                 R-EU_R0603                    R0603                 rcl               1
+NTX2_RES1         10K                 R-EU_R0603                    R0603                 rcl               1
+NTX2_RES2         6K8                 R-EU_R0603                    R0603                 rcl               1
+NTX2_RES3         22K                 R-EU_R0603                    R0603                 rcl               1
+OSC               16MHz               CRYSTAL5X3                    CRYSTAL-SMD-5X3       SparkFun          1
+P                 DC-IN               22-27-2021-02                 6410-02               con-molex         1
+RADIO             NTX2H               NTX2H                         NTX2H                 matt_brejza       1
+RESET             SW-MOMENTARY-SMD    SWITCH-MOMENTARY-2-SMD-1101NE TACTILE-SWITCH-1101NE SparkFun          1
+RES_PWR           100R                R-EU_R0603                    R0603                 rcl               1
+SD_DCPLG          100nF               CAP0805                       0805                  SparkFun          1
+STATUS_LED        GREEN               LEDCHIPLED_0603               CHIPLED_0603          led               1
+STATUS_RES        100R                R-EU_R0603                    R0603                 rcl               1
+TEMP              EXTERNAL_TEMP       22-27-2031-03                 6410-03               con-molex         1
+TEMP_DCPLG        100nF               CAP0805                       0805                  SparkFun          1
+U$1               BNC_BULK            BNC_BULK                      BNC_BULK              matt_brejza       1
+VREG              LT1763CS8-3.3       LT1763CS8-3.3                 SOIC8                 linear-technology 1
