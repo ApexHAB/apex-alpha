@@ -16,9 +16,12 @@ void rtty_init()
 {
     pinMode(TX_1,OUTPUT);
     pinMode(TX_0,OUTPUT);
-    pinMode(NTX2_EN,OUTPUT);
 
-    digitalWrite(NTX2_EN,HIGH);
+    // Enable the NTX2
+    //pinMode(NTX2_EN,OUTPUT);
+    //digitalWrite(NTX2_EN,HIGH); // This causes the AVR to crash
+    DDRD |= (1<<7);
+    PORTD |= (1<<7); // This also causes the AVR to crash
 }
 
 char* rtty_prepare(char* sentence)
