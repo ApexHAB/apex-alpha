@@ -115,6 +115,7 @@ void build_packet()
     dtostrf(battery_get_voltage(),4,2,bv);
 
     // Build the packet
+    //sprintf(packet,"$$ALPHA,%u,%s,%s,%s",counter_get(),et,it,bv); // No GPS!
     sprintf(packet,"$$ALPHA,%u,%s,%s,%s,%s",counter_get(),gps_get(),et,it,bv);
 }
 
