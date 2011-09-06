@@ -5,11 +5,11 @@ ToDo List
 
 Stuff that needs doing now:
 --------------------------------------
+# Sort competition entry * Daniel
+# Stickers * Daniel
 # Write the guide * Priyesh & Daniel
-# Solder PCB when it comes * @ Andrew's Shed
-# Test Alpha board * Priyesh
-# Make / get a case * Daniel, Phil & Michael
-# Test case * Daniel & Phil
+# Make / get a case * Daniel
+# Test case * Hammer
 # Antenna for payload * Alex
 # Finish Zenith * Daniel
 
@@ -18,3 +18,5 @@ Should we get into the competition:
 # Helium Balloons with APEX Alpha Logo on
 # Make more posters
 # Posters with information
+# Minicards with logo and web address?
+# Banners
