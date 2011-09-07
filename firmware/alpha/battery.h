@@ -16,6 +16,14 @@
 #include "WProgram.h"
 
 #define BATTERY_PIN 0
+/*
+ * R1 = 33K
+ * R2 = 22K
+ *
+ * Ratio = R2 / (R1 + R2)
+ */
+#define BATTERY_RESISTOR_RATIO 0.4
+#define BATTERY_REFERENCE_VOLTS 3.3
 
 float battery_get_voltage();
 

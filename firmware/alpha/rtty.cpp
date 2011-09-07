@@ -20,8 +20,6 @@ void rtty_init()
     // Enable the NTX2
     pinMode(NTX2_EN,OUTPUT);
     digitalWrite(NTX2_EN,HIGH);
-    //DDRD |= (1<<7);
-    //PORTD |= (1<<7);
 }
 
 char* rtty_prepare(char* sentence)
