@@ -53,7 +53,7 @@ void rtty_tx(char* sentence, int baud)
 
 void rtty_preamble(int baud)
 {
-    char sentence[15] = "UUUUUUUUUUUU\r\n";
+    char sentence[] = "UUUUUUUUUUUUUUUUUUUUUU\r\n";
 
     // Disable interrupts
     noInterrupts();
