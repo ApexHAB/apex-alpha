@@ -75,7 +75,6 @@ void loop()
 
     // Telemetry
     Serial.print("Telemetry started... ");
-    //digitalWrite(STATUS_LED_PIN,HIGH); // SPI bus is in use
 
     // Send the packet with RTTY
     // @ 300 baud - preamble then 3 times
@@ -89,7 +88,6 @@ void loop()
     rtty_tx(packet, 0);
 
     Serial.println("finished");
-    //digitalWrite(STATUS_LED_PIN,LOW); // SPI bus is in use
     
     // Delay until the next packet
     // This window is also for UART commands to be entered in

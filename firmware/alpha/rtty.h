@@ -23,8 +23,8 @@
 #include "WProgram.h"
 #include "util/crc16.h"
 
-#define TX_1 5
-#define TX_0 6
+#define TX_0 5
+#define TX_1 6
 #define NTX2_EN 7
 
 void rtty_init();
