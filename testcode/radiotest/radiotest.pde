@@ -10,20 +10,53 @@
    team@apexhab.org
  */
 
+char inData[200]; // Allocate some space for the string
+char inChar=-1; // Where to store the character read
+byte index = 0; // Index into array; where to store the character
+
 void setup()
 {
     pinMode(5,OUTPUT);
     pinMode(6,OUTPUT);
+    Serial.begin(9600);
+    rtty_tx("APEX Open Evening Demo\n");
+    Serial.println("APEX Open Evening Demo");
+    rtty_tx("Initialized.\n\n");
+    Serial.println("Initialized.\n\n");
 
-    // Enable NTX2
-    pinMode(7,OUTPUT);
-    digitalWrite(7,HIGH);
+
 }
 
 void loop()
 {
-    rtty_tx("$$ALPHA,a,very,long,test,string,is,being,sent,over,rtty!\n");
-    delay(2000);
+    if(Serial.available()){
+      Serial.println("---------------------------");
+ Serial.println("Sending...\n");
+       delay(100);
+      
+       while(Serial.available() > 0) {
+
+            inChar = Serial.read(); // Read a character
+            inData[index] = inChar; // Store it
+            index++; // Increment where to write next
+            inData[index] = '\0'; // Null terminate the string
+   
+       }
+       rtty_tx("$APEX_OPENEVENINGDEMO: ");
+       rtty_tx(inData);
+       rtty_tx("\n");
+       Serial.print("'");
+       Serial.print("$APEX_OPENEVENINGDEMO: ");
+       Serial.print(inData);
+       Serial.print("'\n");
+       Serial.println("Message Sent.\n\n");
+       for (int i=0;i<199;i++) {
+            inData[i]=0;
+        }
+        index=0;
+
+    }
+       
 }
 
 void rtty_tx(char * sentence)
