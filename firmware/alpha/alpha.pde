@@ -79,11 +79,13 @@ void loop()
     // Send the packet with RTTY
     // @ 300 baud - preamble then 3 times
     rtty_preamble(1);
+    rtty_tx("$$ALPHA\r\n$$ALPHA\r\n", 1);
     rtty_tx(packet, 1);
     rtty_tx(packet, 1);
     rtty_tx(packet, 1);
     // @ 50 baud - preamble then 2 times
     rtty_preamble(0);
+    rtty_tx("$$ALPHA\r\n$$ALPHA\r\n", 0);
     rtty_tx(packet, 0);
     rtty_tx(packet, 0);
 
