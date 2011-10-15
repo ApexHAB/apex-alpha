@@ -93,7 +93,7 @@ void loop()
     
     // Delay until the next packet
     // This window is also for UART commands to be entered in
-    delay(8000);
+    delay(4000);
 
     // Check for any inputted UART commands
     uart_commands();
