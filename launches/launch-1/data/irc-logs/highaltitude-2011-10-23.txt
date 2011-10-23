@@ -1,0 +1,1328 @@
+[00:00] watcher__ (4feea4c0@gateway/web/freenode/ip.79.238.164.192) left irc: Ping timeout: 265 seconds
+[00:00] <HarrisonC> you said you were uploading. was it you
+[00:00] <Zuph> Lunar_Lander: How's APRS coverage in Deutschland?
+[00:00] <OZ1SKY> The path was 776km to last good beacon
+[00:00] <klausf_> Lunar:  sofern du möchtest, würde ich dich unterstützen... eine webseite ins netz zu stellen...
+[00:00] <Randomskk> nickolai89: I'm tracking it down now
+[00:00] <Randomskk> but the issue is in your times
+[00:01] <Zuph> huh, evidently my irc client doesn't like umlauts.
+[00:01] <nickolai89> ok, how should i format them?
+[00:01] <juxta> is anybody tracking via globaltuners?
+[00:01] <Randomskk> nickolai89: ideally just hh:mm:ss
+[00:01] <Randomskk> if that's easy for you to change
+[00:01] qazwsxedc (b839049a@gateway/web/freenode/ip.184.57.4.154) left irc: Quit: Page closed
+[00:01] <nickolai89> shouldn't be too bad, give me a few minutes
+[00:01] <juxta> actually - is APEX still flying?
+[00:02] <Matt_soton> indeed
+[00:02] bob (535242c3@gateway/web/freenode/ip.83.82.66.195) joined #highaltitude.
+[00:02] <Matt_soton> we assume
+[00:02] <Lunar_Lander> klausf_ : klingt gut
+[00:02] Nick change: bob -> Guest12281
+[00:03] <DG0CAW> is it possible with http://www.globaltuners.com/receiver/519/   ?
+[00:03] <Matt_soton> yea if u have an account
+[00:03] <juxta> that's the one I was about to try DG0CAW
+[00:03] <DG0CAW> i dont have
+[00:03] ejcweb (~chatzilla@constantine.chu.cam.ac.uk) left irc: Quit: ChatZilla 0.9.87 [Firefox 3.6.23/20110921061452]
+[00:04] AbstractBeliefs (~AbstractB@unaffiliated/abstractbeliefs) left irc: Ping timeout: 240 seconds
+[00:04] Zotter (~Zotter@ka7o.net) joined #highaltitude.
+[00:04] HarrisonC (5c12cd9b@gateway/web/freenode/ip.92.18.205.155) left irc: Ping timeout: 265 seconds
+[00:06] <juxta> I'm tuning around listening
+[00:06] <Lunar_Lander> klausf_ : darf ich fragen wo du herkommst? ich bin ja aus Osnabrück
+[00:06] <Lunar_Lander> Zuph : APRS in Germany works pretty good
+[00:06] <Randomskk> nickolai89: appears to be working
+[00:07] <ms7821> DG0CAW: I think that's fixed frequency
+[00:07] <Randomskk> nickolai89: one just broke actually
+[00:07] <klausf_> Lunar_ sicher, komme auf düsseldorf, Z64,
+[00:07] <Randomskk> you have a space between the 06 and the :46
+[00:07] <Randomskk> okay that most recent worked
+[00:07] <DG0CAW> ms7821 okay.
+[00:08] <DG0CAW> just got my account at globaltuners
+[00:08] ovh (bcdec888@gateway/web/freenode/ip.188.222.200.136) joined #highaltitude.
+[00:09] ovh (bcdec888@gateway/web/freenode/ip.188.222.200.136) left irc: Client Quit
+[00:09] Chrillz (53fbd559@gateway/web/freenode/ip.83.251.213.89) joined #highaltitude.
+[00:09] <Randomskk> nickolai89: appears to be all working
+[00:10] <nickolai89> yes it does!
+[00:10] <nickolai89> thanks!
+[00:10] <Randomskk> no problem
+[00:10] Action: Randomskk goes to bed, seeya all
+[00:11] <DG0CAW> mmhh this receiver doesnt work !
+[00:11] <nickolai89> HarrisonC: yea i'm uploading right now - were you asking in regards to my spacenear.us problem or my shift problem?
+[00:13] mac (ae372f1d@gateway/web/freenode/ip.174.55.47.29) left irc: Quit: Page closed
+[00:14] mac (ae372f1d@gateway/web/freenode/ip.174.55.47.29) joined #highaltitude.
+[00:14] <juxta> OZ1SKY, are you still receiving?
+[00:14] <mac> I though the GPS was dead
+[00:15] <steve|m> mac: gps started working again, but now it's out of OZ1SKY's range
+[00:19] <OZ1SKY> juxta: no i lost it here
+[00:19] <juxta> OZ1SKY, what was your last dial frequency?
+[00:20] <OZ1SKY> juxta:  434.640
+[00:21] <OZ1SKY> juxta: LSB mode
+[00:21] <DG0CAW> i am at the odenwald receiver in germany at globaltuners. and there is nothing.
+[00:21] <juxta> i tried that one too DG0CAW
+[00:21] <juxta> it's a bit far away though
+[00:22] <DG0CAW> yes
+[00:22] <juxta> shame there's nothing closer
+[00:22] <juxta> OZ1SKY, how long ago did you lose it?
+[00:23] <OZ1SKY> juxta: around 01:44
+[00:24] <juxta> ah - what time is it now? :)
+[00:24] <juxta> it's 11am here
+[00:24] <Lunar_Lander> it's 2:25
+[00:25] <OZ1SKY> juxta: yes sorry 01:44CET or 23:44UTC
+[00:26] <DG0CAW> juxta you are the vk5 station?
+[00:26] lewisbb (422c7720@gateway/web/freenode/ip.66.44.119.32) joined #highaltitude.
+[00:26] <juxta> DG0CAW, yes, that's me
+[00:26] <DG0CAW> okay. just saw you at globaltuners
+[00:26] <juxta> :)
+[00:26] crowley (bcc2f817@gateway/web/freenode/ip.188.194.248.23) joined #highaltitude.
+[00:27] sdh7 (4cbdd6ab@gateway/web/freenode/ip.76.189.214.171) left irc: Ping timeout: 265 seconds
+[00:27] Nick change: crowley -> Guest53972
+[00:27] <OZ1SKY> the last lines i got $$ALPHA,1163,2745:555>03.95,01916.1847,36292,0l-57.94,-52.31,3.0-A7@8 $$ADPHA,116#¬23845:5203.2975<19561847,3629p, 5,-57.94(-5.31,1n60*A¸
+[00:28] Greensystemsgo (440312f2@gateway/web/freenode/ip.68.3.18.242) joined #highaltitude.
+[00:28] <Guest53972> hey guys, nice flight you do there :) !
+[00:29] <juxta> good job OZ1SKY, you got that from quite a long way away
+[00:29] <juxta> what setup do you have?
+[00:29] <Guest53972> whats the minimum batterie voltage you think the ballon will be able to send with?
+[00:29] <OZ1SKY> juxta: lost it around 776km. i was using a comet gp-9 antenna with ssb sp-7000 preamp and a icom ic-910h
+[00:30] <juxta> wow, that's pretty good!
+[00:30] <juxta> how much gain does it have on 70cm?
+[00:30] <juxta> I figured you must have had something directional to keep it so long
+[00:30] <OZ1SKY> a ham opperator in hungary heard it shortly
+[00:31] <juxta> Guest12281, I'm not sure of the payload details. if it's anything like ours then you could expect around 24 hours of battery life
+[00:31] <OZ1SKY> he got a weak signal again
+[00:31] <OZ1SKY> juxta: i cant realy remember
+[00:31] <Matt_soton> we need to get raw data from the tracker so we can manually correct it
+[00:32] <juxta> Matt_soton, the GPS blip you mean?
+[00:32] <Darkside> juxta: 90ma, battery was running very low last i saw
+[00:32] <NigelMoby> Omg is it still going?
+[00:32] <OZ1SKY> juxta: its 11.9dbi on 70cm
+[00:33] <mac> it's at -50C, the battery isn't going dead, it's just really cold
+[00:33] fred2890 (18e2ff3e@gateway/web/freenode/ip.24.226.255.62) joined #highaltitude.
+[00:33] <Matt_soton> i mean if people can still hear it, they might be able to get some of the packet but the checksum will fail and it wont show
+[00:33] <Guest53972> yeah, I tought about the temperature too.
+[00:33] DiJuMx (4d625eb3@gateway/web/freenode/ip.77.98.94.179) left irc: Quit: Page closed
+[00:33] <NigelMoby> Which country we in now?
+[00:34] <Matt_soton> poland
+[00:34] <Matt_soton> probably
+[00:35] pressburger (~petak@78.141.100.108) left irc: Quit: leaving
+[00:35] <NigelMoby> Awsome, what a day eh
+[00:36] radicalbiscuit (45a98524@gateway/web/freenode/ip.69.169.133.36) joined #highaltitude.
+[00:36] <klausf_> vy 73 es gd dx   de klaus   looking forward to hear from your next project apex
+[00:37] <DG0CAW> i'm off. good night. 73 de alex
+[00:37] Chrillz (53fbd559@gateway/web/freenode/ip.83.251.213.89) left irc: Quit: Page closed
+[00:37] DG0CAW (~Alex@46.115.24.195) left irc: Quit: Leaving
+[00:37] klausf_ (klausf@dslb-084-060-193-004.pools.arcor-ip.net) left #highaltitude.
+[00:37] chuff (027bf552@gateway/web/freenode/ip.2.123.245.82) left irc: Quit: Page closed
+[00:38] <radicalbiscuit> Hello and hello! What's the status? Far out of range of anyone awake, or battery dead?
+[00:39] <Matt_soton> know anyone in poland?
+[00:39] <radicalbiscuit> Afraid not.
+[00:40] <Matt_soton> :(
+[00:41] verpoler (~verpoler@p548F8365.dip0.t-ipconnect.de) left irc: Ping timeout: 258 seconds
+[00:42] qazwsxedc (b839049a@gateway/web/freenode/ip.184.57.4.154) joined #highaltitude.
+[00:43] Guest12281 (535242c3@gateway/web/freenode/ip.83.82.66.195) left irc: Ping timeout: 265 seconds
+[00:43] <radicalbiscuit> an hour since contact? Probably still flying ever so high.
+[00:43] qazwsxedc (b839049a@gateway/web/freenode/ip.184.57.4.154) left irc: Client Quit
+[00:44] <fred2890> is there an estimation of the time left until the battery dies?
+[00:44] <Matt_soton> battery probably wont be the first thing to go
+[00:44] <Matt_soton> will probably burst in the morning first
+[00:46] <radicalbiscuit> One of the reasons I enjoy tracking and following HAB is there's something kind of lonely about it anyhow. To listen to data encoded as audio and get a message from it (or to be unable to do so) leaves me with a feeling that there stiill is a frontier, there still are adventurers who also happen to be balloons.
+[00:47] <radicalbiscuit> This one beats them all.
+[00:47] <steve|m> call the kreml - isn't putin always looking for some PR-stunts? "Putin recovers weather balloon"
+[00:50] <Matt_soton> need to tell the russian hams
+[00:50] AbstractBeliefs (~AbstractB@88-104-251-21.dynamic.dsl.as9105.com) joined #highaltitude.
+[00:50] AbstractBeliefs (~AbstractB@88-104-251-21.dynamic.dsl.as9105.com) left irc: Changing host
+[00:50] AbstractBeliefs (~AbstractB@unaffiliated/abstractbeliefs) joined #highaltitude.
+[00:50] <Matt_soton> not quite too sure how to go about that
+[00:50] <radicalbiscuit> lol, there'd be a picture of him jumping off a high cliff being chased by bears, tigers, and peasants, barely grabbing onto the ballloon which safely carries him away.
+[00:50] <radicalbiscuit> Putin, the new Balloon Boy.
+[00:52] curto (183a12e7@gateway/web/freenode/ip.24.58.18.231) joined #highaltitude.
+[00:52] curto (183a12e7@gateway/web/freenode/ip.24.58.18.231) left irc: Client Quit
+[00:56] <OZ1SKY> what a shame no one could take over
+[00:56] <Lunar_Lander> LOL
+[00:56] Bob (46876dc1@gateway/web/freenode/ip.70.135.109.193) joined #highaltitude.
+[00:57] <Lunar_Lander> yea
+[00:57] Nick change: Bob -> Guest15100
+[00:57] <OZ1SKY> you need to put a ads-b beacon on it next time :-)
+[00:57] <Lunar_Lander> :9
+[00:58] <Lunar_Lander> yeah but that is maybe forbidden in england
+[00:58] <Matt_soton> never heard of that before
+[00:58] <OZ1SKY> Lunar_Lander: yes i think it would be
+[00:58] <OZ1SKY> Matt_soton:  its a radar beacon for airplanes
+[00:58] <Matt_soton> oh ok
+[00:59] <Matt_soton> maybe a hf beacon would work well
+[00:59] <OZ1SKY> Matt_soton: http://www.flightradar24.com
+[00:59] <Matt_soton> yea seen
+[00:59] <Matt_soton> that
+[00:59] <Matt_soton> would be quite nice
+[00:59] <Matt_soton> encoder would be alot of work
+[01:00] <radicalbiscuit> HF beacon is a good way to go
+[01:00] <OZ1SKY> Matt_soton: i can track there too, got a small ads-b setup here
+[01:03] Guest15100 (46876dc1@gateway/web/freenode/ip.70.135.109.193) left #highaltitude.
+[01:03] <OZ1SKY> a polish guy just showed up on the other chat, will try him
+[01:05] <Lunar_Lander> yay
+[01:06] <OZ1SKY> no answer ;-(
+[01:06] <Lunar_Lander> :(
+[01:08] <radicalbiscuit> There's always the Ukranian Amateur Radio League: http://uarl.org.ua/
+[01:08] <radicalbiscuit> g2g for now
+[01:08] <radicalbiscuit> I'll check in later
+[01:08] radicalbiscuit (45a98524@gateway/web/freenode/ip.69.169.133.36) left irc: 
+[01:13] <Matt_soton> o well, thanks for the help
+[01:13] <Matt_soton> i think ill be off to bed now too
+[01:13] <OZ1SKY> just an idea. for hamradio opperators, it would be use full if the qth locator was displayed on the webpage, translated from the lat/lon
+[01:13] <OZ1SKY> Matt_soton:  goodnight matt
+[01:13] BobH (46876dc1@gateway/web/freenode/ip.70.135.109.193) joined #highaltitude.
+[01:15] <benoxley> heading off as well
+[01:15] <benoxley> thanks for all your help OZ1SKY
+[01:16] <Lunar_Lander> sounds good OZ1SKY
+[01:16] <OZ1SKY> benoxley: your very welcome, looking forward to next time
+[01:17] <benoxley> :)
+[01:17] <benoxley> bye!
+[01:17] <OZ1SKY> nye
+[01:17] <OZ1SKY> bye
+[01:18] <mac> I'm out. Thanks for all your work OZ1SKY
+[01:19] mac (ae372f1d@gateway/web/freenode/ip.174.55.47.29) left irc: Quit: Page closed
+[01:19] <OZ1SKY> mac: glad i could, goodnight
+[01:20] <Lunar_Lander> :)
+[01:21] MoALTz_ (~no@host-92-18-6-14.as13285.net) joined #highaltitude.
+[01:22] MoALTz (~no@host-92-18-6-14.as13285.net) left irc: Ping timeout: 260 seconds
+[01:23] Jasperw (~jasperw@2001:470:1f08:1caf::2) left irc: Quit: Leaving.
+[01:23] Zotter (Zotter@ka7o.net) left #highaltitude ("Leaving").
+[01:24] andre_ (745a8826@gateway/web/freenode/ip.116.90.136.38) joined #highaltitude.
+[01:27] BobH (46876dc1@gateway/web/freenode/ip.70.135.109.193) left irc: Quit: Page closed
+[01:27] <nickolai89> Lunar_Lander, are you still on?
+[01:29] ilukester (6c26b2a5@gateway/web/freenode/ip.108.38.178.165) joined #highaltitude.
+[01:30] <Greensystemsgo> whats the word.
+[01:31] sdh7 (4cbdd6ab@gateway/web/freenode/ip.76.189.214.171) joined #highaltitude.
+[01:31] <ilukester> my question is how much longer till it is out of HAM range
+[01:32] <k5egg> there are hams everywhere
+[01:32] <ilukester> actually the last time it updated was about an hour ago... so that means that it has gone a drift
+[01:33] <Lunar_Lander> nickolai89 : yes
+[01:34] <nickolai89> so what is this project everyone is talking about?
+[01:34] <nickolai89> i've seen it on the tracker - was it meant to be a floater?
+[01:35] <ilukester> nope was meant to attempt to break the alititude record
+[01:35] <nickolai89> i saw it's max alt was something like 36.5, pretty far up there
+[01:35] <nickolai89> what's the record? 36?
+[01:35] <ilukester> to bad they didnt attach any cameras to that thing... there would be some amazing photos on that thing...
+[01:36] <ilukester> 130k feet
+[01:36] <ilukester> so i think its about 41
+[01:36] <nickolai89> i have trouble understanding why you would launch without cameras, although maybe if i've launched a lot then i wouldn't see much point in always having one...
+[01:36] <Greensystemsgo> weight.
+[01:36] <nickolai89> yup
+[01:37] <Greensystemsgo> goal was altitude, not pictures. Would of been cool, but its was purpose built.
+[01:38] <nickolai89> i eventually plan to get to a nice altitude with a rockoon, maybe like 50km or something, but that won't be for some time...
+[01:39] Relman (~Relman@cpc1-tilb8-2-0-cust53.basl.cable.virginmedia.com) left irc: 
+[01:39] ourkie (477b0566@gateway/web/freenode/ip.71.123.5.102) joined #highaltitude.
+[01:42] <OZ1SKY> Lunar_Lander: fyi 434.600-434.9875 is FM repeater downlink in Denmark,Sweden and Norway.
+[01:43] <OZ1SKY> Lunar_Lander:  so im lucky i dont have any repeater in my area on .650
+[01:43] Nickolai_ (~Nickolai@184.17.121.254) joined #highaltitude.
+[01:43] <Lunar_Lander> yeah
+[01:43] ourkie (477b0566@gateway/web/freenode/ip.71.123.5.102) left irc: Ping timeout: 265 seconds
+[01:44] NigeyS (~Nigel@cpc5-cdif13-2-0-cust232.5-1.cable.virginmedia.com) joined #highaltitude.
+[01:47] NigeyS (~Nigel@cpc5-cdif13-2-0-cust232.5-1.cable.virginmedia.com) left irc: Read error: Connection reset by peer
+[01:49] jcoxon (~jcoxon@ip98-182-35-198.ri.ri.cox.net) joined #highaltitude.
+[01:50] radicalbiscuit (081291a0@gateway/web/freenode/ip.8.18.145.160) joined #highaltitude.
+[01:50] <jcoxon> Update?
+[01:50] <radicalbiscuit> Did anything becomeof the supposed Pole who logged onto some chat somewhere?
+[01:53] Action: radicalbiscuit has lost sleep following this one
+[01:53] <radicalbiscuit> :D
+[01:57] <NigelMoby> Hey James
+[02:00] ourkie (477b0566@gateway/web/freenode/ip.71.123.5.102) joined #highaltitude.
+[02:01] <OZ1SKY> Thanks for the fun, goodnight everyone
+[02:03] Transformer (~Transform@ool-4a59e397.dyn.optonline.net) joined #highaltitude.
+[02:03] <Lunar_Lander> good night and thanks OZ1SKY
+[02:03] <radicalbiscuit> goodnight you were a trooper oz1sky
+[02:03] Transformer (~Transform@ool-4a59e397.dyn.optonline.net) left irc: Excess Flood
+[02:06] OZ1SKY (c2efaca9@gateway/web/freenode/ip.194.239.172.169) left irc: Ping timeout: 265 seconds
+[02:07] Stacey (4b458b46@gateway/web/freenode/ip.75.69.139.70) left irc: Quit: Page closed
+[02:13] N4TXI (182aed2a@gateway/web/freenode/ip.24.42.237.42) left #highaltitude.
+[02:15] Wil5on (~Wil5on@124-171-69-192.dyn.iinet.net.au) joined #highaltitude.
+[02:16] lewisbb (422c7720@gateway/web/freenode/ip.66.44.119.32) left irc: Quit: Page closed
+[02:21] Greensystemsgo (440312f2@gateway/web/freenode/ip.68.3.18.242) left irc: Ping timeout: 265 seconds
+[02:22] radicalbiscuit (081291a0@gateway/web/freenode/ip.8.18.145.160) left irc: Ping timeout: 265 seconds
+[02:23] pszy (~pszy@77-22-27-250-dynip.superkabel.de) left irc: Quit: This computer has gone to sleep
+[02:34] ilukester (6c26b2a5@gateway/web/freenode/ip.108.38.178.165) left irc: Ping timeout: 265 seconds
+[02:37] radicallbiscuit (08129180@gateway/web/freenode/ip.8.18.145.128) joined #highaltitude.
+[02:38] Nick change: radicallbiscuit -> radicalbiscuit
+[02:41] Lunar_Lander (~Miranda@p54883A28.dip.t-dialin.net) left irc: Quit: Miranda IM! Smaller, Faster, Easier. http://miranda-im.org
+[02:44] AbstractBeliefs (~AbstractB@unaffiliated/abstractbeliefs) left irc: Ping timeout: 240 seconds
+[02:47] Seeker` (~cjo20@gateway/shell/ubottu/x-ngaruhwwgdjmhxau) joined #highaltitude.
+[02:52] jerrajerra (7a6e4c7f@gateway/web/freenode/ip.122.110.76.127) joined #highaltitude.
+[02:53] jerrajerra (7a6e4c7f@gateway/web/freenode/ip.122.110.76.127) left irc: Client Quit
+[02:54] DaveP (792d7731@gateway/web/freenode/ip.121.45.119.49) joined #highaltitude.
+[03:01] sdh7 (4cbdd6ab@gateway/web/freenode/ip.76.189.214.171) left irc: Quit: Page closed
+[03:11] lolol_ (188358f0@gateway/web/freenode/ip.24.131.88.240) joined #highaltitude.
+[03:12] lolol_ (188358f0@gateway/web/freenode/ip.24.131.88.240) left irc: Client Quit
+[03:18] radicalbiscuit (08129180@gateway/web/freenode/ip.8.18.145.128) left irc: Ping timeout: 265 seconds
+[03:42] werdan (7ca84ccb@gateway/web/freenode/ip.124.168.76.203) joined #highaltitude.
+[03:43] werdan (7ca84ccb@gateway/web/freenode/ip.124.168.76.203) left irc: Client Quit
+[03:58] ffffffffffffff (~fffffffff@184.163.252.124) left irc: Quit: ffffffffffffff
+[04:00] fred2890 (18e2ff3e@gateway/web/freenode/ip.24.226.255.62) left irc: Ping timeout: 265 seconds
+[04:01] DaveP (792d7731@gateway/web/freenode/ip.121.45.119.49) left irc: Ping timeout: 264 seconds
+[04:07] annon (4b9ee1eb@gateway/web/freenode/ip.75.158.225.235) joined #highaltitude.
+[04:09] annon (4b9ee1eb@gateway/web/freenode/ip.75.158.225.235) left irc: Client Quit
+[04:17] Paradoxial (~Paradoxia@pool-108-28-22-94.washdc.fios.verizon.net) left irc: Quit: :
+[04:17] kristianpaul (~kristianp@unaffiliated/kristianpaul) left irc: Ping timeout: 260 seconds
+[04:19] Nick change: niftylettuce_ -> niftylettuce
+[04:30] kristianpaul (~kristianp@cl-498.udi-01.br.sixxs.net) joined #highaltitude.
+[04:30] kristianpaul (~kristianp@cl-498.udi-01.br.sixxs.net) left irc: Changing host
+[04:30] kristianpaul (~kristianp@unaffiliated/kristianpaul) joined #highaltitude.
+[04:32] ourkie (477b0566@gateway/web/freenode/ip.71.123.5.102) left irc: Ping timeout: 265 seconds
+[04:40] andre_ (745a8826@gateway/web/freenode/ip.116.90.136.38) left irc: Quit: Page closed
+[04:49] NJR_ZA (291a7ad1@gateway/web/freenode/ip.41.26.122.209) joined #highaltitude.
+[04:51] NJR_ZA (291a7ad1@gateway/web/freenode/ip.41.26.122.209) left #highaltitude.
+[04:56] g0mjw (82f684b2@gateway/web/freenode/ip.130.246.132.178) left irc: Ping timeout: 265 seconds
+[05:01] firespeaker (~jonathan@c-24-1-99-217.hsd1.in.comcast.net) joined #highaltitude.
+[05:01] <firespeaker> from #hamradio
+[05:01] <firespeaker> (00:59:42) firespeaker: that thing's going to come down near BayqoKur and the Kazakhs are going to freak out
+[05:01] <firespeaker> (01:00:48) firespeaker: how long'll the power last?
+[05:03] <Darkside> the battery is likely dead by now
+[05:03] <Darkside> give that it was 3 AAs
+[05:06] daveake (~daveake@daveake.plus.com) joined #highaltitude.
+[05:08] <firespeaker> oy
+[05:08] <firespeaker> :(
+[05:08] <firespeaker> it looked like it was still being heard
+[05:08] Action: firespeaker wonders how long ago that way
+[05:09] daveake (~daveake@daveake.plus.com) left irc: Client Quit
+[05:09] <firespeaker> *was
+[05:12] <Darkside> 5 hours or so
+[05:12] <firespeaker> :(
+[05:12] <firespeaker> I was thinking I could find some hams in Russia
+[05:12] <firespeaker> but I guess it's probably of no use
+[05:16] johnnyfive (~johnnyfiv@c-67-182-144-154.hsd1.wa.comcast.net) left irc: Read error: Operation timed out
+[05:17] johnnyfive (~johnnyfiv@c-24-18-112-160.hsd1.wa.comcast.net) joined #highaltitude.
+[05:26] txrx (5b987461@gateway/web/freenode/ip.91.152.116.97) joined #highaltitude.
+[05:33] <natrium42> Darkside: no radios in poland?
+[05:34] <natrium42> it's like that joke "Why was the Polish airforce grounded? The pilot got sick."
+[05:38] <firespeaker> oy
+[05:39] <firespeaker> I'm trying to scare up some hams in Russia or Ukraine
+[05:40] <firespeaker> I found a couple on some random russian irc server, but it looks like they're all asleep
+[05:40] Action: firespeaker speaks Russian
+[05:44] DrLuke (~Im@p5B15B132.dip.t-dialin.net) left irc: Ping timeout: 260 seconds
+[05:45] <firespeaker> no one with an HF rig and a beam pointed towards moscow?  :(
+[05:49] DrLuke (~Im@p5B15D092.dip.t-dialin.net) joined #highaltitude.
+[05:52] nickolai (~nickolai@184.17.121.254) left irc: Quit: Leaving
+[06:10] edmund__ (46f92040@gateway/web/freenode/ip.70.249.32.64) left irc: Quit: Page closed
+[06:15] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) joined #highaltitude.
+[06:19] Nickolai_ (~Nickolai@184.17.121.254) left irc: Read error: Connection reset by peer
+[06:42] SamSilver_ (2985f435@gateway/web/freenode/ip.41.133.244.53) left irc: Ping timeout: 265 seconds
+[06:42] Nick change: niftylettuce -> NIFTYLETTUCE
+[06:46] daveake (~daveake@86.188.200.75) joined #highaltitude.
+[06:46] txrx (5b987461@gateway/web/freenode/ip.91.152.116.97) left irc: Ping timeout: 265 seconds
+[06:47] Dtch-Mill (3e2d7a74@gateway/web/freenode/ip.62.45.122.116) joined #highaltitude.
+[06:48] Dtch-Mill (3e2d7a74@gateway/web/freenode/ip.62.45.122.116) left irc: Client Quit
+[06:48] Dutch-Mill (3e2d7a74@gateway/web/freenode/ip.62.45.122.116) joined #highaltitude.
+[06:52] nosebleedKT (~mixio@ppp046177207217.dsl.hol.gr) joined #highaltitude.
+[06:53] <nosebleedKT> morning al
+[06:54] baloonwathcer (d5982da1@gateway/web/freenode/ip.213.152.45.161) left irc: Quit: Page closed
+[06:54] <costyn> nosebleedKT: hello
+[06:55] <costyn> nosebleedKT: looked at your resume, looks good.
+[07:02] <Dutch-Mill> morning
+[07:03] <costyn> Dutch-Mill: howdy
+[07:04] <Dutch-Mill> heb je al op marktplaats gekeken voor een 817 ed
+[07:04] aeroaeroaero (~chatzilla@115-64-111-31.tpgi.com.au) joined #highaltitude.
+[07:04] <costyn> Dutch-Mill: you said I shouold look at Marktplaats last night; been looking, but there's not a lot of scanners/transcievers that do SSB there... only some quite expensive R7000
+[07:05] <Darkside> mmmm R7000s...
+[07:05] <Darkside> they are *awesome*
+[07:05] <Darkside> incredibly sensitive
+[07:05] firespeaker (jonathan@c-24-1-99-217.hsd1.in.comcast.net) left #highaltitude.
+[07:05] <costyn> :) I would like something smaller though... something with a higher wife-acceptance-factor
+[07:05] <Dutch-Mill> You can often find there's 817
+[07:06] <costyn> Dutch-Mill: HAM friend of mine said he'd sell his old 817 to me if I get my novice license
+[07:06] charlie (32686ec2@gateway/web/freenode/ip.50.104.110.194) joined #highaltitude.
+[07:06] <Darkside> if you just want a receiver, you might be able to find an old Icom R10 scanner
+[07:06] <costyn> but seeing as the next exam is in may, I'm not sure I wanna wait that long
+[07:06] <Darkside> Icom IC-R10s are a nice handheld scanner that will do SSBfine
+[07:06] <costyn> Darkside: cool
+[07:07] Sparkinium (4c1ca8fe@gateway/web/freenode/ip.76.28.168.254) joined #highaltitude.
+[07:07] <Dutch-Mill> ..of koop een funcube  http://www.hamshop.nl/index.php/cPath/115?osCsid=bb7a948dae978ab637660a2631411eb2
+[07:08] <Darkside> yeeess
+[07:08] <Darkside> funcube dongles are nice
+[07:08] <Darkside> they aren't very sensitive though
+[07:08] <nosebleedKT> costyn: im just a started. I have spent time with many IT fields but currently im not specialized in something. Im starter :)
+[07:10] <Dutch-Mill> do not buy a VR500...small but less sensitive
+[07:10] charlie (32686ec2@gateway/web/freenode/ip.50.104.110.194) left irc: Ping timeout: 265 seconds
+[07:10] Sparkinium (4c1ca8fe@gateway/web/freenode/ip.76.28.168.254) left irc: Client Quit
+[07:10] <Dutch-Mill> i'm out ...bye
+[07:11] <costyn> Dutch-Mill: thx, cya
+[07:11] Dutch-Mill (3e2d7a74@gateway/web/freenode/ip.62.45.122.116) left irc: Quit: Page closed
+[07:12] <costyn> Darkside: yea I was looking at the funcube; if it can do what people say then it's a nice price ; but you're saying it'll dissapoint?
+[07:12] aeroaeroaero (chatzilla@115-64-111-31.tpgi.com.au) left #highaltitude.
+[07:12] <Darkside> costyn: oh, its great fun
+[07:12] <Darkside> it works fine for HAB tracking
+[07:12] <Darkside> just its frontend is a bit crap
+[07:12] <Darkside> so don't use it near any other powerful transmitters
+[07:14] <costyn> hmm ok
+[07:16] tay (51d28c1d@gateway/web/freenode/ip.81.210.140.29) joined #highaltitude.
+[07:16] number10 (569e1bf8@gateway/web/freenode/ip.86.158.27.248) joined #highaltitude.
+[07:21] <priyesh> 1;2c/redraw
+[07:21] <priyesh> morning
+[07:21] <x-f> morning
+[07:21] <Darkside> hey priyesh
+[07:21] <Darkside> sucks there weren't any more stations to the east
+[07:22] <Darkside> would have been interesting to see how far it went
+[07:22] <daveake> I guess we won't find out how far unless it gets found or it creates an international incident :p
+[07:22] <costyn> yea would have been fun
+[07:22] <priyesh> Darkside: indeed.
+[07:23] <priyesh> if we can find a ham in east europe, i want them to try receiving it
+[07:23] <priyesh> we have no idea if it's up or down and whether the battery has lasted
+[07:23] <x-f> hi, Darkside, how did it go with those uBlox breakouts? are you still willing to send them over to Europe?
+[07:24] <daveake> priyesh I think the battery would be OK if it was warmer.  The cold drops the voltage.  AA capacity is 3000mAh and doesn't drop that much with temperature.
+[07:25] <costyn> sun should be heating it a bit by now
+[07:25] <priyesh> yeah.. but the sun is up now
+[07:25] <priyesh> only way to try to tell is get a HAM in ukraine / belaus / russia / poland
+[07:25] <Darkside> x-f: you'll have to order from Upu i'm afraid
+[07:25] <x-f> so far just the ROSAT has crash-landed during the last night, no similar news about Alpha in news :)
+[07:25] <daveake> Yep
+[07:25] <Darkside> i'm not going to be able to do much else
+[07:26] <x-f> Darkside, ok, thanks
+[07:26] <x-f> will Upu send then assambled and ready to go or DIY?
+[07:26] <x-f> them*
+[07:29] <Darkside> no idea
+[07:29] <Darkside> probably DIY :P
+[07:29] <costyn> x-f: he's thinking about assembling them, not sure . right now it's only breakouts
+[07:29] <Darkside> they aren't easy to solder
+[07:29] <Darkside> when i started assembling the breakouts i killed a few ublox chips
+[07:29] <costyn> x-f: i'm also interested, but my SMD soldering skills are not up to the job I think
+[07:30] <x-f> costyn, mine neither :)
+[07:31] <costyn> so anybody have experience with mains level electricity? I have some LED spots on a dimmer which are flickering when dimmed. but only when I use them on a particular group
+[07:32] <number10> I dont think LED spots are meant to be used on a dimmer circuit
+[07:32] <costyn> number10: well they're advertised as being dimmable (even on the bulbs)
+[07:33] <number10> ah well if thats the case igmore my comment
+[07:33] SamSilver_ (2985f435@gateway/web/freenode/ip.41.133.244.53) joined #highaltitude.
+[07:33] <costyn> :) gonna have to do more research
+[07:34] <daveake> costyn What does "on a particular group" mean?
+[07:34] <costyn> the webshop that sold me them has been great in helping me so far, but is stumped as to why they are still flickering
+[07:35] <costyn> daveake: euh, not sure I've used the correct term, but your mains are divided into 8 or so circuit breakers rated 16 amps; in Dutch we call each 16 amp group with a fuse a 'group' :)
+[07:35] boggyj (51668491@gateway/web/freenode/ip.81.102.132.145) joined #highaltitude.
+[07:36] <daveake> OK, here that's a "ring" usually
+[07:36] <daveake> So they only flicker on one of those?  Wow
+[07:37] <costyn> daveake: it seems so; I have the same spots in the kitchen, and when I move the dimmer fromthe living room to the kitchen, the leds don't flicker there when dimmed
+[07:37] <daveake> Any other lighting on in the room at the time?
+[07:38] <daveake> And this flickering is a rapid (i.e. mains frequency 50Hz) flickering?
+[07:38] <costyn> not at the moment no... but thinking it might be interference from some other noisy device... wil try switching off stuff until it goes away
+[07:38] <costyn> nope... it's very unsteady which is the unnerving thing
+[07:39] <daveake> Ah, OK
+[07:39] <daveake> Dimmers can make 50Hz flicker more noticeable, especially with fast-acting devices like LEDs
+[07:40] <daveake> But that doesn't appear to be your problem
+[07:40] <costyn> yea; and it's a "correct" reverse phase-cut dimmer too
+[07:42] <daveake> All "groups" run from the same mains phase?
+[07:42] <costyn> daveake: yes
+[07:42] <daveake> ok.  Thought so but best to check :)
+[07:42] <costyn> daveake: you can call it a ring :) now that I know the correct English term
+[07:42] <daveake> lol
+[07:43] <daveake> Well "ring" is a bit more specific - it's where the wiring goes from the fuse/breaker box to socket 1 then 2 .... then comes back again.  i.e. it's a ring.
+[07:43] <daveake> You can also get ones that aren't rings :)
+[07:44] <costyn> so far I've tried removing the fridge, the subwoofer and the laptop adapter; will try the wifi, router and heater later
+[07:44] tehe (4f156f6c@gateway/web/freenode/ip.79.21.111.108) joined #highaltitude.
+[07:44] <costyn> yea as far as I know most of the in house rings we have here aren't rings
+[07:45] <daveake> Call them groups then :D
+[07:46] <costyn> :) http://www.youtube.com/watch?v=ZAJPIVUXIyE#at=50  <-- interesting effect when I had it on 12 volts
+[07:47] <costyn> thought replacing it with 230v would solve it as that worked in the kitchen
+[07:47] <daveake> Whoa, now that is weird!
+[07:48] <daveake> It's repeating .... I think that's because the current load (quite a lot) drops the incoming voltage.
+[07:48] <Upu> MORNING
+[07:48] <Upu> opps
+[07:48] <daveake> QUIET!
+[07:48] <daveake> some of us are still asleep :)
+[07:49] <costyn> daveake: i have no idea  :) the LEDs and or electronic transformer shouldn't be generating more than 30watts
+[07:49] <costyn> Upu: hi
+[07:49] <priyesh> morning Upu
+[07:50] <Upu> so nothing past OT1SKY then ? Shame
+[07:50] <priyesh> no :(
+[07:50] <priyesh> would be nice if an eastern european ham tried listening
+[07:50] <priyesh> but it's hard to find/convince them
+[07:50] <priyesh> no idea if it's still up or out of battery
+[07:51] <Upu> yeah
+[07:51] <daveake> costyn - stick a voltmeter on the transformer output.  See if it's varying a lot in time with that cycling
+[07:51] Guest53972 (bcc2f817@gateway/web/freenode/ip.188.194.248.23) left irc: Ping timeout: 265 seconds
+[07:51] SamOxley (50c3b6a2@gateway/web/freenode/ip.80.195.182.162) joined #highaltitude.
+[07:51] <costyn> daveake: well the transformer is no longer in the circuit. just 230v with the dimmer. all the 12v stuff is going back to the merchant/webshop
+[07:52] <costyn> daveake: but it might be interesting to see what the 230v is doing when it's dimmed; not sure my digitial multimeter will show anything tho; a scope would be useful
+[07:53] <number10> also worth swapping the sets of lights over
+[07:53] <daveake> Oh, so the "transformer" was 12V --> 230V, and now it's 230VAC --> dimmer --> LED packs?
+[07:53] tay (51d28c1d@gateway/web/freenode/ip.81.210.140.29) left irc: Quit: Page closed
+[07:54] <costyn> daveake: Before it was 230v -> dimmer -> 230/12v transformer -> LEDs ; now it's 230v -> dimmer -> LEDs
+[07:54] <costyn> was using 12v LED spots before, now 230v LED spots
+[07:54] <daveake> Ah, gottit
+[07:55] <daveake> Try a different dimmer
+[07:55] <daveake> Aside from the mains wiring it's the only common factor
+[07:57] <costyn> daveake: yea true; the 230v LED spots in the kitchen are using a forward phase-cut off dimmer which is a no-no with LEDs apparently, although they work fine. problem is the reverse phase-cut off dimmers are in the order of 65 euro's, so it's not something you buy just to try
+[07:57] <Upu> damn
+[07:57] <Upu> I didn't get the 50 baud record
+[07:57] <Upu> OT1SKY did
+[07:57] <daveake> :(
+[07:57] <daveake> :)
+[07:57] <Upu> 775.6 km
+[07:57] <costyn> Upu: yea he beat you during the night
+[07:58] <costyn> and he wasn't using a yagi either
+[07:58] <Upu> just... :)
+[07:58] <daveake> So fsphil is down to #3 in one day/night
+[07:58] <Darkside> does transmission over the internet count? >_>
+[07:58] <Upu> don't think I'd have got much more with a Yagi
+[07:58] <Upu> no :)
+[07:58] <daveake> :)
+[07:58] <Darkside> aww
+[07:58] <costyn> Darkside: I thought it was an impressive stunt tho... decoding signals on the other side of the world. :)
+[07:59] tehe (4f156f6c@gateway/web/freenode/ip.79.21.111.108) left irc: Quit: Page closed
+[07:59] <costyn> daveake: so thanks for thinking along; I'll let you know if I figure it out
+[08:02] <eroomde> morning
+[08:03] sw (d9d1afd4@gateway/web/freenode/ip.217.209.175.212) joined #highaltitude.
+[08:03] <eroomde> anything after about 1am?
+[08:04] G0MJW (82f684b1@gateway/web/freenode/ip.130.246.132.177) joined #highaltitude.
+[08:05] <Upu> nop
+[08:05] <costyn> eroomde: nope... what's on the tracker is the last signal OZ1SKY got
+[08:05] <Upu> e
+[08:05] <Upu> priyesh
+[08:05] <Upu> you about ?
+[08:05] MoALTz__ (~no@host-92-18-6-26.as13285.net) joined #highaltitude.
+[08:05] <Upu> eroomde OZ1SKY broke my 50 baud record :)
+[08:05] fsphil-laptop (~phil@2001:8b0:34:1:219:d2ff:fe09:a6b9) joined #highaltitude.
+[08:05] <daveake> Upu How many minutes did you hold that for? ;)
+[08:06] <Upu> not long
+[08:06] <Upu> claiming the 300 one though :)
+[08:06] <daveake> :)
+[08:06] <fsphil-laptop> so how badly was I beaten? :)
+[08:06] MoALTz_ (~no@host-92-18-6-14.as13285.net) left irc: Read error: Connection reset by peer
+[08:06] <eroomde> Upu: what is the new record?
+[08:06] <Upu> well OT1SKY beat me by 30 km
+[08:06] <daveake> oo
+[08:06] <Upu> 775.6 km
+[08:06] <eroomde> nice
+[08:07] <fsphil-laptop> I'm not beating that lol
+[08:07] <SamSilver_> Upu:  that is only a 3.86 % diff
+[08:07] DiJuMx (4d625eb3@gateway/web/freenode/ip.77.98.94.179) joined #highaltitude.
+[08:08] <eroomde> Looks like DominoEX with FEC could be the way forward
+[08:08] <eroomde> and another 2kg float attemp
+[08:08] <fsphil-laptop> I still prefer rtty with fec, although it's non standard
+[08:08] <eroomde> on a very windy but hot summers day
+[08:09] <Upu> I still think we aren't putting enough gas in these
+[08:09] <fsphil-laptop> yes
+[08:09] <eroomde> so the float altitude is high, it gets to 1000km away without boring everyone to death, and the atmospheric conditions are good
+[08:09] <eroomde> Upu: yes that's almost certainly the case
+[08:09] <eroomde> the question though is how much more do we need?
+[08:09] <Upu> well
+[08:09] <eroomde> there was very very little gas in Horus 15 and that got to 40km
+[08:09] <Upu> Bello had a neck lift of 4.60
+[08:10] <Upu> Horus used a 1.6kg ?
+[08:10] <eroomde> we need absolute pressure sensors to see what actual pressure altitude these things are floating at
+[08:10] MoALTz__ (~no@host-92-18-6-26.as13285.net) left irc: Ping timeout: 256 seconds
+[08:10] <eroomde> as one days' 40km might be quite close to another day's 37km
+[08:10] <Upu> yeah
+[08:11] <fsphil-laptop> is there a nice simple pressure sensor that works at those altitudes?
+[08:11] <daveake> I had one in Buzz, but it didn't get as far as floating
+[08:12] <fsphil-laptop> I'd put one on a flight by default if there was
+[08:12] <eroomde> fsphil-laptop: unfortunatelly, havn't really found one
+[08:12] <eroomde> well, it depends a bit
+[08:12] <eroomde> so, take horus 15.5
+[08:12] <eroomde> the bit of oscillation in the float would have had a peak to peak pressure difference of about 10Pa
+[08:12] <eroomde> and it would be quite nice to be able to observe that in the pressure data
+[08:12] <eroomde> see if it correlates with the gps oscillation
+[08:13] <eroomde> but that's really quite serious resolution for a mems pressure sensor
+[08:13] <daveake> Indeed.  I think you'd need some noise filtering
+[08:13] <fsphil-laptop> is there some way we could build one?
+[08:13] <fsphil-laptop> even something that doesn't work at low altitude
+[08:14] <daveake> The SCP1000 I used has a resolution of 1Pa but the noise level is rather higher than that
+[08:14] <fsphil-laptop> what we need is a collection of sensors and a vacuum chamber :)
+[08:15] <eroomde> but we could and it'd be nice to see if that oscillation is caused but the balloon moving wthin an air mass (in which case you would see the pressure osillating) or if the entire air mass is moving (eg a gravity wave) and the balloon is fixed relative to the air but oscillating with the air, relative to the earth. in which case the pressure sensor would show flat readings
+[08:15] <eroomde> we can cope to an extent with noisy sensors
+[08:15] <eroomde> we can still get information out if we have gps
+[08:16] <eroomde> so we can set it up as a bayesian pmodel problem and say 'what is more likely - what the gps is saying or not what the gps is saying?'
+[08:16] <eroomde> but.... it would be much nicer to not have the noise :)
+[08:17] <eroomde> I think the best bet for differential pressure sensors which we need too is to just use the most basic honewell ones
+[08:17] <eroomde> they're just a bridge
+[08:17] <fsphil-laptop> active radar -- setup an ntx2 and nrx2, with an avr programmed with a fixed delay
+[08:17] <eroomde> sorry i'm monologuing here
+[08:17] <eroomde> but because they're just a bridge, in theory their resolution is whatever you make of it
+[08:17] juxta (~juxta@ppp203-122-193-94.static.internode.on.net) left irc: Ping timeout: 255 seconds
+[08:17] <eroomde> so if you make a really nice low noise analog front end, probably with constant current supply, and a good 24bit adc, you might get something useful out
+[08:18] <fsphil-laptop> are pressure sensors sensitive to motion? the balloon bouncing around for eg.?
+[08:19] GW8RAK (~chatzilla@host-78-150-134-231.as13285.net) joined #highaltitude.
+[08:19] <daveake> I was thinking of repackaging my Buzz flight electronics with a bit more insulation, and 4 AA cells instead of 3 AAAs, then launch with a 1600 Hwoyee again but with a "likely to float" ascent rate.
+[08:19] <eroomde> fsphil-laptop: i imagine so
+[08:19] <daveake> Just to see what happens, but probably not bother chasing it
+[08:19] <eroomde> fsphil-laptop: well, i doubt they would notice anything that was on a balloon
+[08:19] <eroomde> but proper vibrations i'd think they would see
+[08:19] <fsphil-laptop> question of filtering again I guess
+[08:19] <eroomde> yeah
+[08:20] <fsphil-laptop> daveake, make sure you launch on a weekend and the weather here is nice ;-)
+[08:20] <fsphil-laptop> oh,and have a very good antenna ;)
+[08:20] SamOxley (50c3b6a2@gateway/web/freenode/ip.80.195.182.162) left irc: Ping timeout: 265 seconds
+[08:20] <daveake> :D
+[08:20] <costyn> daveake: well send it towards mainland europe... we have some new listeners now :)
+[08:20] <daveake> It'll go wherever the wind takes it :)
+[08:21] <eroomde> but yeah - some 'basic' analog pressure sensors with very very good interface and conditioning circuitry would be the way to do it, I think
+[08:21] <eroomde> what we really need is one of those amazing summer days
+[08:21] <daveake> I have the balloon .. would just need a short while to repackage, then zip over to Cambs to launch from there
+[08:21] <eroomde> where it would ascent to 37km straight up and just stay there
+[08:21] <fsphil-laptop> amazing what days?
+[08:21] <daveake> lol
+[08:22] <daveake> We had one in June.  I remember it well.
+[08:22] <eroomde> ah sorry
+[08:22] <fsphil-laptop> so you think a bit of heat is needed for altitude?
+[08:22] <fsphil-laptop> I guess the atmosphere is a bit thicker then
+[08:22] <eroomde> i think if it's hotter, the whole atmosphere will expand radially
+[08:22] <eroomde> just to average out the lower density
+[08:22] <fsphil-laptop> well technically thinner
+[08:22] <fsphil-laptop> but bigger
+[08:22] <eroomde> and so a given floating pressure will be higher AGL
+[08:23] <eroomde> i suspect there was a bit of that in Horus 15.5
+[08:23] <fsphil-laptop> I guess I should aim for a float with my 1600g rather than altitude then
+[08:23] <eroomde> what's your payload mass?
+[08:24] <fsphil-laptop> about 120g, but with insulation probably 150g
+[08:24] <eroomde> gah, we need to get to the bottom of this
+[08:24] <eroomde> lots of variables, not enough data
+[08:24] RocketBoy (~steverand@5acfd4f7.bb.sky.com) joined #highaltitude.
+[08:24] <fsphil-laptop> but I have no sensors on it -- I think I might use the dave miller-time to redesign it
+[08:24] <eroomde> yeah
+[08:25] <daveake> mmm Miller Time ...
+[08:25] <fsphil-laptop> but yea I know nothing about pressure sensors... given that there isn't anything perfect, is there a better-than-nothing sensor I could use?
+[08:25] <eroomde> just having a look
+[08:25] <fsphil-laptop> I'll put one in the balloon too
+[08:26] <eroomde> i guess the SP1000 is been flown a few times
+[08:26] <eroomde> but as daveake, probably very noisy
+[08:27] <fsphil-laptop> daveake, do you have a plot from that sensor?
+[08:27] Mikes (~mikes@cpc1-orpi1-0-0-cust99.2-3.cable.virginmedia.com) joined #highaltitude.
+[08:27] <costyn> I'm sending up a BMP085, but no idea how it'll perform
+[08:27] <daveake> No, but can do.
+[08:27] <Mikes> Morning
+[08:27] <fsphil-laptop> morning Mikes
+[08:27] <Mikes> What's the news on Alpha ?
+[08:27] <daveake> eroomde - twice
+[08:27] Action: fsphil-laptop rubs eyes
+[08:27] <daveake> Buzz was 100g.  If I lose the UFO stuff and add more proper insulation it'll go up a little.  4xAA instead of 3xAAA will add 36g, so I think the total will be 150g.
+[08:27] Nick change: Mikes -> earthshine2
+[08:28] <fsphil-laptop> yes I'm adding more batteries :)
+[08:28] <fsphil-laptop> and a regulator right next to the gps
+[08:28] <daveake> :)
+[08:28] <fsphil-laptop> ooh, or some nichrome wire just to keep it warm
+[08:28] <DiJuMx> any benefit of using AA/AAA batteries over li-poly/li-ion?
+[08:28] <number10> doesnt the sp1000 only go down to 30kPa
+[08:28] <fsphil-laptop> earthshine2, no new listeners sadly
+[08:28] <daveake> Specced to -40 instead of -20
+[08:29] <earthshine2> number10: It will go much lower
+[08:29] <earthshine2> fsphil-laptop: :(
+[08:29] <GW8RAK> Morning Phil and all. With more batteries are you thinking of in parallel or series?
+[08:29] <fsphil-laptop> parallel
+[08:29] <eroomde> number10: yup - we've flown them much lower
+[08:29] <earthshine2> Parallel will make it last much longer
+[08:29] <fsphil-laptop> series would burn too much energy through the regulator
+[08:29] <eroomde> the error is quite a lot infact, according to the graphs
+[08:29] <number10> how much?
+[08:29] <eroomde> at those pressures and temps
+[08:29] <eroomde> there's some data in the datasheet, i think you can extrapolate
+[08:30] <number10> ok
+[08:30] <GW8RAK> Yes, but I was just looking at a small switch mode psu which would do, without the inefficiency of a regulator
+[08:30] <daveake> I tested 4xAA series with Arduino Mini Pro, running NTX2+GS407.  The reg was quite warm :)
+[08:30] <earthshine2> What was Alphas last know position?
+[08:30] <SamSilver_> of topic but fun   ...  http://wimp.com/nasasatellite/
+[08:30] <fsphil-laptop> hah, SCP1000 is tiny
+[08:30] <RocketBoy> `The BMP085 I use in the XABEN17 & 18 flights gave resuls quite close to the NASA model for pressure all the way upto 108K ft
+[08:30] <eroomde> fiddly too
+[08:30] <eroomde> not meant to hot-oven it
+[08:30] <mattltm> Morning all :)
+[08:31] <daveake> I have it on the Sparkfun breakout
+[08:31] <eroomde> so use a footprint with large pads if you are integrating it
+[08:31] <earthshine2> Me too
+[08:31] <fsphil-laptop> I sense a sparkfun order coming up
+[08:31] <eroomde> so you can get an iron tip in
+[08:31] <daveake> I don't do tiny components :p
+[08:31] <eroomde> ah ok fine
+[08:31] radicalbiscuit (45a98524@gateway/web/freenode/ip.69.169.133.36) joined #highaltitude.
+[08:31] <eroomde> that makes it easier :)
+[08:31] <benoxley> morning!
+[08:31] <eroomde> i put it on badger2
+[08:31] <earthshine2> Morning
+[08:31] <eroomde> was a faff
+[08:31] <fsphil-laptop> lol
+[08:31] <earthshine2> Anyone know Alphas's last known position?
+[08:32] <eroomde> I beleive as per the map
+[08:32] <fsphil-laptop> Sparkfun have retired it. nuts
+[08:32] <daveake> If it's smaller than 0.1" (God's pitch) then it's someone else's problem :)
+[08:32] <eroomde> it's a pretty godless world out there now then!
+[08:32] <daveake> I know :(
+[08:32] <daveake> lol
+[08:32] <RocketBoy> increasingly godless
+[08:32] <eroomde> Actually i've found things like SOIC and TQFP to be the wasiest things to solder
+[08:32] <Upu> earthshine 52.054183,19.82842
+[08:32] <fsphil-laptop> but yea thine hot gun shall save you all
+[08:33] <eroomde> just because drag soldering works so nicely
+[08:33] <daveake> I suppose I ought to have a go to prove that my eyesight is up to it and my hands steady enough
+[08:33] <eroomde> oh - a microscope makes all the difference
+[08:33] <eroomde> seriously
+[08:33] <daveake> I hear you :)
+[08:33] <eroomde> it turns out that hand wobble is really just about feedback
+[08:33] <fsphil-laptop> sparkfun only sell the BMP085 now
+[08:33] <eroomde> i can hold the iron so so much more precisely when looking through the scope
+[08:34] <daveake> eroomde Interesting.
+[08:34] <eroomde> sorrt of 0.2mm accuracy
+[08:34] <daveake> cool
+[08:34] <benoxley> eroomde: for hand-soldering SOIC / tqfp do you use wire or paste?
+[08:34] <daveake> I'm feeling quite tempted now
+[08:34] <fsphil-laptop> having used a microscope I agree with that
+[08:34] <fsphil-laptop> it's weird
+[08:34] <daveake> sod god
+[08:34] <fsphil-laptop> join us daveake
+[08:34] <daveake> Over on the Dark Side?
+[08:34] <fsphil-laptop> the small side
+[08:34] <daveake> :)
+[08:34] <eroomde> there's a decent one for about 129 euros
+[08:35] <eroomde> can't remember the make and model off the top of my head
+[08:35] <daveake> Let me know when you remember
+[08:35] <eroomde> benoxley: depends
+[08:35] <eroomde> i'm happy with either
+[08:35] <fsphil-laptop> I'd love a good microscope, the one at work cost ... lots :)
+[08:35] <eroomde> so, if it's a nice new pcb design, like a flight computer, it's worth spending £25 on a stencil i think
+[08:35] <eroomde> and using paste
+[08:35] <eroomde> but for one-offs, quite happy to hand solder
+[08:36] <daveake> I'm at a customer site today and a mere 2 metres away I spy .... a microscope used for PCB work :)
+[08:36] <fsphil-laptop> I've seen people using paste manually with a pump, it looked very easy
+[08:36] <eroomde> but someone like PCB train will do you a stainless steel laser cut solderpaste stencil for £30
+[08:36] <daveake> [fx: carries something off to back of car] lol
+[08:36] <eroomde> which is a bargain - it'll save you hours
+[08:36] <eroomde> and give nice results
+[08:37] <benoxley> I'm finding it quite good to paste+place then heat up the tracks with a fine nib soldering iron
+[08:37] <benoxley> worked for me down to soic
+[08:37] <eroomde> yeah that works well too
+[08:37] <fsphil-laptop> eroomde, do you use a proper oven to flow it?
+[08:37] <eroomde> it's so flux heavy that it flows well
+[08:37] <daveake> Sounds good.  They're just down the road from me and I use them for PCB blanks.  A friend works there too.
+[08:37] <eroomde> fsphil-laptop: £19.99 from argos
+[08:37] <eroomde> IR toaster oven
+[08:37] <fsphil-laptop> haha
+[08:37] <eroomde> that did everything for the ESA project
+[08:37] <fsphil-laptop> lemme have a look
+[08:38] <fsphil-laptop> aarh, why to argos use flash just to show a picture
+[08:38] <fsphil-laptop> do*
+[08:38] <eroomde> the other rnadom tip for the day is that some amount of current limiting is a really nice idea for pyros
+[08:40] <eroomde> so for the firing box i just did for the full size vehicle, that's a full-on constant current 5A circuit and static electricity management bits and bobs and so on, to delivery a very precise amount of energy as a square wave. but that's a bit silly. but certainly a 1 ohm resistor in series with a pyro really helps. stops the pyro wires being blown apart too quickly
+[08:40] <fsphil-laptop> I've seen that happen
+[08:41] <eroomde> you can actually make very good constant current supplies with something like an lm338 regulator
+[08:41] <daveake> I'm so glad that I used a nichrome cutdown on Buzz instead of a pyro ...
+[08:41] <eroomde> you make the 'adjust' pin feed off a voltage drop across a small shut resistor in series with the load
+[08:41] <fsphil-laptop> BMP085 ... "offers a measuring range of 300 to 1100 hPa with an absolute accuracy of down to 0.03 hPa"
+[08:41] <eroomde> shunt*
+[08:41] <daveake> .... it made it much less of a surprise when it triggered in the back of the car when we were having lunch after the chase :)
+[08:42] <fsphil-laptop> haha
+[08:42] <eroomde> daveake: lol
+[08:42] <eroomde> we do need a nice inline cutdown device
+[08:42] <daveake> Buzz did reboot which does show that the AAAx3 idea was a bit marginal
+[08:42] <fsphil-laptop> did you loop the wire around the cord?
+[08:42] <eroomde> maybe something you could sew onto the apex of a chute
+[08:43] <daveake> Twisted round the cord, and the assembly covered in glass fibre flexible sleeving
+[08:43] <eroomde> except you don't really want to ditch all the nice instrumentation in the balloon neck
+[08:43] <eroomde> daveake: I *hate* that stuff
+[08:43] <eroomde> that sleeving
+[08:43] <daveake> yep
+[08:43] <eroomde> gives me nasty finger rashes for days afterwards
+[08:43] <fsphil-laptop> I suppose it would be better to have a cut-down that bursts the balloon in that case
+[08:43] <daveake> oh, I was ok
+[08:43] <fsphil-laptop> have a big enough parachute for both the payload and balloon remains
+[08:43] <eroomde> i had to use it on a job a few years ago for wires in a high temp environment
+[08:43] <eroomde> it was just pummelling my fingers with little bits of glass
+[08:44] <daveake> :(
+[08:44] <fsphil-laptop> euu
+[08:44] RocketBoy (~steverand@5acfd4f7.bb.sky.com) left irc: Quit: RocketBoy
+[08:44] <eroomde> yeah the parachute situation is annoying
+[08:44] <eroomde> it'd be really much nicer to deploy a parachute (yes me and my parachute deployment, i know) but the inline thing has such enormous advantages we can't really move away from it
+[08:45] <fsphil-laptop> yea
+[08:45] <eroomde> but if you start having a balloon neck flight computer, it'd going to start getting heavier
+[08:45] <eroomde> and more likely to foul an inline chute
+[08:46] <eroomde> one solution is a 'deployed' chute upside down at the bottom of the train
+[08:46] <eroomde> so it drags on the way up
+[08:46] <eroomde> but the entire train inverts on burst
+[08:46] <daveake> I thought about that ....
+[08:47] <eroomde> but that would increase drift i guess as it'd ascend more slowly
+[08:47] <daveake> .... yes, GPS and antenna now upside down
+[08:47] RocketBoy (~steverand@5acfd4f7.bb.sky.com) joined #highaltitude.
+[08:47] xaron (~petak@78.141.100.108) joined #highaltitude.
+[08:47] <eroomde> and radio
+[08:47] <eroomde> ah sorry you said that
+[08:47] <daveake> I meant radio antenna
+[08:47] <eroomde> yeah
+[08:47] <daveake> :)
+[08:47] <eroomde> so, hrm
+[08:47] <eroomde> i think we need a parachute mortar in the balloon neck
+[08:47] <daveake> Self-righting payload :)
+[08:47] <xaron> hi all, what is the status of alpha? no new trackers since 1:30 CET?
+[08:47] <eroomde> so we can deploy a chute through the balloon
+[08:48] <eroomde> xaron: it went out of range of all trackers
+[08:48] <eroomde> it was saluted
+[08:48] <eroomde> and people went to bed
+[08:48] <xaron> eroomde: pitty :(
+[08:48] Hiena (~boreger@81.93.195.181.datatrans.hu) joined #highaltitude.
+[08:49] <fsphil-laptop> it's probably down now
+[08:49] <fsphil-laptop> causing a storm in some village somewhere :)
+[08:49] <Hiena> 'morning!
+[08:49] <Hiena> What is the Apex Alpha status?
+[08:49] <fsphil-laptop> morning Hiena
+[08:49] <fsphil-laptop> out of range of all stations
+[08:50] <fsphil-laptop> batteries are probably dead now too
+[08:50] <eroomde> daveake: so remind me - where abouts do you live?
+[08:51] <daveake> Between Newbury and Wantage
+[08:51] <Hiena> Yesterday evening tried to get some HAM friends online helping the tracking, but the most is 10 or 80 meter operator, or just simply plastered due the weekend.
+[08:52] GW8RAK_ (~chatzilla@host-78-150-134-231.as13285.net) joined #highaltitude.
+[08:52] <eroomde> yeah
+[08:52] <eroomde> you know, it would be cheeky
+[08:52] <eroomde> but flying a 10m beacon onboard would be seriously sensible
+[08:52] <eroomde> maybe just doing HellShreiber or something funky
+[08:52] <fsphil-laptop> there is a license-exempt range in HF
+[08:52] <eroomde> aparently people were doing transatlantic on 10m 'with a wet noodle' yesterday
+[08:52] <fsphil-laptop> 10mw though
+[08:52] <eroomde> 13.5MHz or something right?
+[08:53] earthshine2 (~mikes@cpc1-orpi1-0-0-cust99.2-3.cable.virginmedia.com) left irc: Quit: Colloquy for iPad - http://colloquy.mobi
+[08:53] <Darkside> thats nor 10m
+[08:53] <Darkside> not*
+[08:53] <daveake> What sort of weight are those things?
+[08:53] <fsphil-laptop> there's one near 26mhz I think
+[08:53] <Darkside> 28MHz is 10m
+[08:53] <fsphil-laptop> but nobody sells a module for it
+[08:53] oh2lak (3e4ea318@gateway/web/freenode/ip.62.78.163.24) joined #highaltitude.
+[08:53] <oh2lak> Balloon still up?
+[08:53] <Darkside> probably not
+[08:53] <daveake> Who knows :)
+[08:53] <eroomde> daveake: not sure
+[08:54] <fsphil-laptop> oh2lak, we don't know but probably not :) our theory is that it would have burst at sunrise
+[08:54] <Hiena> fsphil-laptop: even a 3rd grade highscooler could build a working 500mW 10 meter transmitter.
+[08:54] <eroomde> you could make an HF beacon quite small i think
+[08:54] GW8RAK (~chatzilla@host-78-150-134-231.as13285.net) left irc: Ping timeout: 256 seconds
+[08:54] <eroomde> especially if you did something on-off keyed like hellschriber
+[08:54] Nick change: GW8RAK_ -> GW8RAK
+[08:54] <eroomde> it'd be a class A amplifier so very very efficient
+[08:54] <fsphil-laptop> Hiena, indeed. the license-free one could work on the UK though :)
+[08:54] <Darkside> Class E you mean
+[08:54] <eroomde> and very compact
+[08:54] <eroomde> sorry thanks Darkside
+[08:54] <fsphil-laptop> in*
+[08:54] <eroomde> one of the vowels
+[08:54] <Darkside> and it wouldn't be that small
+[08:55] <Darkside> you'd need space for the inductors and things
+[08:55] <Darkside> i've been meaning to make a small HF transmitter, haven't gotten around to it yet though
+[08:55] <fsphil-laptop> aprs would be another option -- 144.8 modules from radiometrix are cheap
+[08:55] <fsphil-laptop> though coverage in eastern europe is thin
+[08:56] <eroomde> i don't think it'd be massice tho darkside
+[08:56] <Darkside> eroomde: oh, it's be small
+[08:56] <Darkside> of course
+[08:56] <fsphil-laptop> I need to get my full license
+[08:56] <eroomde> you could probably fit it on a small pcb
+[08:56] <Hiena> I built several two or three transistor 27MHz RC transmitter, even one which was built, tuned and flown within 4 hours.
+[08:56] <eroomde> like 5cm x 2.5cm
+[08:56] <eroomde> maybe
+[08:56] oh2lak (3e4ea318@gateway/web/freenode/ip.62.78.163.24) left irc: Client Quit
+[08:56] <eroomde> what i mean is you wouldn't have a big thing with a big heat sink
+[08:57] <GW8RAK> I've tried a number of things from this page http://www.gw1tdv.co.cc/
+[08:57] <eroomde> fsphil-laptop: yes you do!
+[08:57] <GW8RAK> They all worked rather well
+[08:57] HarrisonC (5c12cdea@gateway/web/freenode/ip.92.18.205.234) joined #highaltitude.
+[08:57] <Darkside> eroomde: yeah of course
+[08:58] <eroomde> and it's be dirt cheap
+[08:58] <HarrisonC> so was the signal lost
+[08:58] <eroomde> it'd*
+[08:58] <Darkside> somewhat
+[08:58] <Darkside> eroomde: i'm working on a frequency agile HF transmitter
+[08:58] <Darkside> using the old AD9835 design as the signal generator
+[08:58] <fsphil-laptop> HarrisonC, yep
+[08:59] <Darkside> or an AD9834
+[08:59] <eroomde> they're quite power thirsty though, those DDSs
+[08:59] <eroomde> i think they're propper sexy
+[08:59] <Darkside> eroomde: not too bad
+[08:59] <eroomde> but, power thirsty
+[08:59] <Darkside> eroomde: the AD9834 is ok
+[08:59] <eroomde> although i guess small bananas on a 1W Tx
+[08:59] <Darkside> yeah, that was the trick
+[09:00] <eroomde> when i looked at it for generating 434MHz 10mW it made no sense whatsoever :)
+[09:00] xaron (petak@78.141.100.108) left #highaltitude.
+[09:00] <Darkside> eroomde: heh
+[09:00] <Darkside> eroomde: well, i've got a working 2W transmitter, in pieces
+[09:00] <priyesh> Upu: you pinged
+[09:00] <priyesh> ?
+[09:00] <eroomde> daveake: we should have a pie and pint at some point as i think we're relatively local
+[09:01] Rob_M0DTS (57c262d3@gateway/web/freenode/ip.87.194.98.211) joined #highaltitude.
+[09:01] <daveake> Sounds like a plan to me
+[09:01] junderwood (~John@host86-176-191-155.range86-176.btcentralplus.com) joined #highaltitude.
+[09:02] <Rob_M0DTS> morning all.. what was the result last night? lack of tracker or battery ran out?
+[09:02] <priyesh> Rob_M0DTS: lack of trackers
+[09:02] <Rob_M0DTS> oh, a shame but it had a good run!
+[09:02] <fsphil-laptop> pie? mmmm
+[09:03] <priyesh> yeah
+[09:03] <eroomde> 26.957 -
+[09:03] <eroomde> 27.283
+[09:03] <eroomde> MHz
+[09:03] <fsphil-laptop> as long as it doesn't have onions ;)
+[09:03] <priyesh> really want to know where it ends up
+[09:03] <eroomde> sorry bad copy paste
+[09:03] <eroomde> we can use that airborne at 10mW
+[09:03] <daveake> eroomde: Also I'll probably launch from Cambs next time, so if you fancy a run over there to help out I can pick you up
+[09:03] <eroomde> could be good yep
+[09:03] <eroomde> from churchill?
+[09:04] <daveake> I don't mind which site :)
+[09:04] <Rob_M0DTS> 27MHz is not good for weak sigs, very noisy with EU stations now activity has picked up.
+[09:04] <Hiena> Yup.
+[09:04] <eroomde> daveake: I'd go for churchill. I like it there
+[09:04] <daveake> cool
+[09:05] <eroomde> and if you take me, you won't need anyone else from cusf about
+[09:05] <daveake> And if I'm aiming for a float or a long flight, it's got less distance to travel till it's over Europe :)
+[09:05] <daveake> :)
+[09:05] <eroomde> in terms of finding gaps in lecture schedules :)
+[09:06] <fsphil-laptop> actually for a float its better to launch where I am ;)
+[09:06] <fsphil-laptop> more listeners for longer
+[09:06] <eroomde> true that
+[09:06] <daveake> True!
+[09:06] <HarrisonC> so no good looking at global tuners then
+[09:06] <daveake> I could post the payload etc to you :)
+[09:06] <Darkside> HarrisonC: we were using them
+[09:06] <Darkside> but there were none in the area
+[09:06] <daveake> But ....... when do you gett he notam? ;)
+[09:07] <fsphil-laptop> stop pointing out flaws in my plan :p
+[09:07] <fsphil-laptop> I must just email Mr.DM
+[09:07] <fsphil-laptop> I don't want to launch with snow on the ground again
+[09:08] <Hiena> If i would like to do some fancy, easy to track stuff i would vote for 2200 meter of 180 meter bands. Both is almost empty and possible to do insane long range contacts with a cheap equipments.
+[09:09] Roky (5317583f@gateway/web/freenode/ip.83.23.88.63) joined #highaltitude.
+[09:09] <fsphil-laptop> the big risk of launching from here is: http://habhub.org/predict/#!/uuid=a34a9cd4b9c77bd1daaba82aa2f91a02ca6b99d7
+[09:09] <eroomde> you'd have to give the entire ukhas comminity a chance to build equipment :)
+[09:09] <eroomde> fsphil-laptop: ouch. nuclear subs?
+[09:10] <fsphil-laptop> well, that and fishermen
+[09:10] <fsphil-laptop> next week is worse: http://habhub.org/predict/#!/uuid=93311bc3f945f76dea73bff051f3aeacee79826b
+[09:10] gnobbi (027bf552@gateway/web/freenode/ip.2.123.245.82) joined #highaltitude.
+[09:11] <HarrisonC> on the radios on global tuner do you set them to 434.640 USB
+[09:11] <fsphil-laptop> yea
+[09:11] <fsphil-laptop> but always tune up or down a bit, the signal will drift considerably throughout a flight
+[09:12] <daveake> For Buzz, "considerably" is far too small a word ...
+[09:12] <Hiena> The only problem with a very long antenna. I flown successfully a 150 meter relay wire as antenna with a party balloon. It worked pretty well on 180 meter.
+[09:13] <priyesh> Upu: will be back later
+[09:13] <HarrisonC> http://www.globaltuners.com/receiver/classic.php?receiver=269 lots of interference. is it close to radian in italy
+[09:14] <HarrisonC> radion
+[09:14] <HarrisonC> radio
+[09:14] <fsphil-laptop> HarrisonC, the balloon will be well into eastern europe by now, if not russia
+[09:15] <fsphil-laptop> it would be amazing if someone found it
+[09:15] <HarrisonC> just thought as the flight path slowed for a bit then cut off
+[09:15] <HarrisonC> do you have a reward notice
+[09:15] <fsphil-laptop> not sure what they wrote on the front, priyesh?
+[09:17] <fsphil-laptop> ooh, sunday http://habhub.org/predict/#!/uuid=91fc9b30c5ba12855371d15e8bcd94b5fa567938
+[09:18] <fsphil-laptop> right, food
+[09:18] <daveake> onions?
+[09:19] <daveake> Coq au vin for me later.  Lots of onions .... ;)
+[09:19] <fsphil-laptop> Noooooooooooooooooooooooooooooooo
+[09:19] Action: fsphil-laptop runs away
+[09:19] <daveake> :D
+[09:20] <fsphil-laptop> onions and sprouts. never has the earth seen such evil
+[09:20] <daveake> Ah, sprouts I can agree on!
+[09:20] <fsphil-laptop> vile!
+[09:20] <daveake> They have no purpose other than for parents to inflict pain and suffering on their offspring
+[09:21] Lee-G4TNX (~Lee-G4TNX@cpc6-grim14-2-0-cust99.12-3.cable.virginmedia.com) joined #highaltitude.
+[09:21] gnobbi (027bf552@gateway/web/freenode/ip.2.123.245.82) left irc: Quit: Page closed
+[09:22] <daveake> They do it if they want their kids to grow up to be PIC assembler programmers
+[09:22] <priyesh> fsphil-laptop: HarrisonC: there was a reward notice with contact details on the front
+[09:23] <daveake> But possibly not in enough languages :p
+[09:23] <HarrisonC> only hope is that it hits america
+[09:23] LazyLeopard (~irc-clien@chocky.demon.co.uk) joined #highaltitude.
+[09:23] <priyesh> daveake: we had to pick languages wisely
+[09:23] <priyesh> i think french was a bad choice
+[09:24] <priyesh> should have gone for russian or polish instead
+[09:24] <daveake> :D
+[09:24] <priyesh> but we had no idea
+[09:24] <daveake> Nope
+[09:25] <daveake> Cloud2 I only used English, but I expected that to land in Suffolk!
+[09:25] <daveake> And I used short words in case it landed in Norfolk ;)
+[09:25] <priyesh> ):
+[09:25] <priyesh>  :)
+[09:27] <daveake> The label was printed on a thermal printer, and not laminated.  I tested one afterwards in salt water and it faded but was still readable after 2 weeks.  Not sure how well it will have survived by now especially if it rubs against anything
+[09:27] <x-f> most people know English, and if they don't i guess their curiosity will drive them to find someone who knows - a neighbor or friend
+[09:27] <daveake> Still, might turn up in Norway sometime
+[09:27] <daveake> Yes
+[09:28] <HarrisonC> look at tracker.new ballon spacenear.us/tracker
+[09:29] <priyesh> ?
+[09:29] <priyesh> HarrisonC: i don't understand?
+[09:29] <HarrisonC> on spacenear.us/tracker there is a new ballon called PRHAL in the US. Take a look
+[09:30] <priyesh> oh
+[09:30] <priyesh> it's just someone testing
+[09:30] <HarrisonC> so who operates space near.us
+[09:31] <priyesh> ukhas
+[09:31] <HarrisonC> oh ok
+[09:32] Lee-G4TNX (~Lee-G4TNX@cpc6-grim14-2-0-cust99.12-3.cable.virginmedia.com) left irc: Remote host closed the connection
+[09:38] <radicalbiscuit> My bets are on the Ukraine. I have visions of it landing in a bowl of cabbage soup.
+[09:38] <jonsowman> lol
+[09:43] <Hiena> Drat, and double drat. Hafta redesign my parralell<->I2C interface board.
+[09:43] <fsphil-laptop> PRHAL is launching today
+[09:43] Rob_M0DTS (57c262d3@gateway/web/freenode/ip.87.194.98.211) left irc: Quit: Page closed
+[09:44] <priyesh> biab
+[09:44] <number10> if it lands in russia they probably already know where you live - watch out for people carrying umarellas
+[09:44] <fsphil-laptop> gdb is brilliant
+[09:45] <eroomde> random
+[09:45] <fsphil-laptop> just found where habhound is crashing :)
+[09:45] <daveake> :)
+[09:46] <fsphil-laptop> mutli-threading can be a royal pain sometimes
+[09:47] <eroomde> i need to get it setup for arm dev
+[09:47] wolfspraul (~wolfsprau@222.130.121.46) left irc: Ping timeout: 260 seconds
+[09:48] <Darkside> oh yeah fsphil-laptop
+[09:48] <Darkside> i'm thinking of modding one of my old mininut boards
+[09:48] G0MJW (82f684b1@gateway/web/freenode/ip.130.246.132.177) left irc: Ping timeout: 265 seconds
+[09:48] <Darkside> replacing the gps with a camera
+[09:48] <Darkside> and doing continious 600 baud SSDV
+[09:49] <radicalbiscuit> lol
+[09:49] <radicalbiscuit> that would be fantastic
+[09:49] wolfspraul (~wolfsprau@114.241.241.67) joined #highaltitude.
+[09:51] <fsphil-laptop> that would be
+[09:51] <fsphil-laptop> at those speeds it gets close to sstv times
+[09:51] daveake (daveake@86.188.200.75) left #highaltitude.
+[09:51] <fsphil-laptop> only better looking
+[09:51] nickolai89 (~nickolai@184.17.121.254) left irc: Ping timeout: 240 seconds
+[09:52] <Darkside> fsphil-laptop: i'd do 640x480
+[09:52] <fsphil-laptop> continuous .. are you doing the telemetry on another radio? ooh a second payload
+[09:52] <fsphil-laptop> ah ha
+[09:52] <fsphil-laptop> now that would be nifty
+[09:52] pszy (~pszy@77-22-27-250-dynip.superkabel.de) joined #highaltitude.
+[09:53] <fsphil-laptop> I got one of the boards you made for Nigel, I'm going to try ssdv on that. not sure if the chip has the memory though
+[09:53] gilligan (4549f4c0@gateway/web/freenode/ip.69.73.244.192) joined #highaltitude.
+[09:54] <fsphil-laptop> that and hellscheiber
+[09:54] <fsphil-laptop> (sp?)
+[09:54] <Darkside> fsphil-laptop: what does it need?
+[09:55] <Darkside> is just SSDV doable on an atmega328p?
+[09:55] <Darkside> 4k of ram
+[09:56] <fsphil-laptop> not a huge amount, it's mostly progmem it uses
+[09:56] <Darkside> ok
+[09:56] <Darkside> well its for 32k of flash
+[09:56] <fsphil-laptop> that's plenty
+[09:56] <Darkside> how does the clock speed make much of a difference?
+[09:56] <Darkside> my boards are all 8MHz
+[09:56] <fsphil-laptop> not sure how much ram it uses though
+[09:57] Lunar_Lander (~Miranda@p54882899.dip.t-dialin.net) joined #highaltitude.
+[09:57] <fsphil-laptop> it shouldn't make any difference, I use 7.3728mhz
+[09:57] <Lunar_Lander> hello
+[09:57] <fsphil-laptop> the camera can be fussy perhaps at higher baud rates if it's not well timed
+[09:57] <fsphil-laptop> but it should run fine at 14.4k
+[09:57] <fsphil-laptop> morning Lunar_Lander
+[09:58] <Lunar_Lander> how is life?
+[09:58] <fsphil-laptop> the 7.3728mhz crystal was still happy doing everything at 2400 baud
+[09:58] <Darkside> fsphil-laptop: i'd be using a proper hardware serial
+[09:58] RocketBoy (steverand@5acfd4f7.bb.sky.com) left #highaltitude.
+[09:58] <fsphil-laptop> spiffy Lunar_Lander :) you?
+[09:59] dfsdfasd (83d7a6b1@gateway/web/freenode/ip.131.215.166.177) left irc: Quit: Page closed
+[09:59] <Darkside> fsphil-laptop: so its teh camera you linked to me last night/
+[09:59] <Darkside> and what non-web-based decoding software is there?
+[09:59] <Darkside> i.e. something we could run in teh car
+[09:59] <fsphil-laptop> dl-fldigi has a decoder built in
+[09:59] <Lunar_Lander> I'm good, thanks
+[09:59] <Darkside> oh, so it shows the images in dl-fldigi?
+[09:59] <fsphil-laptop> yea
+[09:59] <Darkside> oh cool
+[09:59] <Darkside> :-)
+[10:00] <fsphil-laptop> but only shows what you receive
+[10:00] <Darkside> yeah thats ok
+[10:00] <Darkside> well, i might get one of these cameras and have a play around
+[10:00] <Darkside> might have to hack your code up a bit
+[10:00] <fsphil-laptop> one note, the current version has a slightly older decoder :) I changed the format a bit
+[10:00] <Darkside> i'd be doing 600 baud on 2m
+[10:00] <Darkside> at 100mW
+[10:00] <fsphil-laptop> oh that'll work really well
+[10:00] <fsphil-laptop> considering all the tests so far have been 10mw and those worked well
+[10:01] pszy (~pszy@77-22-27-250-dynip.superkabel.de) left irc: Quit: This computer has gone to sleep
+[10:01] <Lunar_Lander> are the apex people here?
+[10:01] <Darkside> fsphil-laptop: i was considering sending it via APRS
+[10:01] <Lunar_Lander> priyesh, jonsowman
+[10:01] <Darkside> fsphil-laptop: whats the packet size for SSDV?
+[10:01] <fsphil-laptop> Darkside, I've had that thought too :) I just bought some 144.8mhz modules for it
+[10:01] <jonsowman> hi Lunar_Lander
+[10:01] <fsphil-laptop> 256 bytes with FEC, -32 bytes without it
+[10:01] <Lunar_Lander> you made an amazing flight
+[10:01] <Darkside> ooh ok
+[10:02] <Darkside> fsphil-laptop: how many packets to make a full image?
+[10:02] <Lunar_Lander> jonsowman : I think this could be considered the first trans-european HAB flight
+[10:02] M0WOJ-Alex (5ac57c52@gateway/web/freenode/ip.90.197.124.82) joined #highaltitude.
+[10:02] <fsphil-laptop> 224 bytes without it then :)
+[10:02] Action: fsphil-laptop is slow today
+[10:02] <jonsowman> Lunar_Lander: thanks! i wasn't really that involved, I only helped launch
+[10:02] <fsphil-laptop> Darkside, depends on the size of the image. my flights with 320x240 images it was about 30/40 packets
+[10:02] <jonsowman> priyesh, danielsaul and others are the ones that built it :)
+[10:02] <Darkside> ok
+[10:02] <fsphil-laptop> the less detailed images where 10 packets
+[10:02] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) left irc: Ping timeout: 256 seconds
+[10:02] <Darkside> oh yes, jpeg
+[10:02] <Darkside> :-)
+[10:03] <fsphil-laptop> indeedy
+[10:03] try (4fdcfd09@gateway/web/freenode/ip.79.220.253.9) joined #highaltitude.
+[10:03] <Darkside> so 4x that much for a 640x480 image
+[10:03] <fsphil-laptop> I've done single-packet images for testing
+[10:03] <Lunar_Lander> ah
+[10:03] <Lunar_Lander> are priyesh and danielsaul here?
+[10:03] <fsphil-laptop> like, 32x16 with just text
+[10:03] <Lunar_Lander> hi M0WOJ-Alex
+[10:04] <M0WOJ-Alex> hi
+[10:04] gilligan (4549f4c0@gateway/web/freenode/ip.69.73.244.192) left irc: Quit: Page closed
+[10:04] <Darkside> so thats 2.84 minutes for a 320x240 image at 600 baud
+[10:04] <fsphil-laptop> sounds about right
+[10:04] <Darkside> so does it store the entire image into the MCUs ram before transmit?
+[10:05] <fsphil-laptop> it streams it from the camera
+[10:05] <Darkside> or does it pull it out of the ttl camera part by part
+[10:05] GW8RAK (~chatzilla@host-78-150-134-231.as13285.net) left irc: Quit: ChatZilla 0.9.87 [Firefox 6.0.2/20110902133214]
+[10:05] <Darkside> oh so you can request bits of the image at a time
+[10:05] <fsphil-laptop> yea
+[10:05] <Darkside> cool
+[10:05] <fsphil-laptop> although it sometimes goes to sleep if you wait too long
+[10:05] <fsphil-laptop> I think I have code in there to ping it
+[10:06] try (4fdcfd09@gateway/web/freenode/ip.79.220.253.9) left irc: Client Quit
+[10:06] <fsphil-laptop> the biggest ram user is the packet itself
+[10:06] <fsphil-laptop> 256 bytes
+[10:06] <fsphil-laptop> and whatever block size you're reading from the jpeg camera
+[10:06] <fsphil-laptop> but that can be varied
+[10:07] <fsphil-laptop> I think I went overboard with the buffering in my code
+[10:07] <fsphil-laptop> 256 bytes
+[10:08] <fsphil-laptop> not too bad
+[10:08] <Darkside> mm
+[10:08] <Darkside> ok
+[10:08] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) joined #highaltitude.
+[10:08] <Darkside> well, i might order a camera and try it out
+[10:08] M0WOJ-Alex (5ac57c52@gateway/web/freenode/ip.90.197.124.82) left irc: Ping timeout: 265 seconds
+[10:08] <fsphil-laptop> it can be like 32 bytes or something silly
+[10:09] <fsphil-laptop> so what's considered too much data for aprs? would it be feasible to transmit the packets through that?
+[10:09] <Darkside> its doable
+[10:09] <Darkside> you might upset the network operators
+[10:09] <Darkside> :P
+[10:09] <fsphil-laptop> meh
+[10:09] <fsphil-laptop> it's there to be used ;)
+[10:10] <Darkside> heh
+[10:10] <fsphil-laptop> you'd need some way to include the callsign in the data
+[10:10] <Darkside> well, if i can get the raw SSDV data to be sent, i could be able to wrap it in the frame
+[10:10] <Darkside> nah
+[10:10] <Darkside> AX25 has that already
+[10:10] <fsphil-laptop> ah, handy
+[10:10] <Darkside> its more routing and stuff
+[10:11] <Darkside> i.e. hwo far do you want the packets to go
+[10:11] belane (5b42a88d@gateway/web/freenode/ip.91.66.168.141) joined #highaltitude.
+[10:11] <Darkside> oh yeah
+[10:11] <Darkside> fsphil-laptop: can you do things like send 3 320x240 images thsen 1 640x480 image?
+[10:11] <fsphil-laptop> yea
+[10:12] <fsphil-laptop> the camera can switch easy, and the encoder will just use whatever the image is
+[10:12] <Darkside> cool
+[10:13] <Darkside> i think i might try doing 320x240 images at 600 baud, then a 640x480 image at 1200 baud
+[10:13] <Darkside> or something like that
+[10:13] pszy (~pszy@77-22-27-250-dynip.superkabel.de) joined #highaltitude.
+[10:13] <fsphil-laptop> that's similar to what tim tried
+[10:13] <Darkside> i'll be using 10 times the output power :P
+[10:14] HarrisonC (5c12cdea@gateway/web/freenode/ip.92.18.205.234) left irc: Quit: Page closed
+[10:14] <fsphil-laptop> lol
+[10:14] <fsphil-laptop> also a better camera
+[10:14] <Darkside> eh?
+[10:15] <Darkside> isnt the camera you linked the one tim used?
+[10:15] <fsphil-laptop> he flew a logitech usb webcam
+[10:15] <Darkside> oh?
+[10:15] <fsphil-laptop> it just couldn't handle the contrast
+[10:15] <Darkside> ahh
+[10:15] <fsphil-laptop> the earth was overexposed on every image
+[10:15] <Darkside> so you use the camera you linked to me?
+[10:15] <fsphil-laptop> yea
+[10:15] <Darkside> cool
+[10:15] <Darkside> 90 or 120 degree lens?
+[10:16] <fsphil-laptop> I think it's 90,.. it's pretty wide but not as much as the gopro
+[10:16] <fsphil-laptop> it can be replaced
+[10:16] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) left irc: Ping timeout: 260 seconds
+[10:16] <fsphil-laptop> it uses the normal board-camera lens size
+[10:16] <Darkside> ok
+[10:17] <priyesh> back
+[10:17] <priyesh> Lunar_Lander: hello
+[10:19] pszy (~pszy@77-22-27-250-dynip.superkabel.de) left irc: Quit: This computer has gone to sleep
+[10:19] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) joined #highaltitude.
+[10:21] <Lunar_Lander> hello priyesh
+[10:21] <priyesh> heloo
+[10:21] <priyesh> *hello
+[10:22] belane (5b42a88d@gateway/web/freenode/ip.91.66.168.141) left irc: Quit: Page closed
+[10:24] unaskedwriter (519c9ec2@gateway/web/freenode/ip.81.156.158.194) joined #highaltitude.
+[10:25] <Lunar_Lander> priyesh : you probably made the first trans-european HAB!
+[10:27] unaskedwriter (519c9ec2@gateway/web/freenode/ip.81.156.158.194) left irc: Client Quit
+[10:27] <priyesh> thanks for helping to track it when we lost it in the UK!
+[10:28] <fsphil-laptop> aaarg, it's a heisenbug - it crashes until you put fprintf() in to find it, then it works
+[10:28] <SpeedEvil> It wasn't picked up again after around midnight?
+[10:28] <priyesh> last packet was at 12:41 BST
+[10:29] <priyesh> it was still transmitting, but we had no one in range
+[10:32] <priyesh> did alpha beat the distance record?
+[10:32] RocketBoy (~steverand@5acfd4f7.bb.sky.com) joined #highaltitude.
+[10:32] <fsphil-laptop> I think so
+[10:32] RocketBoy (steverand@5acfd4f7.bb.sky.com) left #highaltitude.
+[10:33] <fsphil-laptop> well, latex distance record
+[10:33] <Darkside> oh?
+[10:33] <Darkside> how far did it go?
+[10:33] <priyesh> fsphil-laptop: are we measuring the path or direct distance?
+[10:33] <fsphil-laptop> probably direct distance ... the last message didn't say
+[10:33] <Darkside> whats the great-cirgle distance?
+[10:33] <Darkside> circle*
+[10:34] <fsphil-laptop> hmm.. I don't have logging enabled in xchat
+[10:34] <Darkside> ill work out great-circle
+[10:34] <Darkside> hold on
+[10:35] <Darkside> holy crap
+[10:35] <Darkside> great-circle from cambridge to last known point was 1346km
+[10:35] <NigelMoby> http://on.tuu.fi/tesmaus/alpha.php
+[10:35] <Darkside> or that
+[10:35] <fsphil-laptop> that's what I was lookin gfor
+[10:35] <priyesh> what's the record
+[10:35] <priyesh> ?
+[10:35] <fsphil-laptop> thanks NigelMoby
+[10:36] <Darkside> priyesh: the record is set by zero pressure balloons
+[10:36] <priyesh> record for a latex ballon
+[10:36] <priyesh> *balloon
+[10:36] clueless (4df8713d@gateway/web/freenode/ip.77.248.113.61) joined #highaltitude.
+[10:36] <NigelMoby> 1200?
+[10:36] <Darkside> 1411 miles
+[10:36] <fsphil-laptop> some balloons have gone around the planet a few times :)
+[10:36] <Darkside> WB8ELK's balloons have done ridiculous distances
+[10:36] Nick change: clueless -> Guest56899
+[10:36] <priyesh> so no latex balloon record?
+[10:36] <Darkside> yes
+[10:37] <Darkside> thats the WB8ELK one
+[10:37] <priyesh> ok
+[10:37] <Darkside> which is 2370km
+[10:37] <priyesh> wow
+[10:37] <fsphil-laptop> wow indeed
+[10:37] <Darkside> HiBall-6
+[10:37] <fsphil-laptop> that's the one that ditched in the atlantic isn't it?
+[10:37] <Darkside> dunno
+[10:37] <priyesh> http://ukhas.org.uk/general:uk_records we got the duration and float duration records acording to this.. not sure if it's been updated
+[10:37] <fsphil-laptop> uk record certainly
+[10:37] <priyesh> yeah
+[10:37] <Darkside> yeah, definitely UK
+[10:38] <fsphil-laptop> by a long way lol
+[10:38] <priyesh> just want to make sure we don't make up stuff in our write ups
+[10:38] SpikeUK (56a3ec79@pdpc/supporter/monthlybyte/spikeuk) joined #highaltitude.
+[10:38] <priyesh> was WB8ELK's distance record a UK one?
+[10:38] <priyesh> if not, what is the UK record?
+[10:38] <fsphil-laptop> the annoying thing is that it *might* have gone a lot lot longer
+[10:38] Guest56899 (4df8713d@gateway/web/freenode/ip.77.248.113.61) left irc: Client Quit
+[10:38] <eroomde> no and not sure
+[10:39] <eroomde> i think the uk one probably isn't much more than 500km
+[10:39] <fsphil-laptop> hadie:2 got about 250km
+[10:39] wolfspraul (~wolfsprau@114.241.241.67) left irc: Ping timeout: 260 seconds
+[10:39] <priyesh> so we got that by far :)
+[10:39] <fsphil-laptop> easily yea
+[10:39] <priyesh> really annoying that we couldn't track it
+[10:39] <Darkside> mm
+[10:39] <priyesh> /may/ have gone on for a little longer
+[10:39] <Darkside> we were lucky with Horus 16, A) it moved slowly
+[10:40] <Darkside> and B) we had heaps of trackers all over australia we could call on
+[10:40] <fsphil-laptop> likely I think priyesh
+[10:40] wolfspraul (~wolfsprau@114.241.241.67) joined #highaltitude.
+[10:40] <priyesh> could someone explain great circle distance and is this the great circle distance on here: http://on.tuu.fi/tesmaus/alpha.php
+[10:41] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) left irc: Ping timeout: 260 seconds
+[10:41] <Darkside> priyesh: great circle is point-to-point distance on a globe
+[10:41] <priyesh> including curvature of the earth?
+[10:41] <Darkside> yes
+[10:41] <priyesh> ah. i see
+[10:41] <Darkside> i just get it using google earth
+[10:41] <priyesh> do we know if http://on.tuu.fi/tesmaus/alpha.php is great circle?
+[10:41] <priyesh> it seems like it is
+[10:41] <Darkside> because it matched what i got on google earth
+[10:41] <priyesh> cool
+[10:41] <Darkside> within a fe wkm anyway
+[10:41] <Darkside> few*
+[10:42] <Darkside> anyway, your balloon would have floated at least until sunrise
+[10:42] <Darkside> possibly a little longer
+[10:42] <priyesh> i'd agree with that too
+[10:42] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) joined #highaltitude.
+[10:43] <Lunar_Lander> btw
+[10:43] <Lunar_Lander> it's cooler to calculate greatr circlke manually
+[10:43] <Lunar_Lander> :P
+[10:43] <Lunar_Lander> *great circle
+[10:43] <priyesh> yes
+[10:43] <priyesh> google earth is cheating!
+[10:43] <priyesh> :P
+[10:43] <Darkside> meh
+[10:43] <Darkside> if it does th ejob
+[10:44] <Lunar_Lander> XD
+[10:44] radicalbiscuit (45a98524@gateway/web/freenode/ip.69.169.133.36) left irc: Ping timeout: 265 seconds
+[10:44] <Lunar_Lander> what is the symbol for the great circle angle?
+[10:44] <Lunar_Lander> :)
+[10:47] <DiJuMx> What was the average speed of Alpha while it was over germany/poland?
+[10:47] <NigelMoby> Bout 29m/s
+[10:48] <Lunar_Lander> DiJuMx : are you from GER?
+[10:48] <NigelMoby> According to that Php page that was made
+[10:48] <DiJuMx> UK
+[10:48] <Lunar_Lander> ah
+[10:50] <Lunar_Lander> OK, the great circle angle is
+[10:50] <Lunar_Lander> Zeta
+[10:50] <Lunar_Lander> :)
+[10:50] <NigelMoby> I think the time that u launched really helped the float duration priyesh
+[10:50] <DiJuMx> okay, bit of quick math, assuming alpha remained at about 29m/s average speed, means it could have travelled another 1160km by now
+[10:51] <Darkside> it would have burst after sunrise, most likely
+[10:51] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) left irc: Ping timeout: 248 seconds
+[10:52] jasonb (~jasonb@adsl-66-124-73-251.dsl.sntc01.pacbell.net) joined #highaltitude.
+[10:53] <DiJuMx> In the best case (where it remains afloat), it could have reached the outskirts of Moscow.....or the black sea depending on the direction
+[10:54] <NigelMoby> Darkside, 300g @ 8 m/s .. estimated impact force?
+[10:54] <Darkside> dunno
+[10:54] <NigelMoby> Moscow... Russians would've shot it down
+[10:54] <Darkside> its a foam box, it won't land very hard
+[10:54] <eroomde> it's at 120,000ft
+[10:55] <eroomde> but not doing mach 3
+[10:55] qazwsxedc (b839049a@gateway/web/freenode/ip.184.57.4.154) joined #highaltitude.
+[10:55] <eroomde> hrm
+[10:55] <eroomde> i think they probs couldn't get to it with a non-redic missile
+[10:55] <eroomde> ridic*
+[10:55] <NigelMoby> Hmm good point
+[10:56] <eroomde> no aerodynamic contro, for the final 20,000ft
+[10:56] qazwsxedc (b839049a@gateway/web/freenode/ip.184.57.4.154) left irc: Client Quit
+[10:56] <eroomde> i have fiinally got my tower up in my new house and have a proper ibm modem m keyboard. so much nicer than crouching over a wee laptop
+[10:57] <eroomde> although typing accuracy has gone out the window
+[10:57] <NigelMoby> Lol
+[10:57] <priyesh> what's the best way to keep the current map on spacenearus
+[10:58] <Darkside> screenshot..
+[10:58] <priyesh> (other than a screenshot :P)
+[10:58] <x-f> JSON
+[10:58] <priyesh> a download json + viewer would be cool
+[10:59] <x-f> priyesh, export it to google earth
+[10:59] <Lunar_Lander> NigelMoby : 9.6 J of kinetic energy
+[10:59] <priyesh> x-f: 'Track in Google Earth'?
+[10:59] <x-f> yup
+[10:59] <Darkside> i've got scripts to pull down the JSON data and convert it to a csv
+[10:59] <NigelMoby> Oh, tnx kev
+[10:59] <Darkside> you can then probably convert that to a kml or something
+[10:59] <priyesh> does that not just link to http://spacenear.us/tracker/data.php?format=kml
+[11:00] <priyesh> i'll just download the kml
+[11:00] <Darkside> yeah its just a network link kml iirc
+[11:00] <Lunar_Lander> you're welcome
+[11:00] <priyesh> it is Darkside
+[11:01] <DanielRichman> priyesh: habitat keeps the data forever. When we add the new web frontend you'll be able to find your flight in the archive
+[11:02] <Darkside> i'm wgetting the json data atm
+[11:02] <Darkside> then will see if i can convert it to a csv for you
+[11:02] <Lunar_Lander> YAY DanielRichman
+[11:02] <DanielRichman> yup. either I or Darkside can give you the link to grab the json out of couchdb.
+[11:02] <priyesh> DanielRichman: nice.. look forward to that
+[11:02] Action: Lunar_Lander gets the guitar
+[11:03] <priyesh> http://habitat.habhub.org/habitat/_design/habitat/_view/payload_telemetry?startkey=[%22ALPHA%22,%22latest%22]&descending=true&include_docs=true
+[11:03] <Lunar_Lander> DanielRichman is so awesome cause he rescues all the data
+[11:03] <DanielRichman> or he could csv it for you. You could ask fsphil-laptop too; he has been working on a local viewer that *might* just take the couchdb json
+[11:03] <Lunar_Lander> oh yeah
+[11:03] <priyesh> is it that?
+[11:03] <DiJuMx> Would it be possible to built a payload which acts as a lightweight UAV-style glider on balloon burst?
+[11:03] <DanielRichman> Lunar_Lander: nah rjharrison is awesome because he's been keeping data after it's deleted off the tracker for years and we'll be able to import it all
+[11:04] <Lunar_Lander> yeah :)
+[11:04] <DanielRichman> priyesh: that's good but you're missing an endkey: (you've included AEROS' telemetry)
+[11:04] <DanielRichman> http://habitat.habhub.org/habitat/_design/habitat/_view/payload_telemetry?startkey=[%22ALPHA%22,false]&endkey=[%22ALPHA%22,%22end%22]&include_docs=true
+[11:04] <priyesh> DanielRichman: so i did :)
+[11:04] <Darkside> i'm dumping it to a csv now priyesh
+[11:04] <DanielRichman> note that this is all telemetry ever for callsign 'ALPHA'
+[11:05] <priyesh> DanielRichman: yep
+[11:05] <DanielRichman> there are other ways to grab only docs attached to a certain flight doc, etc.
+[11:05] <priyesh> Darkside: thanks.. saves me from doing it
+[11:05] <DanielRichman> in this case though it will probably just be easier to trim testing stuff off each end by timestamp.
+[11:05] <DanielRichman> it should be sorted.
+[11:05] <priyesh> that's the plan
+[11:05] <Darkside> just making sure the fields are right
+[11:05] <priyesh> i'm going to remove the 2/3 corrupt packets from the kml track too
+[11:07] <Darkside> priyesh: http://pipe2.darklomax.org/alpha.csv
+[11:07] <priyesh> thanks - downloded
+[11:07] <Darkside> csv = "{nicetime},{latitude},{longitude},{altitude},{satellites},{temp_int},{temp_ext},{battery_volts}"
+[11:07] <Darkside> thats the format
+[11:07] <Darkside> it'll probably have testing data in it
+[11:08] <danielsaul> Morning
+[11:08] <priyesh> Darkside: yep
+[11:08] <danielsaul> *Afternoon rather
+[11:08] <DanielRichman> I would suggest adding {count}, if it's easy enough so you can double check that everything is in sequence (no reason for it not to be, but...)
+[11:08] <danielsaul> People pinged whilst I was asleep... not sure who
+[11:08] <eroomde> can one still get free mousemats?
+[11:08] <Darkside> danielsaul: thats a good point
+[11:08] Roky (5317583f@gateway/web/freenode/ip.83.23.88.63) left irc: Quit: Page closed
+[11:09] <Darkside> danielsaul:
+[11:09] <Darkside> aaaaack
+[11:09] <Darkside> too many daniels
+[11:09] <danielsaul> haha
+[11:09] <Darkside> priyesh: i'm re-running the script with the packet counting included
+[11:09] <priyesh> ok
+[11:10] <Darkside> ok re-dwownload
+[11:10] <priyesh> done
+[11:13] <danielsaul> priyesh: stick the flightpath stuff in the dropbox folder please
+[11:13] <danielsaul> :P
+[11:13] <danielsaul> bbl

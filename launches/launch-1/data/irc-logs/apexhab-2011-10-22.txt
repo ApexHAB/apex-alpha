@@ -1,0 +1,583 @@
+--- Log opened Sat Oct 22 00:00:07 2011
+--- Day changed Sat Oct 22 2011
+00:00 < apexlog> *** New IRC log started at http://www.apexhab.org/irc-log/ ***
+00:03 -!- awakefield [~androirc@92.40.254.109.threembb.co.uk] has quit [Ping timeout: 258 seconds]
+00:05 -!- andrew_apex [~chatzilla@149.254.60.163] has quit [Remote host closed the connection]
+00:15 < priyesh> morning all
+00:15 < priyesh> doing a bit of testing in a second
+01:59 < priyesh> night
+01:59 < priyesh> morning?
+07:39 < jonsowman> morning
+07:51 -!- Andrew_apex_mob [~androirc@89.192.0.7] has joined #apexhab
+07:52 < Andrew_apex_mob> Morning team apex!
+07:52 < jonsowman> morning Andrew_apex_mob
+07:52 < Andrew_apex_mob> off to breakfast :)
+07:52 < jonsowman> we are in a min too
+09:14 < Andrew_apex_mob> currently outside maplins
+09:17 -!- benoxley_mobile [~benuni@212.183.140.19] has joined #apexhab
+09:17 < benoxley_mobile> morning
+09:20 < jonsowman> hello ther benoxley_mobile
+09:20 < benoxley_mobile> y halo that.
+09:21 < benoxley_mobile> * thar
+09:22 -!- benoxley_mobile [~benuni@212.183.140.19] has quit [Quit: AndroIRC]
+09:22 -!- benoxley_mobile [~benuni@212.183.140.19] has joined #apexhab
+09:31 < benoxley_mobile> most relaxed apex launch evarrrrr
+10:30 -!- benoxley_mobile [~benuni@212.183.140.19] has quit [Quit: AndroIRC]
+10:45 -!- costyn [~costyn@lolcathost.quanza.net] has joined #apexhab
+11:07 < apexbot> @apexhab: Payload ready. #apexhab #ukhas http://t.co/fEkWcpqB [http://twitter.com/apexhab/status/127687599266603008]
+11:22 < costyn> nice "Dutch" on the side :)
+11:23 < costyn> Google translate? :)
+11:24 < costyn> although it's perfectly understandable, so don't worry :)
+11:25 -!- awakefield [~androirc@92.40.254.159.threembb.co.uk] has joined #apexhab
+11:34 -!- jamvanderloeff [~user@119.224.102.139] has joined #apexhab
+11:35 < jamvanderloeff> So when is the launch?
+11:35 -!- jamvanderloeff [~user@119.224.102.139] has quit [Client Quit]
+11:44 -!- awakefield [~androirc@92.40.254.159.threembb.co.uk] has quit [Remote host closed the connection]
+11:48 -!- jamvanderloeff [~jamvander@119.224.102.139] has joined #apexhab
+12:38 -!- awakefield [~androirc@92.40.254.159.threembb.co.uk] has joined #apexhab
+12:38 < costyn> jamvanderloeff: now :)
+12:46 < Andrew_apex_mob> apex alpha has launched, and is ascending at around 2.3m/s
+12:47 -!- DiJuMx [4d625eb3@gateway/web/freenode/ip.77.98.94.179] has joined #apexhab
+12:49 < jamvanderloeff> tracker seems stuck
+13:00 -!- Andrew_apex_mob [~androirc@89.192.0.7] has quit [Ping timeout: 258 seconds]
+13:01 -!- Andrew_apex_mob [~androirc@89.192.0.7] has joined #apexhab
+13:18 -!- edward_apex [5c28fe9f@gateway/web/freenode/ip.92.40.254.159] has joined #apexhab
+13:22 -!- edward_apex [5c28fe9f@gateway/web/freenode/ip.92.40.254.159] has quit [Ping timeout: 265 seconds]
+13:30 -!- awakefield [~androirc@92.40.254.159.threembb.co.uk] has quit [Remote host closed the connection]
+13:30 < apexbot> @apexhab: Live altitude counter :) #ukhas #apexhab http://t.co/6Ll6xGcO [http://twitter.com/apexhab/status/127723494627745793]
+13:30 -!- awakefield [~androirc@92.40.254.159.threembb.co.uk] has joined #apexhab
+13:55 -!- mrchimpy [5d608bd2@gateway/web/freenode/ip.93.96.139.210] has joined #apexhab
+13:55 -!- costyn [~costyn@lolcathost.quanza.net] has left #apexhab []
+13:56 -!- jamvanderloeff [~jamvander@119.224.102.139] has quit []
+13:58 -!- mrchimpy [5d608bd2@gateway/web/freenode/ip.93.96.139.210] has quit [Client Quit]
+14:29 < apexbot> @danielsaul: RT @apexhab: Live altitude counter :) #ukhas #apexhab http://t.co/6Ll6xGcO [http://twitter.com/danielsaul/status/127738309647675392]
+14:42 -!- howard [d4b78028@gateway/web/freenode/ip.212.183.128.40] has joined #apexhab
+14:44 < apexbot> @cuspaceflight: Tracking Apex Alpha from CUED roof! #cusf #apexhab http://t.co/yhGDpJEu [http://twitter.com/cuspaceflight/status/127742101478842368]
+14:47 -!- howard [d4b78028@gateway/web/freenode/ip.212.183.128.40] has quit [Quit: Page closed]
+15:35 < DiJuMx> Where was the payload expected to come down?
+16:01 -!- td [~tomasd@c-f234e155.163-1-64736c11.cust.bredbandsbolaget.se] has joined #apexhab
+16:02 -!- td [~tomasd@c-f234e155.163-1-64736c11.cust.bredbandsbolaget.se] has quit [Client Quit]
+16:30 -!- danielsaul [~danielsau@99.198.122.28] has quit [Ping timeout: 252 seconds]
+16:31 -!- danielsaul [~danielsau@99.198.122.28] has joined #apexhab
+16:43 -!- fogger [~Fogger@136.27.233.220.static.exetel.com.au] has joined #apexhab
+16:48 < apexbot> @cuspaceflight: Down to 5 degrees elevation #apexhab #cusf http://t.co/PIXPvlYx [http://twitter.com/cuspaceflight/status/127773201018269696]
+16:49 < danielsaul> Hello #apexhab'''''''''''''''''''''''''''''''''''''''#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#'#####################################################################'##'#'[[[[[
+16:49 < jonsowman> hi
+16:49 < danielsaul> Hello #apexhab
+16:50 < danielsaul> Im in minibus and we're heading home
+16:50 < jonsowman> danielsaul: ok
+16:51 < danielsaul> Priyesh and Andrew_apex_mob are coming back for benoxley and Matt_soton soon i think
+16:51 < priyesh> hello
+16:51 < danielsaul> Argh, internet is slow
+17:18 -!- fogger [~Fogger@136.27.233.220.static.exetel.com.au] has left #apexhab []
+17:21 -!- benoxley_mobile [~benuni@212.183.140.1] has joined #apexhab
+17:23 -!- benapex [~benuni@212.183.140.1] has joined #apexhab
+17:57 < apexbot> @cuspaceflight: Still decoding Apex Alpha, 525km at 300 baud #cusf #apexhab [http://twitter.com/cuspaceflight/status/127790631727800320]
+17:58 < priyesh> :)
+17:59 < apexbot> @danielsaul: Wow, #apexhab Alpha is still up in the air and still being tracked... Over Germany now! [http://twitter.com/danielsaul/status/127791181588467712]
+17:59 < apexbot> @danielsaul: RT @cuspaceflight: Still decoding Apex Alpha, 525km at 300 baud #cusf #apexhab [http://twitter.com/danielsaul/status/127791210353008640]
+17:59 < jonsowman> down to 1 deg elevation on the trakotron
+18:02 < danielsaul> Oooh
+18:02 < jonsowman> 540km, all good at 300 baud
+18:02 < danielsaul> :D
+18:02 < danielsaul> Do we know any people in east germany or poland? :P
+18:04 < jonsowman> i dont lol
+18:04 < jonsowman> globaltuners though
+18:04 < priyesh> can we get more listeners in germany
+18:05 < priyesh> please call people!
+18:08 -!- salokcin [~androirc@208.53.57.16] has joined #apexhab
+18:08 < salokcin> still aloft?
+18:08 < jonsowman> yep
+18:09 < salokcin> awesome!
+18:09 -!- benoxley_mobile [~benuni@212.183.140.1] has quit [Quit: AndroIRC]
+18:09 -!- benapex [~benuni@212.183.140.1] has quit [Quit: AndroIRC]
+18:09 -!- benoxley_mobile [~benuni@212.183.140.1] has joined #apexhab
+18:09 -!- benapex [~benuni@212.183.140.1] has joined #apexhab
+18:22 < apexbot> @apexhab: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/apexhab/status/127797101521403904]
+18:23 < apexbot> @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/danielsaul/status/127797105938022400]
+18:24 < jonsowman> losing 300 baud here
+18:25 -!- benoxley_mobile [~benuni@212.183.140.1] has quit [Ping timeout: 258 seconds]
+18:25 -!- benapex [~benuni@212.183.140.1] has quit [Ping timeout: 258 seconds]
+18:26 < danielsaul> :(
+18:26 < jonsowman> 300 baud at 603km
+18:26 < danielsaul> :)
+18:26 -!- benoxley_mobile [~benuni@212.183.140.17] has joined #apexhab
+18:26 < apexbot> @aewakefield: RT @apexhab: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/aewakefield/status/127798032988250112]
+18:27 < priyesh> :)
+18:30 < jonsowman> 300 baud at 611km
+18:30 < priyesh> danielsaul: give my congrats to alex for making that antenna
+18:32 < jonsowman> 616km
+18:33 < danielsaul> Will do
+18:33 < priyesh> danielsaul: thanks :)
+18:34 < apexbot> @cuspaceflight: Continuing to decode Alpha at 620km at 300 baud! #apexhab #cusf [http://twitter.com/cuspaceflight/status/127799964851113984]
+18:34 -!- Andrew_apex_mob [~androirc@89.192.0.7] has quit [Ping timeout: 252 seconds]
+18:34 < priyesh> jonsowman: you said no chute!
+18:34 < priyesh> :P
+18:34 < jonsowman> haha
+18:35 < jonsowman> it's hard to know
+18:35 < priyesh> i'm kidding :
+18:35 < priyesh> :P
+18:35 < jonsowman> we did a rough calc earlier at it would drop at about 10m/s
+18:35 < jonsowman> so even if on land it wouldn't be The End Of The World
+18:36 < priyesh> good
+18:36 < priyesh> :)
+18:36 < priyesh> what a launch!
+18:38 < apexbot> @TheArduinoGuy: RT @apexhab: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/TheArduinoGuy/status/127800898100531200]
+18:38 < apexbot> @bm_: RT @apexhab: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/bm_/status/127801071526612992]
+18:39 < apexbot> @apexhab: #Alpha speeding across Germany! We need German trackers quickly! #apexhab #ukhas [http://twitter.com/apexhab/status/127801360145063936]
+18:40 < priyesh> danielsaul: where are you
+18:40 < danielsaul> Uhh
+18:40 < apexbot> @LVL1WhiteStar: RT @apexhab: #Alpha speeding across Germany! We need German trackers quickly! #apexhab #ukhas [http://twitter.com/LVL1WhiteStar/status/127801532866498560]
+18:40 < apexbot> @TheArduinoGuy: RT @apexhab: #Alpha speeding across Germany! We need German trackers quickly! #apexhab #ukhas [http://twitter.com/TheArduinoGuy/status/127801604496818177]
+18:41 < danielsaul> Come off M25
+18:42 < priyesh> okay
+18:42 < priyesh> mile marker
+18:42 < priyesh> ?
+18:42 < apexbot> @Bernattc: RT @cuspaceflight: Continuing to decode Alpha at 620km at 300 baud! #apexhab #cusf [http://twitter.com/Bernattc/status/127801998484582402]
+18:42 < apexbot> @b3noxley: RT @apexhab #Alpha speeding across Germany! We need German trackers quickly! #apexhab #ukhas [http://twitter.com/b3noxley/status/127802046031200256]
+18:45 < apexbot> @danielsaul: RT @apexhab: #Alpha speeding across Germany! We need German trackers quickly! #apexhab #ukhas [http://twitter.com/danielsaul/status/127802700632047616]
+18:46 < apexbot> @aewakefield: RT @apexhab: #Alpha speeding across Germany! We need German trackers quickly! #apexhab #ukhas [http://twitter.com/aewakefield/status/127802940571389952]
+18:47 < apexbot> @jcrouchley: RT @apexhab: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/jcrouchley/status/127803329341431808]
+18:50 < jonsowman> checksum on last packet was B00B
+18:50 < jonsowman> nice
+18:50 < danielsaul> priyesh, tweet on #amateurfunk
+18:50 < danielsaul> lol
+18:50 < priyesh> lol
+18:51 < apexbot> @moui: RT @apexhab: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/moui/status/127804345159909376]
+19:01 -!- awakefield [~androirc@92.40.254.159.threembb.co.uk] has quit [Ping timeout: 252 seconds]
+19:03 -!- edward_apex [5c28fe9f@gateway/web/freenode/ip.92.40.254.159] has joined #apexhab
+19:06 < edward_apex> for me, alpha hasn't left Cambridge on spacenear.us. can someone help?
+19:06 < priyesh> refresh?
+19:06 < priyesh> ctrl+f5
+19:07 < edward_apex> doesn't do anything
+19:07 < priyesh> close and open the browser
+19:07 < priyesh> spacenearus is fine for us
+19:08 < priyesh> so what did mr c say in the minibus?
+19:08 < priyesh> germany !
+19:08 < edward_apex> it is a bit "dads army"
+19:09 < edward_apex> dropping one on Berlin
+19:09 < priyesh> lol
+19:11 < jonsowman> 702km at 50 baud
+19:11 < DiJuMx> What're the specs for the balloon? i.e. rated burst time/height.
+19:12 < edward_apex> Mr. C now discussing the lack of Polish friendly messages on alpha
+19:12 < priyesh> lol
+19:12 < priyesh> where are you?
+19:13 < edward_apex> manor park
+19:13 < edward_apex> you?
+19:13 < priyesh> carshalton
+19:16 < apexbot> @LVL1WhiteStar: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/LVL1WhiteStar/status/127810523281633280]
+19:17 < apexbot> @Rene_dev: yay, ich kann ihn hören :D #apexhab [http://twitter.com/Rene_dev/status/127810700470005761]
+19:17 < priyesh> lol
+19:18 < apexbot> @russss: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/russss/status/127810957106872320]
+19:20 < apexbot> @jgrahamc: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/jgrahamc/status/127811463837532161]
+19:23 -!- edward_apex [5c28fe9f@gateway/web/freenode/ip.92.40.254.159] has quit [Ping timeout: 265 seconds]
+19:23 < apexbot> @nerd8192: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/nerd8192/status/127812340862287872]
+19:25 -!- Neolith100 [4333354d@gateway/web/freenode/ip.67.51.53.77] has joined #apexhab
+19:26 -!- Neolith100 [4333354d@gateway/web/freenode/ip.67.51.53.77] has left #apexhab []
+19:27 < jonsowman> i think we've lost it here
+19:27 < jonsowman> can't make it out over the noise
+19:27  * danielsaul is back
+19:27 < danielsaul> and babysitting
+19:27 < danielsaul> with a proper internet connection :)
+19:27 < jonsowman> danielsaul: it's way way over our radio horizon
+19:27 < danielsaul> :(
+19:28 < apexbot> @Rene_dev: leider ist das signal zu schwach um es zu dekodieren #apexhab [http://twitter.com/Rene_dev/status/127813664895016960]
+19:30 -!- DiJuMx [4d625eb3@gateway/web/freenode/ip.77.98.94.179] has quit [Ping timeout: 265 seconds]
+19:30 < apexbot> @steamfire: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/steamfire/status/127814190441312258]
+19:31 < apexbot> @AshBerlin: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/AshBerlin/status/127814269659119619]
+19:33 < apexbot> @garryq: RT @danielsaul Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/garryq/status/127814812104265728]
+19:36 < apexbot> @tiefpunkt: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/tiefpunkt/status/127815718405283841]
+19:47 -!- priyesh-mob [~Priyesh@149.254.61.34] has joined #apexhab
+19:50 < apexbot> @theqlabs: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/theqlabs/status/127819061756301312]
+19:50 < danielsaul> Hi priyesh-mob
+19:52 < apexbot> @MsAsti: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/MsAsti/status/127819547511242753]
+19:52 -!- priyesh-mob [~Priyesh@149.254.61.34] has quit [Remote host closed the connection]
+19:52 -!- priyesh-mob [~Priyesh@149.254.61.34] has joined #apexhab
+19:54 -!- DiJuMx [4d625eb3@gateway/web/freenode/ip.77.98.94.179] has joined #apexhab
+19:56 -!- priyesh-mobile [~Priyesh@149.254.61.34] has joined #apexhab
+20:02 -!- priyesh-mobile [~Priyesh@149.254.61.34] has quit [Ping timeout: 258 seconds]
+20:02 < benoxley_mobile> going to quit for a bit, back in half an hour!
+20:03 -!- priyesh-mob [~Priyesh@149.254.61.34] has quit [Ping timeout: 260 seconds]
+20:03 < danielsaul> ok
+20:03 -!- benoxley_mobile [~benuni@212.183.140.17] has quit [Quit: AndroIRC]
+20:04 -!- priyesh-mob [~Priyesh@149.254.61.165] has joined #apexhab
+20:06 < apexbot> @da_ke: RT @apexhab: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/da_ke/status/127823152272244736]
+20:06 < apexbot> @da_ke: RT @apexhab: #Alpha speeding across Germany! We need German trackers quickly! #apexhab #ukhas [http://twitter.com/da_ke/status/127823179879161857]
+20:09 -!- DiJuMx [4d625eb3@gateway/web/freenode/ip.77.98.94.179] has quit [Ping timeout: 265 seconds]
+20:10 < apexbot> @Rene_dev: @apexhab I called on berlin repeaters via echolink, no response so far. #apexhab [http://twitter.com/Rene_dev/status/127824095889997826]
+20:11 -!- danielsaul is now known as dansaul_apex
+20:11 -!- dansaul_apex is now known as danielsaul
+20:16 -!- priyesh-mobile [~Priyesh@cpc21-nmal17-2-0-cust75.croy.cable.virginmedia.com] has joined #apexhab
+20:17 -!- priyesh-mobile [~Priyesh@cpc21-nmal17-2-0-cust75.croy.cable.virginmedia.com] has quit [Read error: Connection reset by peer]
+20:19 -!- priyesh-mob [~Priyesh@149.254.61.165] has quit [Ping timeout: 260 seconds]
+20:19 -!- andrew_apex [~chatzilla@2.27.80.201] has joined #apexhab
+20:21 < priyesh> home
+20:23 -!- M0WOJ-Alex [5ac57c52@gateway/web/freenode/ip.90.197.124.82] has joined #apexhab
+20:23  * andrew_apex is also home
+20:23 < apexbot> @apexhab: @hjconline Nope, no cameras etc. on board - this was meant to be a shortish launch landing in the North Sea! #apexhab #ukhas [http://twitter.com/apexhab/status/127827489484578816]
+20:23  * andrew_apex is impressed that the battery seems to be holding out ok...
+20:24 < danielsaul> Hi all
+20:24 < danielsaul> Yeh
+20:24 < danielsaul> Tom L has been keeping track of it all day too
+20:24 < danielsaul> :)
+20:25 < danielsaul> He thinks we should be worried about the Russians hunting us down for spying on them
+20:25 < danielsaul> We currently have a german HAM guy decoding and then pasting the packets to us to upload
+20:25 < priyesh> where is he pasting
+20:25 < danielsaul> 860 packets :)
+20:26 < danielsaul> #ha
+20:26 < priyesh> i see
+20:27 < apexbot> Received email: Brian Benchoff "[apexhab] well you get two hackaday posts for this one."
+20:27 < danielsaul> Two hackaday posts!
+20:27 < danielsaul> We are lucky
+20:28 < priyesh> YAY
+20:28 < apexbot> Received email: Priyesh Patel "Re: [apexhab] well you get two hackaday posts for this one."
+20:30 < apexbot> Received email: Daniel Saul "Re: [apexhab] well you get two hackaday posts for this one."
+20:30 < priyesh> i have done
+20:31 < apexbot> Received email: Priyesh Patel "Re: [apexhab] well you get two hackaday posts for this one."
+20:31 < priyesh> why can't the german guys upload?
+20:32 < danielsaul> cos he doesnt have dl-fldigi
+20:32 < danielsaul> and we want him decoding rather than trying to isntall it
+20:33 < priyesh> ok
+20:36 < apexbot> @apexhab: #apexhab Alpha still going... almost directly over Berlin now at 35km altitude [http://twitter.com/apexhab/status/127830799658659841]
+20:36 < apexbot> @danielsaul: #apexhab Alpha still going... almost directly over Berlin now at 35km altitude [http://twitter.com/danielsaul/status/127830801936158721]
+20:38 < danielsaul> Have you seen the number of retweets we're getting
+20:38 < danielsaul> loving it :)
+20:38 < priyesh> i know :)
+20:38 < priyesh> amazing
+20:46 < apexbot> @b3noxley: RT @apexhab: #apexhab Alpha still going... almost directly over Berlin now at 35km altitude [http://twitter.com/b3noxley/status/127833199530344451]
+20:48 -!- edward_apex [56b66a8e@gateway/web/freenode/ip.86.182.106.142] has joined #apexhab
+20:51 < priyesh> hey edward_apex
+20:52 < priyesh> BERLIN!
+20:52 < danielsaul> BERLIN!
+20:52 < priyesh> BERLIN!!!!
+20:52 < edward_apex> yeahhh
+20:52 < danielsaul> BERLIN!!!!
+20:52 < edward_apex> BERLIN!
+20:53 < danielsaul> out of berlin
+20:53 < danielsaul> Well
+20:53 < priyesh> BERLIN!
+20:53 < priyesh> over
+20:53 < edward_apex> any prospect of trackers in eastern europe?
+20:53 < priyesh> POLAND!
+20:53 < danielsaul> depends how far you say berlin  reaches
+20:53 < danielsaul> edward_apex: Not at the moment
+20:54 < edward_apex> batteries are hanging in there
+20:55 < priyesh> yeah
+20:57 < edward_apex> who is the guy tracking from the west coast of Africa? and how is he doing it?
+20:57 < danielsaul> Hes not
+20:58 < danielsaul> Its 0,0
+20:58 < danielsaul> He hasnt set his co-ordinates
+20:58 < edward_apex> ok
+20:59 -!- AbstractBeliefs [~AbstractB@unaffiliated/abstractbeliefs] has joined #apexhab
+21:00 < apexbot> @RyanHugh: @stephenfry help with RT? - Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/RyanHugh/status/127836642470936577]
+21:01 -!- M0WOJ-Alex [5ac57c52@gateway/web/freenode/ip.90.197.124.82] has quit [Ping timeout: 265 seconds]
+21:04 < edward_apex> has anyone emailed the German Amateur Radio Club (DARC)?
+21:04 < priyesh> not yet
+21:04 < priyesh> go for it
+21:04 < priyesh> better would be to call them
+21:04 < danielsaul> Phone them
+21:04 < priyesh> no jokes
+21:04 < danielsaul> Phone them!
+21:05 < edward_apex> sure - I'll see how gcse german gets on...
+21:05 < edward_apex> auf wiedersehen!!!
+21:06 < andrew_apex> anyone doing GCSE polish?
+21:06 < priyesh> okay
+21:06 < priyesh> remind me who OZ1SKY is
+21:06 < andrew_apex> or we could ask Dave :P
+21:06 < priyesh> also, andrew_apex thanks for the lift
+21:06 < danielsaul> priyesh: Someone in denmark
+21:06 < danielsaul> andrew_apex: Thanks for no lift
+21:06 < andrew_apex> priyesh: no problem
+21:07 < andrew_apex> danielsaul: no comment
+21:07 < danielsaul> Minibus dropped me back at my house :P
+21:07 < danielsaul> Now everyone in it knows where I live
+21:07 < priyesh> that's not a problem
+21:09 < danielsaul> Does dave have relatives in poland? :P
+21:10 -!- awakefield [5eac18ec@gateway/web/freenode/ip.94.172.24.236] has joined #apexhab
+21:10 < jonsowman> right
+21:10 < jonsowman> hows it going
+21:10 < danielsaul> jonsowman: See last hour or two on #highaltitude :P
+21:10 < awakefield> hello
+21:11 < edward_apex> DARC are closed and wouldn't get the message until monday
+21:11 < edward_apex> I'll email them instead
+21:11 < jonsowman> summary please danielsaul?
+21:11 < priyesh> hello
+21:11 < danielsaul> Err
+21:11 < danielsaul> Obviously, you can see where it is...
+21:11 < jonsowman> yes...
+21:12 < danielsaul> erm, we have a german HAM pasting in packets to be manually uploaded
+21:12 < danielsaul> He doesnt have dl-fldigi
+21:12 < danielsaul> We have someone in denmark
+21:12 < danielsaul> and thats it I think... I cant be bothered to go through the various discussions we've had
+21:12 < priyesh> that's it i think?
+21:12 < jonsowman> lol ok
+21:13 < AbstractBeliefs> apex folk: have you considered the legal implications of an out-of-control balloon becoming awkward over europe?
+21:14 < AbstractBeliefs> just wondering what you are thinking right now, apart from "woah, this is awesome"
+21:14 < apexbot> @apexhab: #apexhab Alpha Balloon nearly into Poland - still need trackers in Eastern Europe if possible #ukhas #apexhab #amateurradio [http://twitter.com/apexhab/status/127840266131484672]
+21:14 < apexbot> @danielsaul: #apexhab Alpha Balloon nearly into Poland - still need trackers in Eastern Europe if possible #ukhas #apexhab #amateurradio [http://twitter.com/danielsaul/status/127840268463521792]
+21:14 < priyesh> AbstractBeliefs: mostly 'WOAH AWESOME'.
+21:15 < priyesh> but also a little worried
+21:15 < jonsowman> AbstractBeliefs: in what sense is it a concern?
+21:15 < priyesh> nothing legal
+21:16 < danielsaul> AbstractBeliefs: We hope the school's insurance covers it? :S
+21:16 < AbstractBeliefs> jonsowman: as in, what happens when an amateur balloon starts to wander europe without prior permission from the owners of airspace
+21:16 < apexbot> @apexhab: @stephenfry #apexhab Alpha Balloon nearly into Poland from Cambridge; still need trackers in Eastern Europe if possible #ukhas #amateurradio [http://twitter.com/apexhab/status/127840772249755648]
+21:16 < jonsowman> AbstractBeliefs: it's very hard to guard against
+21:16 < AbstractBeliefs> danielsaul: lol. its the UK, youre on your own xD (our insurance wouldnt go as far as letting us solder a broken mic)
+21:17 < jonsowman> it is well above controlled airspace
+21:17 < AbstractBeliefs> jonsowman: so, there are already procedures and allowances for incidents like this?
+21:17 < danielsaul> haha - the school's fault though :P We were told by the school to launch it, it was a school trip - not the fault of any individuals involved :P
+21:17 < danielsaul> priyesh: Did you do that? ^^^
+21:17 < AbstractBeliefs> danielsaul: fair enough, cant argue with that
+21:17 < priyesh> haha
+21:18 < jonsowman> AbstractBeliefs: there is very little risk to anyone
+21:18 < priyesh> what are we predicting battery wise
+21:18 < AbstractBeliefs> jonsowman: yeah, i was just curious re. the legal implications (not meaning to scaremonger/certainly not trolling)
+21:18 < jonsowman> it's a bit of a grey area
+21:18 < priyesh> AbstractBeliefs: no problem
+21:19 < jonsowman> but in giving us launch permission the CAA accept that we have little control over where it goes
+21:20 < danielsaul> Will the CAA protect us from the russians when they hunt us down?
+21:20 < jonsowman> lol
+21:20 < danielsaul> No one will tell me - what is the latex distance record jonsowman ?
+21:22 < danielsaul> jonsowman: When was the last launch that was this exciting? :P lol
+21:22 < jonsowman> i don't know danielsaul
+21:22 < jonsowman> yea it's been good!
+21:22 < priyesh> yeah
+21:22 < jonsowman> we got 730km out of the trakotron
+21:22 < jonsowman> very happy with that
+21:22 < danielsaul> :)
+21:22  * danielsaul is just eating, then will start getting footage off these flipcams
+21:22 < danielsaul> Im missing one
+21:23 < danielsaul> edward_apex: do ou have it?
+21:23 < edward_apex> I think so
+21:23 < danielsaul> Ok
+21:23 < danielsaul> Can you get the video off it and upload it somewhere when you have time?
+21:23 < edward_apex> sure
+21:24 < danielsaul> ta
+21:25  * danielsaul is babysitting and making dinner in strange house
+21:25 < danielsaul> cant find any bowls
+21:25 < danielsaul> or plates
+21:27 < priyesh> POLAND
+21:27  * danielsaul cant believe it
+21:27 < danielsaul> My poor alpha
+21:27 < jonsowman> haha
+21:27 < apexbot> @apexhab: #apexhab Alpha has reached Poland! Need help tracking. #highalitutde on freenode IRC #ukhas #amateurradio [http://twitter.com/apexhab/status/127843620794531841]
+21:28 -!- DiJuMx [4d625eb3@gateway/web/freenode/ip.77.98.94.179] has joined #apexhab
+21:28 -!- awakefield [5eac18ec@gateway/web/freenode/ip.94.172.24.236] has quit [Ping timeout: 265 seconds]
+21:28 < apexbot> @danielsaul: RT @apexhab: #apexhab Alpha has reached Poland! Need help tracking. #highalitutde on freenode IRC #ukhas #amateurradio [http://twitter.com/danielsaul/status/127843832405569537]
+21:29 < priyesh> nearly 1000km
+21:29 < danielsaul> Found a bowl
+21:29 < danielsaul> No sieve :S
+21:29 < priyesh> 992
+21:29 < danielsaul> How do I drain the pasta? :S
+21:30 < AbstractBeliefs> danielsaul: hold fork to bown, pour very slowly
+21:30 < AbstractBeliefs> bowl*
+21:30 < danielsaul> I shall try...
+21:31 < apexbot> @TheArduinoGuy: RT @apexhab: #apexhab Alpha has reached Poland! Need help tracking. #highalitutde on freenode IRC #ukhas #amateurradio [http://twitter.com/TheArduinoGuy/status/127844542895489024]
+21:32 < priyesh> 998km
+21:33 < priyesh> 999.9km
+21:34 < apexbot> @DiJuM: RT @apexhab: #apexhab Alpha has reached Poland! Need help tracking. #highalitutde on freenode IRC #ukhas #amateurradio [http://twitter.com/DiJuM/status/127845318657196032]
+21:34 < apexbot> @b3noxley: RT @apexhab: #apexhab Alpha has reached Poland! Need help tracking. #highalitutde on freenode IRC #ukhas #amateurradio [http://twitter.com/b3noxley/status/127845346050179072]
+21:34 < priyesh> 1000km!
+21:34 < priyesh> congrats team!
+21:36 < andrew_apex> wooo :D
+21:36 < jonsowman> :D
+21:36 < jonsowman> nice
+21:36 < jonsowman> well doen
+21:37 < apexbot> Received email: Priyesh Patel "[apexhab] Poland & 1000km"
+21:38 < danielsaul> Whats the latex distance record!!!????
+21:38 < danielsaul> and how do you work this stupid tv
+21:38 < danielsaul> ah, 300km more
+21:38 < danielsaul> then we call the airforce to shoot it down
+21:39 < jonsowman> lol
+21:39 < priyesh> are people serious with this whole russsia thing?
+21:39 < priyesh> :S
+21:39 < priyesh> :(
+21:39 < jonsowman> what russia thing?
+21:39 < priyesh> erm
+21:39 < priyesh> 21:35 < RocketBoy> Can someone *think* if this a good flight to publicise before any publicity please
+21:40 < priyesh> 21:36 < jonsowman> RocketBoy: it's probably too late
+21:44 -!- Harrisoj [5c12cd9b@gateway/web/freenode/ip.92.18.205.155] has joined #apexhab
+21:45 < danielsaul> Stupid Sky
+21:45 < priyesh> hi
+21:45 < priyesh> Harrisoj:
+21:45 < danielsaul> how do you work this thing
+21:46 < Harrisoj> Hi Priyesh. Meant to be Harrison
+21:46 < danielsaul> Hi Harrisoj
+21:46 < priyesh> you can use /nick to change it
+21:46 -!- Harrisoj is now known as Harrison
+21:47 -!- Harrison is now known as HarrisonC
+21:48 < HarrisonC> how are people tracking the apex
+21:48 < DiJuMx> http://http://spacenear.us/tracker/
+21:48 < DiJuMx> http://spacenear.us/tracker/
+21:49 < HarrisonC> sorry i understand that but the latest tweet said on irc channel
+21:49 < danielsaul> We said come on IRC channel for more information
+21:49 < danielsaul> HarrisonC: Most of the action is happening on #highaltitude
+21:49 < danielsaul>  /join #highaltitude
+21:56 < apexbot> @smittyhalibut: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/smittyhalibut/status/127850773961904128]
+21:57 < apexbot> @MicheBella: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/MicheBella/status/127851096357085185]
+21:58 < apexbot> @EI3KF: RT @danielsaul: Anyone know any German Radio HAMS? We desperately need people in East Germany/Berlin to track #apexhab alpha :) [http://twitter.com/EI3KF/status/127851251646996480]
+22:07 -!- andrew_apex [~chatzilla@2.27.80.201] has quit [Quit: ChatZilla 0.9.87 [Firefox 3.6.23/20110920075126]]
+22:16 < priyesh> we have very low disk space
+22:16 < priyesh> i'll sort that out tomorrow morning
+22:16 < danielsaul> Good
+22:17 < danielsaul> Where shall I upload too?
+22:17 < priyesh> now?
+22:17 < priyesh> erm.. upload to gallery
+22:17 < priyesh> i'll just get emails saying we've exceeded
+22:17 < priyesh> i'll ignore :P
+22:17 < danielsaul> ok
+22:17 < danielsaul> lol
+22:19 < priyesh> i can still hear rtty
+22:19 < priyesh> lol
+22:19 < benoxley> priyesh: how are you listening?
+22:19 < danielsaul> priyesh: In your mind? :S
+22:20 < priyesh> danielsaul: yeah, in my mind
+22:20 < priyesh> benoxley: http://robertharrison.org/listen/data/data.txt
+22:20 < priyesh> keep refreshing that
+22:20 < priyesh> raw incoming data
+22:20 < benoxley> coooooooool
+22:21 < danielsaul> Need a ASCII to RTTY translator :P
+22:21 < jonsowman> how would that help
+22:21 < jonsowman> lol
+22:22 < priyesh> why?
+22:24 < jonsowman> you two have to get some serious "thank you so much" emails out to lists
+22:24 < danielsaul> Yeh
+22:24 < priyesh> yeah
+22:25 < priyesh> tomorrow will be busy
+22:25 < priyesh> uhas
+22:25 < priyesh> ukhas
+22:25 < priyesh> and where else?
+22:25 < jonsowman> hopefully it's be on the ground by then :P
+22:25  * danielsaul will be sleeping
+22:25 < priyesh> jonsowman: what the plan.. wait for phone call?
+22:25 < jonsowman> priyesh: i think ukhas & twitter
+22:25 < priyesh> we can still listen out for temp changes
+22:25 < jonsowman> i don't see that there's anything else you can do
+22:25 < jonsowman> if it's still in the air at sunrise then there's a good chance that
+22:26 < jonsowman> 1) it will regain gps lock
+22:26 < jonsowman> 2) rise, burst, and come down
+22:26 < priyesh> who will be able to track then>
+22:26 < danielsaul> 3) it will be out of batery
+22:26 < danielsaul> 4) in the middle of nowhere
+22:26 < jonsowman> well that's the thing
+22:26 < danielsaul> But considering we were expecting to lose it in the north sea, doesnt make much difference losing in in the middle of russia instead
+22:27 < jonsowman> indeed
+22:27 < jonsowman> whatever happens, happens
+22:27 < priyesh> thats an amazing story to tell
+22:27 < jonsowman> don't be concerned
+22:27 < priyesh> ukhas record page needs updating
+22:27 < jonsowman> go for it
+22:27 < danielsaul> We need to do a write-up
+22:27 < jonsowman> it's an open wiki
+22:27 < priyesh> yeah
+22:28 < priyesh> jonsowman: i don't know the exact numbers
+22:28 < jonsowman> ah ok
+22:28 < priyesh> dont want to write +/- 10km
+22:28 < priyesh> :P
+22:28 < danielsaul> lol
+22:28 < danielsaul> I cant work out how to use this tv
+22:29 < danielsaul> priyesh: email hackaday
+22:29 < priyesh> what do i write?
+22:30 < danielsaul> lost gps lock
+22:30 < priyesh> ok
+22:30 < priyesh> opening apexhab stats
+22:31 < priyesh> OMG
+22:31 < priyesh> OMG
+22:31 < priyesh> OMG
+22:31 < danielsaul> lol
+22:32 < apexbot> @apexhab: GPS has come back alive! And Alpha is still in Poland. #ukhas #apexhab [http://twitter.com/apexhab/status/127859934678355968]
+22:33 < priyesh> danielsaul: i'm not emailing hackaday YET!
+22:33 < danielsaul> ol
+22:33 < danielsaul> lol
+22:35 < apexbot> @jcrouchley: RT @apexhab: #apexhab Alpha has reached Poland! Need help tracking. #highalitutde on freenode IRC #ukhas #amateurradio [http://twitter.com/jcrouchley/status/127860684280180737]
+22:36 < apexbot> @b3noxley: RT @apexhab: GPS has come back alive! And Alpha is still in Poland. #ukhas #apexhab [http://twitter.com/b3noxley/status/127860822306340864]
+22:36 < priyesh> andrew is coming back :P
+22:37 < jonsowman> priyesh: ?
+22:37 < priyesh> he went
+22:37 < priyesh> i told him we had lock again
+22:37 < priyesh> he is coming back now
+22:37 < jonsowman> oh i see
+22:39 < danielsaul> haha
+22:39 -!- twillbrian [522fae2a@gateway/web/freenode/ip.82.47.174.42] has joined #apexhab
+22:40 -!- twillbrian [522fae2a@gateway/web/freenode/ip.82.47.174.42] has quit [Client Quit]
+22:40 -!- andrew_apex [~chatzilla@2.27.80.201] has joined #apexhab
+22:40 < priyesh> hey andrew_apex
+22:50 < apexbot> @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/apexhab/status/127864327637184512]
+22:50 < apexbot> @TheArduinoGuy: RT @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/TheArduinoGuy/status/127864393965895680]
+22:50 < apexbot> @NigeyUK: RT @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/NigeyUK/status/127864474202939394]
+22:51 < apexbot> @danielsaul: RT @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/danielsaul/status/127864578141986816]
+22:52 < jonsowman> http://www.flickr.com/photos/cuspaceflight/sets/72157627829326013/
+22:52 < priyesh> :)
+22:52 < jonsowman> love this
+22:52 < jonsowman> http://www.flickr.com/photos/cuspaceflight/6270583964/in/set-72157627829326013/
+22:53 < Matt_soton> jonsowman: i assume ur home rather then on HF to hams
+22:53 < jonsowman> wut
+22:53 < priyesh> we need HAMs
+22:53 < Matt_soton> i think that sentence almost makes sense :\
+22:53 < priyesh> Matt_soton: it better :/
+22:53 < danielsaul> :)
+22:54 < apexbot> @WillObeney: RT @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/WillObeney/status/127865381787406336]
+22:54 < danielsaul> WIll Obeney!
+22:55 < jonsowman> nice
+22:55 < Matt_soton> it seems there are connaught people in the gordon avenue
+22:55 < Matt_soton> *arms
+22:55 < jonsowman> great
+22:56 < Matt_soton> well at least that place closes at 12
+22:56 < apexbot> @sdh7: RT @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/sdh7/status/127865873124958208]
+23:02 < priyesh> danielsaul: ping
+23:02 < priyesh> danielsaul: phone bbc world service
+23:02 < priyesh> see what happens :P
+23:02 < Matt_soton> also tweeting in polish might help
+23:03 < apexbot> @DiJuM: @NASA Urgent appeal for ISS to help with tracking a high-altitude payload: #apexhab #ukhas #alpha http://t.co/Gh9Ia0jb http://t.co/8XDEFl5U [http://twitter.com/DiJuM/status/127867576733802496]
+23:04 < priyesh> ok
+23:04 < danielsaul> Matt_soton: Do you speak polish
+23:04 < danielsaul> ?
+23:04 < priyesh> what shall i translate
+23:04 < Matt_soton> nope no idea
+23:04 < danielsaul> Last tweet
+23:04 < danielsaul> with IRC channel info
+23:04 < danielsaul> if you can fit
+23:05 < danielsaul> Or the link to qrz post
+23:05 < priyesh> ok
+23:06 < apexbot> @apexhab: Pilne wezwanie do HAM entuzjastów radia w Polska lub w jego pobliżu, aby pomóc nam #apexhab alpha. http://t.co/HXS3z01h #ukhas [http://twitter.com/apexhab/status/127868401401077760]
+23:07 < apexbot> @danielsaul: RT @apexhab: Pilne wezwanie do HAM entuzjastów radia w Polska lub w jego pobliżu, aby pomóc nam #apexhab alpha. http://t.co/HXS3z01h #ukhas [http://twitter.com/danielsaul/status/127868592531324928]
+23:08 < apexbot> @TheArduinoGuy: RT @apexhab: Pilne wezwanie do HAM entuzjastów radia w Polska lub w jego pobliżu, aby pomóc nam #apexhab alpha. http://t.co/HXS3z01h #ukhas [http://twitter.com/TheArduinoGuy/status/127868878675132418]
+23:13 -!- andrew_apex [~chatzilla@2.27.80.201] has quit [Ping timeout: 252 seconds]
+23:15 < priyesh> hope this goes well
+23:16 < priyesh> apexhab.org got a couple thousand pageviews today
+23:17 < danielsaul> Im not surpised
+23:17 < danielsaul> http://gallery.apexhab.org/index.php/Apex-Alpha/Launch-1---October2011/DSC02066 :)
+23:17 < danielsaul> Ive got some great pictures of people
+23:18 < priyesh> nice
+23:24 -!- Dodgy [~stuart@cpc9-brom9-2-0-cust217.wolv.cable.virginmedia.com] has joined #apexhab
+23:28 < Dodgy> had to dc/rc, have we found any more people to track?
+23:28 < danielsaul> nope
+23:29 < danielsaul> Need to though
+23:29 < danielsaul> urgently
+23:29 < Dodgy> :-(
+23:29 < Dodgy> whats the signal like from OZ1SKY?
+23:29 < danielsaul> Alright... for now
+23:30 < Dodgy> good to see the gps is alive again :-)
+23:30 < danielsaul> Yeh :)
+23:31 -!- edward_apex [56b66a8e@gateway/web/freenode/ip.86.182.106.142] has quit [Ping timeout: 265 seconds]
+23:31 < danielsaul> Need a U turn :P
+23:32 < danielsaul> lol
+23:32 < priyesh> 8 hours floating complete
+23:32 < danielsaul> whats the floating record?
+23:32 < danielsaul> for UK
+23:32 < priyesh> see ha
+23:34 < priyesh> 23:34 < DiJuMx> Section 114 of a translated document referring to russian airspace: http://pastebin.com/3fakFCAt
+23:36 < danielsaul> lol
+23:37 < apexbot> Received email: Priyesh Patel "[apexhab] Re: Poland & 1000km"
+23:37 < apexbot> @southon: RT @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/southon/status/127876372055068673]
+23:38 < priyesh> mr turner
+23:38 < priyesh> tweeted us
+23:38 < priyesh> http://twitter.com/#!/the_dippy_hippy/status/127876277834227712
+23:41 < danielsaul> lol
+23:41 < danielsaul> haha
+23:47 < apexbot> @apexhab: An urgent call for HAM users in Poland or Belarus to help us track #apexhab alpha. All RTs appreciated! DETAILS: http://t.co/HXS3z01h #ukhas [http://twitter.com/apexhab/status/127878729438470144]
+23:47 < apexbot> @danielsaul: RT @apexhab: An urgent call for HAM users in Poland or Belarus to help us track #apexhab alpha. All RTs appreciated! DETAILS: http://t.c ... [http://twitter.com/danielsaul/status/127878768277733376]
+23:50 < apexbot> @DiJuM: RT @apexhab: An urgent call for HAM users in Poland or Belarus to help us track #apexhab alpha. All RTs appreciated! DETAILS: http://t.c ... [http://twitter.com/DiJuM/status/127879636511240192]
+23:57 < apexbot> @southon: RT @apexhab: An urgent call for HAM users in Poland or Belarus to help us track #apexhab alpha. All RTs appreciated! DETAILS: http://t.c ... [http://twitter.com/southon/status/127881339432218624]
+--- Log closed Sun Oct 23 00:00:08 2011
