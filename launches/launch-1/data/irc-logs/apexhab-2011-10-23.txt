@@ -1,0 +1,71 @@
+--- Log opened Sun Oct 23 00:00:08 2011
+--- Day changed Sun Oct 23 2011
+00:00 < apexlog> *** New IRC log started at http://www.apexhab.org/irc-log/ ***
+00:01 < apexbot> @DL5RFK: RT @apexhab: An urgent call for HAM users in Poland or Belarus to help us track #apexhab alpha. All RTs appreciated! DETAILS: http://t.c ... [http://twitter.com/DL5RFK/status/127882223155281920]
+00:04 < apexbot> @apexhab: Настойлівым заклікам HAM карыстальнікаў у Польшчы ці Беларусі, якія дапамагаюць нам адсочваць #apexhab альфа. j.mp/q6mOeG #ukhas [http://twitter.com/apexhab/status/127882979157610496]
+00:07 < apexbot> @dominionetwork: RT @apexhab: An urgent call for HAM radio enthusiasts in Poland or nearby to help us track #apexhab #alpha. All RTs appreciated! #ukhas [http://twitter.com/dominionetwork/status/127883725999575040]
+00:21 -!- Jan- [~IceChat77@109.176.231.33] has joined #apexhab
+00:21 < Jan-> Poland, dudes, that's really cool :D
+00:24 < priyesh> benoxley: do you think there's anything we can do?
+00:24 < priyesh> i think we've run out of ideas
+00:25 < Jan-> I know people in Poland. But I have no idea whether they're ham radio enthusiasts :/
+00:25  * Jan- phones them
+00:25 < priyesh> thanks Jan-
+00:26 < benoxley> we had a good run :)
+00:26 < priyesh> we did :)
+00:26 < Jan-> Might be tricky to force this through the combination of language and techno-incomprehension barriers
+00:26 -!- Jhon [56a00393@gateway/web/freenode/ip.86.160.3.147] has joined #apexhab
+00:26 < Jan-> How far did you expect it to go
+00:26 < jonsowman> right, i must get some sleep, well done today guys, will catch up with you tomorrow
+00:26 < priyesh> same here
+00:26 < priyesh> thanks for the help jonsowman Matt_soton benoxley
+00:26  * danielsaul will be hre a while longer
+00:26 < Jan-> oh yeah you guys rock
+00:26  * Jan- is super-impressed
+00:26 -!- Jhon [56a00393@gateway/web/freenode/ip.86.160.3.147] has quit [Client Quit]
+00:26 < danielsaul> thanks Jan-
+00:27 < Jan-> when did you last hear from your baloon?
+00:27 < priyesh> about 3 min ago
+00:27 < Jan-> from your guy in denmark?
+00:27 < priyesh> 8 min ago
+00:27 < priyesh> yeah
+00:27 < Jan-> Gotta love that
+00:27 < priyesh> indeed
+00:27 < priyesh> we're greatful
+00:27 < Jan-> Aren't you breaking any international laws :)
+00:28 < danielsaul> Nope, not as far as we kow
+00:28 < danielsaul> *know
+00:29 < danielsaul> but then, we were expecting it to land in the north sea
+00:29 < Jan-> So uh, why did it go so unexpectedly far?
+00:29 < Jan-> If it goes much farther east, the Russian air force will probably shoot it down with a surface-to-air missile or something :)
+00:30 < priyesh> we're back?
+00:31 < Jan-> how are you back
+00:31 < priyesh> getting more data
+00:31 < Jan-> oh cool
+00:31 < Jan-> I don't get how a 10mw transmitter goes from poland to denmark
+00:32 < priyesh> 800km
+00:32 < priyesh> antenna design, line of sight, good radios
+00:32 < Jan-> Also, it says there's a big zigzag in the course
+00:32 < Jan-> do we assume that's a glitch
+00:33 < Jan-> or is it windy :)
+00:33 < priyesh> those were corrupt packets
+00:33 < Jan-> I wonder if you've been noticed by the polish air force
+00:33 < Jan-> "aargh, capitalist dogs!"
+00:42 -!- salokcin [~androirc@208.53.57.16] has quit [Read error: Connection reset by peer]
+00:52 < benoxley> preamp as well
+00:53 < priyesh> :S
+00:54 < priyesh> over.
+00:54 < danielsaul> :(
+00:54 < danielsaul> sad
+00:57 < priyesh> i better be off now
+00:57 < priyesh> byr
+00:57 < priyesh> bye
+00:59 < danielsaul> bye
+01:04 -!- AbstractBeliefs [~AbstractB@unaffiliated/abstractbeliefs] has quit [Ping timeout: 240 seconds]
+01:04 -!- HarrisonC [5c12cd9b@gateway/web/freenode/ip.92.18.205.155] has quit [Ping timeout: 265 seconds]
+01:17 -!- Jan- [~IceChat77@109.176.231.33] has quit [Quit: For Sale: Parachute. Only used once, never opened, small stain.]
+01:33 -!- DiJuMx [4d625eb3@gateway/web/freenode/ip.77.98.94.179] has quit [Quit: Page closed]
+01:50 -!- AbstractBeliefs [~AbstractB@88-104-251-21.dynamic.dsl.as9105.com] has joined #apexhab
+01:50 -!- AbstractBeliefs [~AbstractB@88-104-251-21.dynamic.dsl.as9105.com] has quit [Changing host]
+01:50 -!- AbstractBeliefs [~AbstractB@unaffiliated/abstractbeliefs] has joined #apexhab
+03:44 -!- AbstractBeliefs [~AbstractB@unaffiliated/abstractbeliefs] has quit [Ping timeout: 240 seconds]
